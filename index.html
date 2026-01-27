@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diba - Urban Furniture Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">DIBA</a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" data-en="Home" data-fa="خانه">خانه</a>
+                    <a href="products.html" data-en="Products" data-fa="محصولات">محصولات</a>
+                    <a href="laman.html" data-en="Laman Collection" data-fa="کالکشن لمان">کالکشن لمان</a>
+                    <a href="projects.html" data-en="Projects" data-fa="پروژه‌ها">پروژه‌ها</a>
+                    <a href="about.html" data-en="About" data-fa="درباره ما">درباره ما</a>
+                    <a href="contact.html" data-en="Contact" data-fa="تماس با ما">تماس با ما</a>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="quote.html" class="btn-quote">
+                        <span data-en="Request Quote" data-fa="درخواست قیمت">درخواست قیمت</span>
+                        <span class="quote-badge" id="quoteBadge">0</span>
+                    </a>
+                    <button class="btn-lang" id="langBtn">EN</button>
+                    <button class="btn-mobile" id="mobileBtn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Masonry Grid -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-card">
+                <div class="hero-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&q=80" alt="Urban Bench" class="hero-img">
+                <div class="hero-content">
+                    <h1 data-en="Modern Urban Spaces" data-fa="فضاهای شهری مدرن">فضاهای شهری مدرن</h1>
+                    <p data-en="Quality furniture for public areas" data-fa="مبلمان با کیفیت برای فضاهای عمومی">مبلمان با کیفیت برای فضاهای عمومی</p>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Park Bench" class="hero-img">
+                <div class="hero-content">
+                    <h1 data-en="Sustainable Design" data-fa="طراحی پایدار">طراحی پایدار</h1>
+                    <p data-en="Built to last for generations" data-fa="ساخته شده برای نسل‌ها">ساخته شده برای نسل‌ها</p>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="hero-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Public Space" class="hero-img">
+                <div class="hero-content">
+                    <h1 data-en="Architectural Excellence" data-fa="برتری معماری">برتری معماری</h1>
+                    <p data-en="Precision in every detail" data-fa="دقت در هر جزئیات">دقت در هر جزئیات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Product Categories" data-fa="دسته‌بندی محصولات">دسته‌بندی محصولات</h2>
+            <div class="categories-grid">
+                <a href="products.html?cat=benches" class="category-card">
+                    <span data-en="Benches" data-fa="نیمکت‌ها">نیمکت‌ها</span>
+                </a>
+                <a href="products.html?cat=trash-bins" class="category-card">
+                    <span data-en="Trash Bins" data-fa="سطل‌های زباله">سطل‌های زباله</span>
+                </a>
+                <a href="products.html?cat=lighting" class="category-card">
+                    <span data-en="Lighting" data-fa="روشنایی">روشنایی</span>
+                </a>
+                <a href="products.html?cat=shelters" class="category-card">
+                    <span data-en="Shelters" data-fa="سایبان‌ها">سایبان‌ها</span>
+                </a>
+                <a href="products.html?cat=bike-racks" class="category-card">
+                    <span data-en="Bike Racks" data-fa="پارکینگ دوچرخه">پارکینگ دوچرخه</span>
+                </a>
+                <a href="products.html?cat=urban-elements" class="category-card">
+                    <span data-en="Urban Elements" data-fa="المان‌های شهری">المان‌های شهری</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Products" data-fa="محصولات">محصولات</h2>
+                <a href="products.html" class="link" data-en="View Products →" data-fa="مشاهده محصولات ←">مشاهده محصولات ←</a>
+            </div>
+            <div class="products-grid" id="featuredProducts"></div>
+        </div>
+    </section>
+
+    <!-- Editorial Statement -->
+    <section class="cta">
+        <div class="container">
+            <h2>
+                <span data-en="We believe in " data-fa="ما به ">ما به </span>
+                <span class="highlight" data-en="improving life" data-fa="بهبود زندگی">بهبود زندگی</span>
+                <span data-en=" in cities" data-fa=" در شهرها معتقدیم"> در شهرها معتقدیم</span>
+            </h2>
+            <p data-en="Through thoughtful design and sustainable materials, we create urban furniture that enhances public spaces and brings communities together." data-fa="از طریق طراحی دقیق و مواد پایدار، ما مبلمان شهری می‌سازیم که فضاهای عمومی را بهبود می‌بخشد و جوامع را به هم نزدیک می‌کند.">
+                از طریق طراحی دقیق و مواد پایدار، ما مبلمان شهری می‌سازیم که فضاهای عمومی را بهبود می‌بخشد و جوامع را به هم نزدیک می‌کند.
+            </p>
+            <a href="contact.html" class="btn btn-secondary" data-en="Start a Project" data-fa="شروع پروژه">شروع پروژه</a>
+        </div>
+    </section>
+
+    <!-- Footer - Dark Mode -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>DIBA</h3>
+                <p data-en="Premium urban furniture manufacturer dedicated to creating sustainable, beautiful public spaces through innovative design and quality craftsmanship." data-fa="تولیدکننده مبلمان شهری پریمیوم متعهد به ایجاد فضاهای عمومی پایدار و زیبا از طریق طراحی نوآورانه و کیفیت ساخت.">
+                    تولیدکننده مبلمان شهری پریمیوم متعهد به ایجاد فضاهای عمومی پایدار و زیبا از طریق طراحی نوآورانه و کیفیت ساخت.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">fb</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
+            </div>
+            <div>
+                <h4 data-en="Products" data-fa="محصولات">محصولات</h4>
+                <div class="footer-links">
+                    <a href="products.html?cat=benches" data-en="Benches" data-fa="نیمکت‌ها">نیمکت‌ها</a>
+                    <a href="products.html?cat=trash-bins" data-en="Trash Bins" data-fa="سطل‌های زباله">سطل‌های زباله</a>
+                    <a href="products.html?cat=lighting" data-en="Lighting" data-fa="روشنایی">روشنایی</a>
+                    <a href="products.html?cat=shelters" data-en="Shelters" data-fa="سایبان‌ها">سایبان‌ها</a>
+                </div>
+            </div>
+            <div>
+                <h4 data-en="Company" data-fa="شرکت">شرکت</h4>
+                <div class="footer-links">
+                    <a href="about.html" data-en="About Us" data-fa="درباره ما">درباره ما</a>
+                    <a href="projects.html" data-en="Projects" data-fa="پروژه‌ها">پروژه‌ها</a>
+                    <a href="contact.html" data-en="Contact" data-fa="تماس">تماس</a>
+                    <a href="quote.html" data-en="Request Quote" data-fa="درخواست قیمت">درخواست قیمت</a>
+                </div>
+            </div>
+            <div>
+                <h4 data-en="Contact" data-fa="تماس با ما">تماس با ما</h4>
+                <p>info@diba-furniture.com</p>
+                <p>+98 21 1234 5678</p>
+                <p data-en="Tehran, Valiasr Street, No. 123" data-fa="تهران، خیابان ولیعصر، پلاک 123">تهران، خیابان ولیعصر، پلاک 123</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 DIBA. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است">تمامی حقوق محفوظ است</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Diba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">DIBA</a>
+                <div class="nav-links">
+                    <a href="index.html" data-en="Home" data-fa="خانه">خانه</a>
+                    <a href="products.html" data-en="Products" data-fa="محصولات">محصولات</a>
+                    <a href="projects.html" data-en="Projects" data-fa="پروژه‌ها">پروژه‌ها</a>
+                    <a href="about.html" data-en="About" data-fa="درباره ما">درباره ما</a>
+                    <a href="contact.html" data-en="Contact" data-fa="تماس با ما">تماس با ما</a>
+                </div>
+                <div class="nav-actions">
+                    <a href="quote.html" class="btn-quote">
+                        <span data-en="Request Quote" data-fa="درخواست قیمت">درخواست قیمت</span>
+                        <span class="quote-badge" id="quoteBadge">0</span>
+                    </a>
+                    <button class="btn-lang" id="langBtn">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 100px; padding: 3rem 0;">
+        <div class="container">
+            <h1 class="section-title" data-en="All Products" data-fa="همه محصولات">همه محصولات</h1>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 DIBA. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است">تمامی حقوق محفوظ است</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('productsGrid').innerHTML = window.dibaApp.products.map(product => `
+            <a href="product.html?id=${product.id}" class="product-card">
+                <div class="product-img">
+                    <img src="${product.image}" alt="${product.nameFa}">
+                </div>
+                <div class="product-info">
+                    <h3>${window.dibaApp.currentLang === 'fa' ? product.nameFa : product.nameEn}</h3>
+                    <p>${window.dibaApp.currentLang === 'fa' ? product.descFa : product.descEn}</p>
+                    <span class="product-btn">${window.dibaApp.currentLang === 'fa' ? 'درخواست قیمت' : 'Request Quote'} →</span>
+                </div>
+            </a>
+        `).join('');
+    </script>
+</body>
+</html>

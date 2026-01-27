@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Request - Diba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quote-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+        .quote-items {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+        }
+        .quote-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .quote-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .quote-form {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            position: sticky;
+            top: 100px;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn-remove {
+            color: #ef4444;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        @media (max-width: 768px) {
+            .quote-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">DIBA</a>
+                <div class="nav-links">
+                    <a href="index.html" data-en="Home" data-fa="خانه">خانه</a>
+                    <a href="products.html" data-en="Products" data-fa="محصولات">محصولات</a>
+                    <a href="quote.html" data-en="Quote" data-fa="درخواست قیمت">درخواست قیمت</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-lang" id="langBtn">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="quote-container">
+            <div class="quote-items">
+                <h2 data-en="Your Selected Products" data-fa="محصولات انتخابی شما">محصولات انتخابی شما</h2>
+                <div id="quoteItemsList"></div>
+            </div>
+            
+            <div class="quote-form">
+                <h3 data-en="Send Quote Request" data-fa="ارسال درخواست">ارسال درخواست</h3>
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label data-en="Full Name *" data-fa="نام و نام خانوادگی *">نام و نام خانوادگی *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-en="Company" data-fa="نام شرکت">نام شرکت</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label data-en="Email *" data-fa="ایمیل *">ایمیل *</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-en="Phone *" data-fa="تلفن *">تلفن *</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-en="Message" data-fa="پیام">پیام</label>
+                        <textarea rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" data-en="Send Request" data-fa="ارسال درخواست">ارسال درخواست</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function renderQuoteItems() {
+            const items = window.dibaApp.getQuoteItems();
+            const container = document.getElementById('quoteItemsList');
+            
+            if (items.length === 0) {
+                container.innerHTML = '<p data-en="No products selected" data-fa="هیچ محصولی انتخاب نشده است">هیچ محصولی انتخاب نشده است</p>';
+                return;
+            }
+            
+            container.innerHTML = items.map(item => `
+                <div class="quote-item">
+                    <img src="${item.image}" alt="${item.nameFa}">
+                    <div style="flex: 1;">
+                        <h4>${window.dibaApp.currentLang === 'fa' ? item.nameFa : item.nameEn}</h4>
+                    </div>
+                    <button class="btn-remove" onclick="removeItem(${item.id})" data-en="Remove" data-fa="حذف">حذف</button>
+                </div>
+            `).join('');
+        }
+        
+        function removeItem(id) {
+            window.dibaApp.removeFromQuote(id);
+            renderQuoteItems();
+        }
+        
+        document.getElementById('quoteForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert(window.dibaApp.currentLang === 'fa' ? 'درخواست شما ارسال شد!' : 'Request sent successfully!');
+            localStorage.removeItem('quoteItems');
+            window.location.href = 'index.html';
+        });
+        
+        renderQuoteItems();
+    </script>
+</body>
+</html>
