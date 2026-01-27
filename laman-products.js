@@ -10,7 +10,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/1-1.png', 'laman-products/1-2.png', 'laman-products/1-3.png', 'laman-products/1-4.jpg'],
+        images: ['1-1.png', '1-2.png', '1-3.png', '1-4.jpg'],
         descFa: 'پلتفرم چندمنظوره با طراحی مدولار برای فضاهای شهری',
         descEn: 'Multi-purpose modular platform for urban spaces',
         isNew: true
@@ -25,7 +25,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/2-1.png', 'laman-products/2-2.png', 'laman-products/2-3.png'],
+        images: ['2-1.png', '2-2.png', '2-3.png'],
         descFa: 'پلتفرم پالت با قابلیت ترکیب و چیدمان متنوع',
         descEn: 'Pallet platform with versatile combination options',
         isNew: true
@@ -40,7 +40,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/3-1.png', 'laman-products/3-2.jpg', 'laman-products/3-3.jpg', 'laman-products/3-4.png'],
+        images: ['3-1.png', '3-2.jpg', '3-3.jpg', '3-4.png'],
         descFa: 'نیمکت مدرن با طراحی الهام گرفته از تار موسیقی',
         descEn: 'Modern bench inspired by musical strings design'
     },
@@ -54,7 +54,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/4-1.png', 'laman-products/4-2.png', 'laman-products/4-3.png', 'laman-products/4-4.png'],
+        images: ['4-1.png', '4-2.png', '4-3.png', '4-4.png'],
         descFa: 'نیمکت تار با تکیه‌گاه ارگونومیک برای راحتی بیشتر',
         descEn: 'Tar bench with ergonomic backrest for enhanced comfort'
     },
@@ -68,7 +68,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/5-1.png', 'laman-products/5-2.png', 'laman-products/5-3.png', 'laman-products/5-4.png'],
+        images: ['5-1.png', '5-2.png', '5-3.png', '5-4.png'],
         descFa: 'نیمکت با سیستم اتصال منحصر به فرد و طراحی مینیمال',
         descEn: 'Bench with unique connection system and minimal design'
     },
@@ -82,7 +82,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/6-1.png', 'laman-products/6-2.png', 'laman-products/6-3.png', 'laman-products/6-4.png'],
+        images: ['6-1.png', '6-2.png', '6-3.png', '6-4.png'],
         descFa: 'نیمکت با الهام از بافت سنتی و معماری معاصر',
         descEn: 'Bench inspired by traditional weaving and contemporary architecture'
     },
@@ -96,7 +96,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/7-1.png', 'laman-products/7-2.png', 'laman-products/7-3.png', 'laman-products/7-4.png'],
+        images: ['7-1.png', '7-2.png', '7-3.png', '7-4.png'],
         descFa: 'نیمکت با فرم ارگانیک و خطوط روان',
         descEn: 'Bench with organic form and flowing lines'
     },
@@ -110,7 +110,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/8-1.png', 'laman-products/8-2.JPG', 'laman-products/8-3.png', 'laman-products/8-4.png'],
+        images: ['8-1.png', '8-2.JPG', '8-3.png', '8-4.png'],
         descFa: 'نیمکت با سیستم نصب آسان و پایداری بالا',
         descEn: 'Bench with easy installation system and high stability'
     },
@@ -124,7 +124,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/9-1.png', 'laman-products/9-2.png', 'laman-products/9-3.png', 'laman-products/9-4.png'],
+        images: ['9-1.png', '9-2.png', '9-3.png', '9-4.png'],
         descFa: 'میز پیکنیک با ظرفیت بالا برای فضاهای عمومی',
         descEn: 'High-capacity picnic table for public spaces'
     },
@@ -138,7 +138,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/10-1.png', 'laman-products/10-2.jpg', 'laman-products/10-3.png', 'laman-products/10-4.png'],
+        images: ['10-1.png', '10-2.jpg', '10-3.png', '10-4.png'],
         descFa: 'پرگولای مدرن با قابلیت سایه‌اندازی و زیبایی بصری',
         descEn: 'Modern pergola with shading capability and visual beauty'
     },
@@ -152,7 +152,7 @@ const lamanProducts = [
         material: 'wood-steel',
         materialFa: 'چوب و فولاد',
         materialEn: 'Wood & Steel',
-        images: ['laman-products/11-1.png', 'laman-products/11-2.png', 'laman-products/11-3.png', 'laman-products/11-4.png'],
+        images: ['11-1.png', '11-2.png', '11-3.png', '11-4.png'],
         descFa: 'سایه‌بان با طراحی بافت منحصر به فرد',
         descEn: 'Canopy with unique woven design pattern'
     },
@@ -166,7 +166,7 @@ const lamanProducts = [
         material: 'steel',
         materialFa: 'فولاد',
         materialEn: 'Steel',
-        images: ['laman-products/12-1.png', 'laman-products/12-2.png', 'laman-products/12-3.png'],
+        images: ['12-1.png', '12-2.png', '12-3.png'],
         descFa: 'پادرختی با طراحی زیبا برای حفاظت از درختان شهری',
         descEn: 'Elegant tree guard for protecting urban trees'
     }
