@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canopies - Laman City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .category-page {
+            margin-top: 90px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4rem 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #999;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #2D7A5F;
+        }
+        
+        .breadcrumb span {
+            color: #2D7A5F;
+        }
+        
+        .category-header {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            font-size: 4rem;
+            font-weight: 200;
+            margin-bottom: 1rem;
+            color: #000;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .category-description {
+            font-size: 1.125rem;
+            color: #666;
+            line-height: 1.6;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #F0F0F0;
+            transition: all 0.4s;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            aspect-ratio: 1;
+            overflow: hidden;
+            background: #FAFAFA;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 2rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .product-info p {
+            color: #666;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .product-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #2D7A5F;
+            color: white;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        @media (max-width: 768px) {
+            .category-page {
+                padding: 3rem 1.5rem;
+            }
+            
+            .category-title {
+                font-size: 2.5rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 36px; width: auto;">
+                    <span>Laman City</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
+                    <span class="nav-link-disabled" data-en="News" data-fa="اخبار" data-ar="الأخبار">اخبار</span>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما" data-ar="معلومات عنا">درباره ما</a>
+                    <span class="nav-link-disabled" data-en="Media" data-fa="رسانه" data-ar="وسائل الإعلام">رسانه</span>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس" data-ar="اتصل بنا">تماس</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</a>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="btn-lang" onclick="toggleLanguage()">EN</button>
+                    <button class="btn-mobile" id="mobileBtn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Category Content -->
+    <div class="category-page">
+        <div class="breadcrumb">
+            <a href="index.html" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
+            <span>◆</span>
+            <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
+            <span>◆</span>
+            <span data-en="Canopies" data-fa="سایبان‌ها" data-ar="المظلات">سایبان‌ها</span>
+        </div>
+        
+        <div class="category-header">
+            <h1 class="category-title" data-en="Canopies & Shade Structures" data-fa="سایبان‌ها و سازه‌های سایه" data-ar="المظلات وهياكل الظل">سایبان‌ها و سازه‌های سایه</h1>
+            <p class="category-description" data-en="Architectural shade solutions that combine functionality with aesthetic appeal. Designed to provide comfort in outdoor spaces." data-fa="راهکارهای معماری سایه که کارکرد را با زیبایی ترکیب می‌کنند. طراحی شده برای ایجاد راحتی در فضاهای بیرونی." data-ar="حلول الظل المعمارية التي تجمع بين الوظيفة والجاذبية الجمالية. مصممة لتوفير الراحة في المساحات الخارجية.">
+                راهکارهای معماری سایه که کارکرد را با زیبایی ترکیب می‌کنند. طراحی شده برای ایجاد راحتی در فضاهای بیرونی.
+            </p>
+        </div>
+        
+        <div class="products-grid">
+            <a href="product-pergola.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/10-1.png" alt="Pergola">
+                </div>
+                <div class="product-info">
+                    <h3 data-en="Pergola" data-fa="پرگولا" data-ar="برجولا">پرگولا</h3>
+                    <p data-en="Modern pergola with shading capability and visual beauty" data-fa="پرگولای مدرن با قابلیت سایه‌اندازی و زیبایی بصری" data-ar="برجولا حديثة مع قدرة التظليل والجمال البصري">پرگولای مدرن با قابلیت سایه‌اندازی و زیبایی بصری</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                </div>
+            </a>
+            
+            <a href="product-baft-canopy.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/11-1.png" alt="Woven Canopy">
+                </div>
+                <div class="product-info">
+                    <h3 data-en="Woven Canopy" data-fa="سایه‌بان بافت" data-ar="مظلة منسوجة">سایه‌بان بافت</h3>
+                    <p data-en="Canopy with unique woven design pattern" data-fa="سایه‌بان با طراحی بافت منحصر به فرد" data-ar="مظلة بنمط تصميم منسوج فريد">سایه‌بان با طراحی بافت منحصر به فرد</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                    <span>Laman City</span>
+                </div>
+                <h3 class="footer-tagline" data-en="We make cities more beautiful" data-fa="ما شهرها را زیباتر می‌کنیم" data-ar="نحن نجعل المدن أكثر جمالاً">ما شهرها را زیباتر می‌کنیم</h3>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Laman. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است" data-ar="جميع الحقوق محفوظة">تمامی حقوق محفوظ است</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

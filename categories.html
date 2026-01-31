@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Laman City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 36px; width: auto;">
+                    <span>Laman City</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
+                    <span class="nav-link-disabled" data-en="News" data-fa="اخبار" data-ar="الأخبار">اخبار</span>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما" data-ar="معلومات عنا">درباره ما</a>
+                    <span class="nav-link-disabled" data-en="Media" data-fa="رسانه" data-ar="وسائل الإعلام">رسانه</span>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس" data-ar="اتصل بنا">تماس</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</a>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="btn-lang" onclick="toggleLanguage()">EN</button>
+                    <button class="btn-mobile" id="mobileBtn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Categories Content -->
+    <div style="margin-top: 90px; max-width: 1400px; margin-left: auto; margin-right: auto; padding: 4rem 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #999; margin-bottom: 2rem;">
+            <a href="index.html" style="color: #999; text-decoration: none;" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
+            <span>◆</span>
+            <span style="color: #2D7A5F;" data-en="Categories" data-fa="دسته‌بندی" data-ar="الفئات">دسته‌بندی</span>
+        </div>
+        
+        <div style="margin-bottom: 4rem;">
+            <h1 style="font-size: 4rem; font-weight: 200; margin-bottom: 1rem; color: #000; font-family: 'Inter', sans-serif;" data-en="Product Categories" data-fa="دسته‌بندی محصولات" data-ar="فئات المنتجات">دسته‌بندی محصولات</h1>
+            <p style="font-size: 1.125rem; color: #666; line-height: 1.6; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Explore our comprehensive range of urban furniture solutions" data-fa="مجموعه کامل راهکارهای مبلمان شهری ما را کشف کنید" data-ar="استكشف مجموعتنا الشاملة من حلول الأثاث الحضري">
+                مجموعه کامل راهکارهای مبلمان شهری ما را کشف کنید
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
+            <a href="benches.html" style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #F0F0F0; text-decoration: none; color: inherit; display: block;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background: #FAFAFA;">
+                    <img src="laman-products/3-1.png" alt="Benches" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Benches" data-fa="نیمکت‌ها" data-ar="المقاعد">نیمکت‌ها</h3>
+                    <p style="color: #666; font-size: 0.875rem; line-height: 1.6; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="6 Products" data-fa="6 محصول" data-ar="6 منتجات">6 محصول</p>
+                </div>
+            </a>
+            
+            <a href="tables.html" style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #F0F0F0; text-decoration: none; color: inherit; display: block;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background: #FAFAFA;">
+                    <img src="laman-products/9-1.png" alt="Tables" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Tables" data-fa="میزها" data-ar="الطاولات">میزها</h3>
+                    <p style="color: #666; font-size: 0.875rem; line-height: 1.6; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="1 Product" data-fa="1 محصول" data-ar="1 منتج">1 محصول</p>
+                </div>
+            </a>
+            
+            <a href="canopies.html" style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #F0F0F0; text-decoration: none; color: inherit; display: block;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background: #FAFAFA;">
+                    <img src="laman-products/10-1.png" alt="Canopies" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Canopies" data-fa="سایبان‌ها" data-ar="المظلات">سایبان‌ها</h3>
+                    <p style="color: #666; font-size: 0.875rem; line-height: 1.6; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="2 Products" data-fa="2 محصول" data-ar="2 منتجات">2 محصول</p>
+                </div>
+            </a>
+            
+            <a href="platforms.html" style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #F0F0F0; text-decoration: none; color: inherit; display: block;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background: #FAFAFA;">
+                    <img src="laman-products/1-1.png" alt="Platforms" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Platforms" data-fa="پلتفرم‌ها" data-ar="المنصات">پلتفرم‌ها</h3>
+                    <p style="color: #666; font-size: 0.875rem; line-height: 1.6; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="2 Products" data-fa="2 محصول" data-ar="2 منتجات">2 محصول</p>
+                </div>
+            </a>
+            
+            <a href="details.html" style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #F0F0F0; text-decoration: none; color: inherit; display: block;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background: #FAFAFA;">
+                    <img src="laman-products/3-2.jpg" alt="Details" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 2rem;">
+                    <h3 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 0.75rem; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Details & Connections" data-fa="جزئیات و اتصالات" data-ar="التفاصيل والاتصالات">جزئیات و اتصالات</h3>
+                    <p style="color: #666; font-size: 0.875rem; line-height: 1.6; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Design Details" data-fa="جزئیات طراحی" data-ar="تفاصيل التصميم">جزئیات طراحی</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                    <span>Laman City</span>
+                </div>
+                <h3 class="footer-tagline" data-en="We make cities more beautiful" data-fa="ما شهرها را زیباتر می‌کنیم" data-ar="نحن نجعل المدن أكثر جمالاً">ما شهرها را زیباتر می‌کنیم</h3>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Laman. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است" data-ar="جميع الحقوق محفوظة">تمامی حقوق محفوظ است</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

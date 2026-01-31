@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Laman City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .contact-container {
+            margin-top: 90px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4rem 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #999;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #2D7A5F;
+        }
+        
+        .breadcrumb span {
+            color: #2D7A5F;
+        }
+        
+        .contact-title {
+            font-size: 4rem;
+            font-weight: 200;
+            margin-bottom: 1.5rem;
+            color: #000;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .contact-subtitle {
+            font-size: 1.125rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 4rem;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-info h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: #000;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2D7A5F;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .contact-item p {
+            font-size: 1.125rem;
+            color: #333;
+            line-height: 1.8;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #2D7A5F;
+        }
+        
+        .contact-form {
+            background: #F9F9F9;
+            padding: 3rem;
+            border-radius: 16px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2D7A5F;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: #2D7A5F;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .btn-submit:hover {
+            background: #236b52;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 122, 95, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 3rem 1.5rem;
+            }
+            
+            .contact-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 36px; width: auto;">
+                    <span>Laman City</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
+                    <span class="nav-link-disabled" data-en="News" data-fa="اخبار" data-ar="الأخبار">اخبار</span>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما" data-ar="معلومات عنا">درباره ما</a>
+                    <span class="nav-link-disabled" data-en="Media" data-fa="رسانه" data-ar="وسائل الإعلام">رسانه</span>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس" data-ar="اتصل بنا">تماس</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</a>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="btn-lang" onclick="toggleLanguage()">EN</button>
+                    <button class="btn-mobile" id="mobileBtn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Content -->
+    <div class="contact-container">
+        <div class="breadcrumb">
+            <a href="index.html" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
+            <span>◆</span>
+            <span data-en="Contact" data-fa="تماس" data-ar="اتصل بنا">تماس</span>
+        </div>
+        
+        <h1 class="contact-title" data-en="Contact Us" data-fa="تماس با ما" data-ar="اتصل بنا">تماس با ما</h1>
+        <p class="contact-subtitle" data-en="Get in touch with us for inquiries, quotes, or project collaborations." data-fa="برای سوالات، درخواست قیمت یا همکاری در پروژه‌ها با ما در تماس باشید." data-ar="تواصل معنا للاستفسارات أو عروض الأسعار أو التعاون في المشاريع.">
+            برای سوالات، درخواست قیمت یا همکاری در پروژه‌ها با ما در تماس باشید.
+        </p>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 data-en="Contact Information" data-fa="اطلاعات تماس" data-ar="معلومات الاتصال">اطلاعات تماس</h2>
+                
+                <div class="contact-item">
+                    <h3 data-en="Address" data-fa="آدرس" data-ar="عنوان">آدرس</h3>
+                    <p data-en="Tehran, Valiasr Street, No. 123" data-fa="تهران، خیابان ولیعصر، پلاک 123" data-ar="طهران، شارع فالياسر، رقم 123">
+                        تهران، خیابان ولیعصر، پلاک 123
+                    </p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3 data-en="Phone" data-fa="تلفن" data-ar="هاتف">تلفن</h3>
+                    <p><a href="tel:+982112345678">+98 21 1234 5678</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3 data-en="Email" data-fa="ایمیل" data-ar="بريد إلكتروني">ایمیل</h3>
+                    <p><a href="mailto:info@laman-city.com">info@laman-city.com</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3 data-en="Working Hours" data-fa="ساعات کاری" data-ar="ساعات العمل">ساعات کاری</h3>
+                    <p data-en="Saturday - Thursday: 9:00 AM - 6:00 PM" data-fa="شنبه تا پنج‌شنبه: 9:00 صبح - 6:00 عصر" data-ar="السبت - الخميس: 9:00 صباحًا - 6:00 مساءً">
+                        شنبه تا پنج‌شنبه: 9:00 صبح - 6:00 عصر
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label data-en="Name" data-fa="نام" data-ar="اسم">نام</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-en="Email" data-fa="ایمیل" data-ar="بريد إلكتروني">ایمیل</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-en="Phone" data-fa="تلفن" data-ar="هاتف">تلفن</label>
+                        <input type="tel" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-en="Message" data-fa="پیام" data-ar="رسالة">پیام</label>
+                        <textarea name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit" data-en="Send Message" data-fa="ارسال پیام" data-ar="إرسال رسالة">ارسال پیام</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                    <span>Laman City</span>
+                </div>
+                <h3 class="footer-tagline" data-en="We make cities more beautiful" data-fa="ما شهرها را زیباتر می‌کنیم" data-ar="نحن نجعل المدن أكثر جمالاً">ما شهرها را زیباتر می‌کنیم</h3>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Laman. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است" data-ar="جميع الحقوق محفوظة">تمامی حقوق محفوظ است</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert(window.currentLang === 'fa' ? 'پیام شما ارسال شد' : 'Your message has been sent');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - Laman City</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .catalogue-container {
+            margin-top: 90px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4rem 2rem;
+        }
+        
+        .catalogue-header {
+            margin-bottom: 3rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #999;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #2D7A5F;
+        }
+        
+        .breadcrumb span {
+            color: #2D7A5F;
+        }
+        
+        .catalogue-title {
+            font-size: 4rem;
+            font-weight: 200;
+            margin-bottom: 1.5rem;
+            color: #000;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .catalogue-subtitle {
+            font-size: 1.125rem;
+            color: #666;
+            line-height: 1.6;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .catalogue-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .catalogue-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        
+        .catalogue-item:last-child {
+            border-bottom: none;
+        }
+        
+        .catalogue-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .catalogue-icon {
+            width: 60px;
+            height: 60px;
+            background: #2D7A5F;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .catalogue-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        
+        .catalogue-content h2 {
+            font-size: 1.75rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #000;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .catalogue-content p {
+            font-size: 1rem;
+            color: #666;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .catalogue-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            background: #2D7A5F;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-download:hover {
+            background: #236b52;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 122, 95, 0.3);
+        }
+        
+        .btn-download svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .catalogue-container {
+                padding: 3rem 1.5rem;
+            }
+            
+            .catalogue-title {
+                font-size: 2.5rem;
+            }
+            
+            .catalogue-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+            
+            .catalogue-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 36px; width: auto;">
+                    <span>Laman City</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
+                    <span class="nav-link-disabled" data-en="News" data-fa="اخبار" data-ar="الأخبار">اخبار</span>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما" data-ar="معلومات عنا">درباره ما</a>
+                    <span class="nav-link-disabled" data-en="Media" data-fa="رسانه" data-ar="وسائل الإعلام">رسانه</span>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس" data-ar="اتصل بنا">تماس</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</a>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="btn-lang" onclick="toggleLanguage()">EN</button>
+                    <button class="btn-mobile" id="mobileBtn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Catalogue Content -->
+    <div class="catalogue-container">
+        <div class="catalogue-header">
+            <div class="breadcrumb">
+                <a href="index.html" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
+                <span>◆</span>
+                <span data-en="Catalogue" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</span>
+            </div>
+            
+            <h1 class="catalogue-title" data-en="Catalog" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</h1>
+            <p class="catalogue-subtitle" data-en="Our products in detail. Please find below our latest catalog of street furniture." data-fa="محصولات ما به تفصیل. لطفاً کاتالوگ جدید مبلمان شهری ما را در زیر پیدا کنید." data-ar="منتجاتنا بالتفصيل. يرجى العثور أدناه على أحدث كتالوج لأثاث الشوارع لدينا.">
+                محصولات ما به تفصیل. لطفاً کاتالوگ جدید مبلمان شهری ما را در زیر پیدا کنید.
+            </p>
+        </div>
+        
+        <div class="catalogue-items">
+            <div class="catalogue-item">
+                <div class="catalogue-info">
+                    <div class="catalogue-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                            <path d="M14 2v6h6"/>
+                        </svg>
+                    </div>
+                    <div class="catalogue-content">
+                        <h2 data-en="Laman Product Catalog 2024/25" data-fa="کاتالوگ محصولات لمان ۲۰۲۴/۲۵" data-ar="كتالوج منتجات لمان 2024/25">کاتالوگ محصولات لمان ۲۰۲۴/۲۵</h2>
+                        <p data-en="Complete collection of urban furniture products" data-fa="مجموعه کامل محصولات مبلمان شهری" data-ar="مجموعة كاملة من منتجات الأثاث الحضري">مجموعه کامل محصولات مبلمان شهری</p>
+                    </div>
+                </div>
+                <div class="catalogue-actions">
+                    <a href="Laman-Product Catalog.pdf" download class="btn-download" data-en="Download here" data-fa="دانلود اینجا" data-ar="تحميل هنا">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>دانلود اینجا</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                    <span>Laman City</span>
+                </div>
+                <h3 class="footer-tagline" data-en="We make cities more beautiful" data-fa="ما شهرها را زیباتر می‌کنیم" data-ar="نحن نجعل المدن أكثر جمالاً">ما شهرها را زیباتر می‌کنیم</h3>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Laman. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است" data-ar="جميع الحقوق محفوظة">تمامی حقوق محفوظ است</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
