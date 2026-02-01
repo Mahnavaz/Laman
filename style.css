@@ -1725,10 +1725,10 @@ body {
 .product-detail-container {
     max-width: 1400px;
     margin: 90px auto 0;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     display: grid;
-    grid-template-columns: 1fr 0.6fr;
-    gap: 4rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
     align-items: start;
 }
 
@@ -1743,7 +1743,7 @@ body {
     position: relative;
     width: 100%;
     aspect-ratio: 16/10;
-    background: #FAFAFA;
+    background: #F5F5F5;
     border-radius: 16px;
     overflow: hidden;
 }
@@ -1752,6 +1752,9 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-main-image {
@@ -1764,6 +1767,7 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease;
     cursor: zoom-in;
+    padding: 2rem;
 }
 
 .gallery-main-image:first-child {
@@ -1835,14 +1839,15 @@ body {
     height: 100px;
     border-radius: 12px;
     cursor: pointer;
-    border: 3px solid transparent;
+    border: 3px solid #E0E0E0;
     transition: all 0.3s;
-    object-fit: cover;
+    object-fit: contain;
     background: white;
+    padding: 0.5rem;
 }
 
 .thumbnail:hover {
-    border-color: #ccc;
+    border-color: #999;
 }
 
 .thumbnail.active {
@@ -2094,12 +2099,16 @@ body {
 @media (max-width: 1024px) {
     .product-detail-container {
         grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 3rem 1.5rem;
+        gap: 2.5rem;
+        padding: 2.5rem 1.5rem;
     }
     
     .product-gallery {
         aspect-ratio: 16/10;
+    }
+    
+    .gallery-main-image {
+        padding: 1.5rem;
     }
     
     .product-title {
@@ -2120,6 +2129,10 @@ body {
     
     .product-gallery {
         aspect-ratio: 4/3;
+    }
+    
+    .gallery-main-image {
+        padding: 1rem;
     }
     
     .product-title {
@@ -2146,6 +2159,7 @@ body {
     .thumbnail {
         flex: 0 0 70px;
         height: 70px;
+        padding: 0.25rem;
     }
     
     .lightbox-prev {
