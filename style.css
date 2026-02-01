@@ -1844,15 +1844,18 @@ body {
     transition: all 0.3s;
     object-fit: cover;
     background: white;
+    opacity: 0.6;
 }
 
 .thumbnail:hover {
     border-color: #999;
+    opacity: 0.8;
 }
 
 .thumbnail.active {
     border-color: var(--primary);
     box-shadow: 0 0 0 1px var(--primary);
+    opacity: 1;
 }
 
 /* Product Info Section */
