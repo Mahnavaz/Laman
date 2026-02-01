@@ -506,3 +506,84 @@ window.dibaApp = {
     updateQuoteBadge,
     applyLanguage
 };
+
+
+// Hero Carousel Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const heroTrack = document.getElementById('heroTrack');
+    const heroPrev = document.getElementById('heroPrev');
+    const heroNext = document.getElementById('heroNext');
+    
+    if (heroTrack && heroPrev && heroNext) {
+        const cards = heroTrack.querySelectorAll('.hero-carousel-card');
+        const totalCards = cards.length;
+        
+        function updateCarouselPosition() {
+            const offset = currentSlide * 100;
+            heroTrack.style.transform = `translateX(-${offset}%)`;
+            
+            // Update button states
+            heroPrev.style.opacity = currentSlide === 0 ? '0.5' : '1';
+            heroPrev.style.cursor = currentSlide === 0 ? 'default' : 'pointer';
+            heroNext.style.opacity = currentSlide >= totalCards - 1 ? '0.5' : '1';
+            heroNext.style.cursor = currentSlide >= totalCards - 1 ? 'default' : 'pointer';
+        }
+        
+        heroPrev.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateCarouselPosition();
+            }
+        });
+        
+        heroNext.addEventListener('click', () => {
+            if (currentSlide < totalCards - 1) {
+                currentSlide++;
+                updateCarouselPosition();
+            }
+        });
+        
+        // Auto-play carousel
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalCards;
+            updateCarouselPosition();
+        }, 5000);
+        
+        // Initialize
+        updateCarouselPosition();
+    }
+});
+
+
+// Dark Mode Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    const sunIcon = darkModeBtn?.querySelector('.sun-icon');
+    const moonIcon = darkModeBtn?.querySelector('.moon-icon');
+    
+    // Check saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    if (savedTheme === 'dark') {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+    }
+    
+    darkModeBtn?.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        if (newTheme === 'dark') {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        } else {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        }
+    });
+});

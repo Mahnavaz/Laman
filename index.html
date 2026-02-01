@@ -81,9 +81,9 @@
                             </div>
                         </div>
                     </div>
-                    <a href="laman.html" data-en="News" data-fa="اخبار">اخبار</a>
+                    <span class="nav-link-disabled" data-en="News" data-fa="اخبار">اخبار</span>
                     <a href="about.html" data-en="About us" data-fa="درباره ما">درباره ما</a>
-                    <a href="media.html" data-en="Media" data-fa="رسانه">رسانه</a>
+                    <span class="nav-link-disabled" data-en="Media" data-fa="رسانه">رسانه</span>
                     <a href="contact.html" data-en="Contacts" data-fa="تماس">تماس</a>
                     <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ">کاتالوگ</a>
                 </div>
@@ -105,22 +105,33 @@
                         <div class="lang-dropdown" id="langDropdown">
                             <div class="lang-dropdown-grid">
                                 <button class="lang-option" data-lang="en">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                                    </svg>
                                     <span>EN</span>
                                 </button>
                                 <button class="lang-option" data-lang="fa">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                                    </svg>
                                     <span>FA</span>
+                                </button>
+                                <button class="lang-option" data-lang="ar">
+                                    <span>AR</span>
                                 </button>
                             </div>
                         </div>
                     </div>
+                    <button class="btn-dark-mode" id="darkModeBtn" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                     <button class="btn-mobile" id="mobileBtn">☰</button>
                 </div>
             </div>
@@ -141,7 +152,7 @@
         <div class="hero-carousel-container">
             <div class="hero-carousel-track" id="heroTrack">
                 <div class="hero-carousel-card">
-                    <img src="laman-products/1-4.jpg" alt="Laman Bench">
+                    <img src="1-4.jpg" alt="Laman Bench">
                     <div class="hero-card-overlay"></div>
                     <div class="hero-card-content">
                         <div class="hero-card-number">01</div>
@@ -151,7 +162,7 @@
                 </div>
                 
                 <div class="hero-carousel-card">
-                    <img src="laman-products/3-2.jpg" alt="Laman Canopy">
+                    <img src="3-2.jpg" alt="Laman Canopy">
                     <div class="hero-card-overlay"></div>
                     <div class="hero-card-content">
                         <div class="hero-card-number">02</div>
@@ -161,7 +172,7 @@
                 </div>
                 
                 <div class="hero-carousel-card">
-                    <img src="laman-products/11-2.png" alt="Laman Platform">
+                    <img src="4-1.png" alt="Laman Platform">
                     <div class="hero-card-overlay"></div>
                     <div class="hero-card-content">
                         <div class="hero-card-number">03</div>

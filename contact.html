@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,176 +8,131 @@
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
     <style>
-        .contact-container {
-            margin-top: 90px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+        .contact-hero {
+            margin-top: 70px;
             padding: 4rem 2rem;
+            text-align: left;
+            background: #F8F8F8;
         }
-        
-        .breadcrumb {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            color: #999;
-            margin-bottom: 2rem;
-        }
-        
-        .breadcrumb a {
-            color: #999;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .breadcrumb a:hover {
-            color: #2D7A5F;
-        }
-        
-        .breadcrumb span {
-            color: #2D7A5F;
-        }
-        
-        .contact-title {
+
+        .contact-hero h1 {
             font-size: 4rem;
             font-weight: 200;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: #000;
             font-family: 'Inter', sans-serif;
         }
-        
-        .contact-subtitle {
-            font-size: 1.125rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 4rem;
-            font-family: 'Vazir', 'Tahoma', sans-serif;
+
+        .contact-main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
-        
+
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 4rem;
             margin-bottom: 4rem;
+            max-width: 600px;
         }
-        
-        .contact-info h2 {
-            font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            color: #000;
-            font-family: 'Vazir', 'Tahoma', sans-serif;
+
+        .contact-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
-        
-        .contact-item {
-            margin-bottom: 2rem;
+
+        .contact-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        
-        .contact-item h3 {
-            font-size: 1rem;
+
+        .contact-section h3 {
+            font-size: 1.25rem;
             font-weight: 600;
-            color: #2D7A5F;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-family: 'Vazir', 'Tahoma', sans-serif;
-        }
-        
-        .contact-item p {
-            font-size: 1.125rem;
-            color: #333;
-            line-height: 1.8;
-            font-family: 'Vazir', 'Tahoma', sans-serif;
-        }
-        
-        .contact-item a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .contact-item a:hover {
-            color: #2D7A5F;
-        }
-        
-        .contact-form {
-            background: #F9F9F9;
-            padding: 3rem;
-            border-radius: 16px;
-        }
-        
-        .form-group {
             margin-bottom: 1.5rem;
+            color: #000;
         }
-        
-        .form-group label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.5rem;
-            font-family: 'Vazir', 'Tahoma', sans-serif;
-        }
-        
-        .form-group input,
-        .form-group textarea {
+
+        .contact-dropdown {
             width: 100%;
             padding: 0.875rem 1rem;
             border: 1px solid #E0E0E0;
             border-radius: 8px;
             font-size: 1rem;
-            font-family: 'Vazir', 'Tahoma', sans-serif;
-            transition: border-color 0.3s;
+            font-family: 'Inter', sans-serif;
+            background: white;
+            cursor: pointer;
         }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #2D7A5F;
+
+        .contact-dropdown option[disabled] {
+            display: none;
         }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
+
+        .contact-map {
+            display: none;
         }
-        
-        .btn-submit {
-            width: 100%;
-            padding: 1rem;
-            background: #2D7A5F;
-            color: white;
-            border: none;
-            border-radius: 8px;
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .contact-info-card h4 {
             font-size: 1rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Vazir', 'Tahoma', sans-serif;
+            color: #2D7A5F;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
-        
-        .btn-submit:hover {
-            background: #236b52;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(45, 122, 95, 0.3);
+
+        .contact-info-card p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.8;
         }
-        
-        @media (max-width: 768px) {
-            .contact-container {
-                padding: 3rem 1.5rem;
-            }
-            
-            .contact-title {
-                font-size: 2.5rem;
-            }
-            
+
+        .contact-info-card a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info-card a:hover {
+            color: #2D7A5F;
+        }
+
+        @media (max-width: 1024px) {
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
             }
-            
-            .contact-form {
-                padding: 2rem;
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-map {
+                height: 350px;
             }
         }
     </style>
@@ -191,90 +146,199 @@
                     <img src="laman-logo.png" alt="Laman Logo" style="height: 36px; width: auto;">
                     <span>Laman City</span>
                 </a>
-                
                 <div class="nav-links" id="navLinks">
-                    <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
-                    <span class="nav-link-disabled" data-en="News" data-fa="اخبار" data-ar="الأخبار">اخبار</span>
-                    <a href="about.html" data-en="About us" data-fa="درباره ما" data-ar="معلومات عنا">درباره ما</a>
-                    <span class="nav-link-disabled" data-en="Media" data-fa="رسانه" data-ar="وسائل الإعلام">رسانه</span>
-                    <a href="contact.html" data-en="Contacts" data-fa="تماس" data-ar="اتصل بنا">تماس</a>
-                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</a>
+                    <div class="nav-dropdown">
+                        <a href="products.html" class="has-dropdown" data-en="Products" data-fa="محصولات">
+                            Products
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+                                <path d="M5 6L0 0h10L5 6z"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a href="benches.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="6" y="24" width="36" height="4"/>
+                                        <line x1="10" y1="28" x2="10" y2="36"/>
+                                        <line x1="38" y1="28" x2="38" y2="36"/>
+                                    </svg>
+                                    <span data-en="Benches" data-fa="نیمکت">Benches</span>
+                                </a>
+                                <a href="tables.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="8" y="20" width="32" height="4"/>
+                                        <line x1="12" y1="24" x2="12" y2="36"/>
+                                        <line x1="36" y1="24" x2="36" y2="36"/>
+                                    </svg>
+                                    <span data-en="Tables" data-fa="میز">Tables</span>
+                                </a>
+                                <a href="canopies.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M10 18 L24 10 L38 18"/>
+                                        <line x1="14" y1="18" x2="14" y2="38"/>
+                                        <line x1="34" y1="18" x2="34" y2="38"/>
+                                    </svg>
+                                    <span data-en="Canopies" data-fa="سایه‌بان">Canopies</span>
+                                </a>
+                                <a href="details.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="24" cy="24" r="14"/>
+                                        <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                                    </svg>
+                                    <span data-en="Details" data-fa="جزئیات">Details</span>
+                                </a>
+                                <a href="platforms.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="10" y="18" width="28" height="14" rx="2"/>
+                                        <line x1="14" y1="32" x2="14" y2="38"/>
+                                        <line x1="34" y1="32" x2="34" y2="38"/>
+                                    </svg>
+                                    <span data-en="Platforms" data-fa="پلتفرم">Platforms</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="nav-link-disabled" data-en="News" data-fa="اخبار">News</span>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما">About us</a>
+                    <span class="nav-link-disabled" data-en="Media" data-fa="رسانه">Media</span>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس">Contacts</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ">Catalogue</a>
                 </div>
-
                 <div class="nav-actions">
-                    <button class="btn-lang" onclick="toggleLanguage()">EN</button>
+                    <button class="btn-search" id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="lang-switcher">
+                        <button class="lang-current" id="langCurrent">
+                            EN
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+                                <path d="M5 6L0 0h10L5 6z"/>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <div class="lang-dropdown-grid">
+                                <button class="lang-option" data-lang="en">
+                                    <span>EN</span>
+                                </button>
+                                <button class="lang-option" data-lang="fa">
+                                    <span>FA</span>
+                                </button>
+                                <button class="lang-option" data-lang="ar">
+                                    <span>AR</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-dark-mode" id="darkModeBtn" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                     <button class="btn-mobile" id="mobileBtn">☰</button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Contact Content -->
-    <div class="contact-container">
-        <div class="breadcrumb">
-            <a href="index.html" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
-            <span>◆</span>
-            <span data-en="Contact" data-fa="تماس" data-ar="اتصل بنا">تماس</span>
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="search-close" id="searchClose">×</button>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search..." data-en-placeholder="Search..." data-fa-placeholder="جستجو...">
+            <div class="search-results" id="searchResults"></div>
         </div>
-        
-        <h1 class="contact-title" data-en="Contact Us" data-fa="تماس با ما" data-ar="اتصل بنا">تماس با ما</h1>
-        <p class="contact-subtitle" data-en="Get in touch with us for inquiries, quotes, or project collaborations." data-fa="برای سوالات، درخواست قیمت یا همکاری در پروژه‌ها با ما در تماس باشید." data-ar="تواصل معنا للاستفسارات أو عروض الأسعار أو التعاون في المشاريع.">
-            برای سوالات، درخواست قیمت یا همکاری در پروژه‌ها با ما در تماس باشید.
-        </p>
-        
+    </div>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <h1>Contact</h1>
+    </section>
+
+    <!-- Contact Main -->
+    <div class="contact-main">
         <div class="contact-grid">
-            <div class="contact-info">
-                <h2 data-en="Contact Information" data-fa="اطلاعات تماس" data-ar="معلومات الاتصال">اطلاعات تماس</h2>
-                
-                <div class="contact-item">
-                    <h3 data-en="Address" data-fa="آدرس" data-ar="عنوان">آدرس</h3>
-                    <p data-en="Tehran, Valiasr Street, No. 123" data-fa="تهران، خیابان ولیعصر، پلاک 123" data-ar="طهران، شارع فالياسر، رقم 123">
-                        تهران، خیابان ولیعصر، پلاک 123
-                    </p>
+            <!-- Sidebar -->
+            <div class="contact-sidebar">
+                <div class="contact-section">
+                    <h3>Continent</h3>
+                    <select class="contact-dropdown" id="continentSelect">
+                        <option value="">Select Continent</option>
+                        <option value="asia">Asia</option>
+                        <option value="africa">Africa</option>
+                    </select>
                 </div>
-                
-                <div class="contact-item">
-                    <h3 data-en="Phone" data-fa="تلفن" data-ar="هاتف">تلفن</h3>
-                    <p><a href="tel:+982112345678">+98 21 1234 5678</a></p>
-                </div>
-                
-                <div class="contact-item">
-                    <h3 data-en="Email" data-fa="ایمیل" data-ar="بريد إلكتروني">ایمیل</h3>
-                    <p><a href="mailto:info@laman-city.com">info@laman-city.com</a></p>
-                </div>
-                
-                <div class="contact-item">
-                    <h3 data-en="Working Hours" data-fa="ساعات کاری" data-ar="ساعات العمل">ساعات کاری</h3>
-                    <p data-en="Saturday - Thursday: 9:00 AM - 6:00 PM" data-fa="شنبه تا پنج‌شنبه: 9:00 صبح - 6:00 عصر" data-ar="السبت - الخميس: 9:00 صباحًا - 6:00 مساءً">
-                        شنبه تا پنج‌شنبه: 9:00 صبح - 6:00 عصر
-                    </p>
+
+                <div class="contact-section">
+                    <h3>Country</h3>
+                    <select class="contact-dropdown" id="countrySelect">
+                        <option value="">Select Country</option>
+                        <option value="iran" data-continent="asia">Iran</option>
+                        <option value="kenya" data-continent="africa">Kenya</option>
+                    </select>
                 </div>
             </div>
-            
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label data-en="Name" data-fa="نام" data-ar="اسم">نام</label>
-                        <input type="text" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label data-en="Email" data-fa="ایمیل" data-ar="بريد إلكتروني">ایمیل</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label data-en="Phone" data-fa="تلفن" data-ar="هاتف">تلفن</label>
-                        <input type="tel" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label data-en="Message" data-fa="پیام" data-ar="رسالة">پیام</label>
-                        <textarea name="message" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit" data-en="Send Message" data-fa="ارسال پیام" data-ar="إرسال رسالة">ارسال پیام</button>
-                </form>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="contact-info-grid">
+            <div class="contact-info-card">
+                <h4>Address</h4>
+                <p id="addressText">No. 3, Rokhsana Dead End, Shariati St, North of Motahari Intersection, Tehran, Iran</p>
+            </div>
+
+            <div class="contact-info-card">
+                <h4>Tel</h4>
+                <p id="telText">
+                    <a href="tel:+982145288000">+98 (0)21 45288000</a><br>
+                    <a href="tel:+982187700295">+98 (0)21 87700295</a>
+                </p>
+            </div>
+
+            <div class="contact-info-card">
+                <h4>Mobile Phone</h4>
+                <p id="mobileText">
+                    <a href="tel:+989912701922">+98 991 270 1922</a>
+                </p>
+            </div>
+
+            <div class="contact-info-card">
+                <h4>Fax</h4>
+                <p id="faxText">
+                    <a href="tel:+982186196270">+98 (0)21 86196270</a>
+                </p>
+            </div>
+
+            <div class="contact-info-card">
+                <h4>Zip Code</h4>
+                <p id="zipText">15676-15411</p>
+            </div>
+
+            <div class="contact-info-card">
+                <h4>Email</h4>
+                <p id="emailText">
+                    <a href="mailto:info@dibats.com">info@dibats.com</a>
+                </p>
+            </div>
+
+            <div class="contact-info-card">
+                <h4>Website</h4>
+                <p id="websiteText">
+                    <a href="https://dibats.com" target="_blank">dibats.com</a>
+                </p>
             </div>
         </div>
     </div>
@@ -287,21 +351,170 @@
                     <img src="laman-logo.png" alt="Laman Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
                     <span>Laman City</span>
                 </div>
-                <h3 class="footer-tagline" data-en="We make cities more beautiful" data-fa="ما شهرها را زیباتر می‌کنیم" data-ar="نحن نجعل المدن أكثر جمالاً">ما شهرها را زیباتر می‌کنیم</h3>
+                <h3 class="footer-tagline" data-en="We make cities more beautiful" data-fa="ما شهرها را زیباتر می‌کنیم">We make cities more beautiful</h3>
+                
+                <div class="footer-social">
+                    <p data-en="Follow us" data-fa="ما را دنبال کنید">Follow us</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="https://dibats.com/en/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem;">
+                    <img src="laman-products/logo.png" alt="Diba Group Logo" style="height: 24px; width: auto;">
+                    <span data-en="Diba Group" data-fa="گروه دیبا">Diba Group</span>
+                </a>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4 data-en="Stay in contact with us" data-fa="با ما در تماس باشید">Stay in contact with us</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your e-mail address" data-en-placeholder="Enter your e-mail address" data-fa-placeholder="آدرس ایمیل خود را وارد کنید">
+                    <button type="submit" class="btn-newsletter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-links-col">
+                    <h4 data-en="About Laman" data-fa="درباره لمان">About Laman</h4>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما">About us</a>
+                    <a href="design.html" data-en="The design studio" data-fa="استودیو طراحی">The design studio</a>
+                    <a href="production.html" data-en="Production" data-fa="تولید">Production</a>
+                    <a href="social.html" data-en="Laman social" data-fa="شبکه‌های اجتماعی">Laman social</a>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4 data-en="About our products" data-fa="درباره محصولات">About our products</h4>
+                    <a href="references.html" data-en="References" data-fa="مراجع">References</a>
+                    <a href="news.html" data-en="News" data-fa="اخبار">News</a>
+                    <a href="materials.html" data-en="Materials" data-fa="مواد">Materials</a>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس">Contacts</a>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4 data-en="And much more" data-fa="و بیشتر">And much more</h4>
+                    <a href="media.html" data-en="Media" data-fa="رسانه">Media</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ">Catalogue</a>
+                    <a href="support.html" data-en="Who we support" data-fa="چه کسانی را حمایت می‌کنیم">Who we support</a>
+                    <a href="gdpr.html" data-en="GDPR" data-fa="حریم خصوصی">GDPR</a>
+                </div>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>© 2026 Laman. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است" data-ar="جميع الحقوق محفوظة">تمامی حقوق محفوظ است</span></p>
+            <p>© 2026 Laman. <span data-en="All rights reserved and product information protected by Laman" data-fa="تمامی حقوق محفوظ و اطلاعات محصول توسط لمان محافظت می‌شود">All rights reserved and product information protected by Laman</span></p>
         </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert(window.currentLang === 'fa' ? 'پیام شما ارسال شد' : 'Your message has been sent');
-            this.reset();
+        // Contact information data
+        const contactData = {
+            iran: {
+                address: "No. 3, Rokhsana Dead End, Shariati St, North of Motahari Intersection, Tehran, Iran",
+                tel: '<a href="tel:+982145288000">+98 (0)21 45288000</a><br><a href="tel:+982187700295">+98 (0)21 87700295</a>',
+                mobile: '<a href="tel:+989912701922">+98 991 270 1922</a>',
+                fax: '<a href="tel:+982186196270">+98 (0)21 86196270</a>',
+                zip: "15676-15411",
+                email: '<a href="mailto:info@dibats.com">info@dibats.com</a>',
+                website: '<a href="https://dibats.com/en/" target="_blank">dibats.com/en</a>'
+            },
+            kenya: {
+                address: "iHiT, Dennis Pritt Road, Next to Maalim Juma Road, Kilimani, Nairobi, Kenya",
+                tel: '<a href="tel:+254112929020">+254 112929020</a>',
+                mobile: '-',
+                fax: '-',
+                zip: "38101-00100",
+                email: '<a href="mailto:ihit@dibats.com">ihit@dibats.com</a>',
+                website: '<a href="https://www.dibaarchiventure.com/" target="_blank">dibaarchiventure.com</a>'
+            }
+        };
+
+        const continentSelect = document.getElementById('continentSelect');
+        const countrySelect = document.getElementById('countrySelect');
+        const countryOptions = countrySelect.querySelectorAll('option[data-continent]');
+
+        // Filter countries based on continent selection
+        continentSelect.addEventListener('change', function() {
+            const selectedContinent = this.value;
+            countrySelect.value = '';
+            
+            // Reset contact info
+            document.getElementById('addressText').innerHTML = '-';
+            document.getElementById('telText').innerHTML = '-';
+            document.getElementById('mobileText').innerHTML = '-';
+            document.getElementById('faxText').innerHTML = '-';
+            document.getElementById('zipText').innerHTML = '-';
+            document.getElementById('emailText').innerHTML = '-';
+            document.getElementById('websiteText').innerHTML = '-';
+            
+            // Show/hide country options based on continent
+            countryOptions.forEach(option => {
+                if (selectedContinent === '') {
+                    option.style.display = 'none';
+                    option.disabled = true;
+                } else if (option.dataset.continent === selectedContinent) {
+                    option.style.display = 'block';
+                    option.disabled = false;
+                } else {
+                    option.style.display = 'none';
+                    option.disabled = true;
+                }
+            });
+        });
+
+        // Update contact info when country is selected
+        countrySelect.addEventListener('change', function() {
+            const country = this.value;
+            if (country && contactData[country]) {
+                const data = contactData[country];
+                document.getElementById('addressText').innerHTML = data.address;
+                document.getElementById('telText').innerHTML = data.tel;
+                document.getElementById('mobileText').innerHTML = data.mobile;
+                document.getElementById('faxText').innerHTML = data.fax;
+                document.getElementById('zipText').innerHTML = data.zip;
+                document.getElementById('emailText').innerHTML = data.email;
+                document.getElementById('websiteText').innerHTML = data.website;
+            }
+        });
+
+        // Initialize - hide all countries
+        countryOptions.forEach(option => {
+            option.style.display = 'none';
+            option.disabled = true;
         });
     </script>
 </body>
