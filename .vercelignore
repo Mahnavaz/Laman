@@ -1,0 +1,8 @@
+node_modules
+.git
+*.docx
+*.xlsx
+temp
+temp.txt
+tetx.txt
+codes up to now.docx
