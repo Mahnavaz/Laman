@@ -1,0 +1,256 @@
+{
+  "products": [
+    {
+      "id": "tar-bench",
+      "file": "product-tar-bench.html",
+      "title": {
+        "en": "Tar Bench",
+        "fa": "نیمکت تار"
+      },
+      "description": {
+        "en": "Modern bench inspired by musical strings design",
+        "fa": "نیمکت مدرن با طراحی الهام گرفته از تار موسیقی"
+      },
+      "category": "benches",
+      "images": ["Pictures/3-1.png", "Pictures/3-2.jpg", "Pictures/3-3.jpg", "Pictures/3-4.png", "Pictures/3-5.jpg", "Pictures/3-6.JPG", "Pictures/3-7.png", "Pictures/3-8.jpg"],
+      "specs": {
+        "length": {"en": "180 cm", "fa": "۱۸۰ سانتی‌متر"},
+        "width": {"en": "60 cm", "fa": "۶۰ سانتی‌متر"},
+        "height": {"en": "45 cm", "fa": "۴۵ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-tar-bench-backrest.html", "product-chaft-bench.html", "product-pood-bench.html"]
+    },
+    {
+      "id": "tar-bench-backrest",
+      "file": "product-tar-bench-backrest.html",
+      "title": {
+        "en": "Tar Bench with Backrest",
+        "fa": "نیمکت تار با پشتی"
+      },
+      "description": {
+        "en": "Ergonomic bench with comfortable backrest",
+        "fa": "نیمکت ارگونومیک با پشتی راحت"
+      },
+      "category": "benches",
+      "images": ["Pictures/4-1.png", "Pictures/4-2.png", "Pictures/4-3.png", "Pictures/4-4.png", "Pictures/4-5.png", "Pictures/4-6.png"],
+      "specs": {
+        "length": {"en": "180 cm", "fa": "۱۸۰ سانتی‌متر"},
+        "width": {"en": "60 cm", "fa": "۶۰ سانتی‌متر"},
+        "height": {"en": "85 cm", "fa": "۸۵ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-tar-bench.html", "product-chaft-bench.html", "product-kalaf-bench.html"]
+    },
+    {
+      "id": "chaft-bench",
+      "file": "product-chaft-bench.html",
+      "title": {
+        "en": "Chaft Bench",
+        "fa": "نیمکت چفت"
+      },
+      "description": {
+        "en": "Bench with unique connection system",
+        "fa": "نیمکت با سیستم اتصال منحصربه‌فرد"
+      },
+      "category": "benches",
+      "images": ["Pictures/5-1.png", "Pictures/5-2.png", "Pictures/5-3.png", "Pictures/5-4.png", "Pictures/5-5.jpg"],
+      "specs": {
+        "length": {"en": "180 cm", "fa": "۱۸۰ سانتی‌متر"},
+        "width": {"en": "55 cm", "fa": "۵۵ سانتی‌متر"},
+        "height": {"en": "45 cm", "fa": "۴۵ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-tar-bench.html", "product-pood-bench.html", "product-bast-bench.html"]
+    },
+    {
+      "id": "pood-bench",
+      "file": "product-pood-bench.html",
+      "title": {
+        "en": "Pood Bench",
+        "fa": "نیمکت پود"
+      },
+      "description": {
+        "en": "Contemporary design inspired by traditional weaving",
+        "fa": "طراحی معاصر با الهام از بافت سنتی"
+      },
+      "category": "benches",
+      "images": ["Pictures/6-1.png", "Pictures/6-2.png", "Pictures/6-3.png", "Pictures/6-4.png", "Pictures/6-5.png"],
+      "specs": {
+        "length": {"en": "180 cm", "fa": "۱۸۰ سانتی‌متر"},
+        "width": {"en": "60 cm", "fa": "۶۰ سانتی‌متر"},
+        "height": {"en": "45 cm", "fa": "۴۵ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-chaft-bench.html", "product-kalaf-bench.html", "product-bast-bench.html"]
+    },
+    {
+      "id": "kalaf-bench",
+      "file": "product-kalaf-bench.html",
+      "title": {
+        "en": "Kalaf Bench",
+        "fa": "نیمکت کلاف"
+      },
+      "description": {
+        "en": "Bench with organic form and flowing lines",
+        "fa": "نیمکت با فرم ارگانیک و خطوط روان"
+      },
+      "category": "benches",
+      "images": ["Pictures/7-1.png", "Pictures/7-2.png", "Pictures/7-3.png", "Pictures/7-4.png"],
+      "specs": {
+        "length": {"en": "180 cm", "fa": "۱۸۰ سانتی‌متر"},
+        "width": {"en": "60 cm", "fa": "۶۰ سانتی‌متر"},
+        "height": {"en": "45 cm", "fa": "۴۵ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-pood-bench.html", "product-bast-bench.html", "product-tar-bench-backrest.html"]
+    },
+    {
+      "id": "bast-bench",
+      "file": "product-bast-bench.html",
+      "title": {
+        "en": "Bast Bench",
+        "fa": "نیمکت بست"
+      },
+      "description": {
+        "en": "Easy installation with high stability",
+        "fa": "نصب آسان با پایداری بالا"
+      },
+      "category": "benches",
+      "images": ["Pictures/8-1.png", "Pictures/8-2.JPG", "Pictures/8-3.png", "Pictures/8-4.png", "Pictures/8-5.png", "Pictures/8-6.png"],
+      "specs": {
+        "length": {"en": "180 cm", "fa": "۱۸۰ سانتی‌متر"},
+        "width": {"en": "60 cm", "fa": "۶۰ سانتی‌متر"},
+        "height": {"en": "45 cm", "fa": "۴۵ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-kalaf-bench.html", "product-pood-bench.html", "product-chaft-bench.html"]
+    },
+    {
+      "id": "picnic-set",
+      "file": "product-picnic-set.html",
+      "title": {
+        "en": "Picnic Set",
+        "fa": "ست پیک‌نیک"
+      },
+      "description": {
+        "en": "Complete outdoor dining solution",
+        "fa": "راه‌حل کامل غذاخوری فضای باز"
+      },
+      "category": "tables",
+      "images": ["Pictures/9-1.png", "Pictures/9-2.png", "Pictures/9-3.png", "Pictures/9-4.png", "Pictures/9-5.png", "Pictures/9-6.png"],
+      "specs": {
+        "tableLength": {"en": "180 cm", "fa": "۱۸۰ سانتی‌متر"},
+        "tableWidth": {"en": "80 cm", "fa": "۸۰ سانتی‌متر"},
+        "height": {"en": "75 cm", "fa": "۷۵ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-tar-bench.html", "product-pallet-platform-01.html", "product-pallet-platform-02.html"]
+    },
+    {
+      "id": "pergola",
+      "file": "product-pergola.html",
+      "title": {
+        "en": "Pergola",
+        "fa": "پرگولا"
+      },
+      "description": {
+        "en": "Modern pergola with shading capability",
+        "fa": "پرگولای مدرن با قابلیت سایه‌اندازی"
+      },
+      "category": "canopies",
+      "images": ["Pictures/10-1.png", "Pictures/10-2.jpg", "Pictures/10-3.png", "Pictures/10-4.png"],
+      "specs": {
+        "length": {"en": "400 cm", "fa": "۴۰۰ سانتی‌متر"},
+        "width": {"en": "300 cm", "fa": "۳۰۰ سانتی‌متر"},
+        "height": {"en": "280 cm", "fa": "۲۸۰ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-baft-canopy.html", "product-pallet-platform-01.html", "product-picnic-set.html"]
+    },
+    {
+      "id": "baft-canopy",
+      "file": "product-baft-canopy.html",
+      "title": {
+        "en": "Woven Canopy",
+        "fa": "سایه‌بان بافت"
+      },
+      "description": {
+        "en": "Canopy with unique woven design pattern",
+        "fa": "سایه‌بان با الگوی بافت منحصربه‌فرد"
+      },
+      "category": "canopies",
+      "images": ["Pictures/11-1.png", "Pictures/11-2.png", "Pictures/11-3.png", "Pictures/11-4.png"],
+      "specs": {
+        "length": {"en": "350 cm", "fa": "۳۵۰ سانتی‌متر"},
+        "width": {"en": "350 cm", "fa": "۳۵۰ سانتی‌متر"},
+        "height": {"en": "300 cm", "fa": "۳۰۰ سانتی‌متر"},
+        "material": {"en": "Wood & Steel", "fa": "چوب و فولاد"}
+      },
+      "similarProducts": ["product-pergola.html", "product-tree-guard.html", "product-pallet-platform-01.html"]
+    },
+    {
+      "id": "pallet-platform-01",
+      "file": "product-pallet-platform-01.html",
+      "title": {
+        "en": "Pallet Platform 01",
+        "fa": "پلتفرم پالت ۰۱"
+      },
+      "description": {
+        "en": "Modular platform with integrated bench",
+        "fa": "پلتفرم ماژولار با نیمکت یکپارچه"
+      },
+      "category": "platforms",
+      "images": ["Pictures/1-1.png", "Pictures/1-2.png", "Pictures/1-3.png", "Pictures/1-4.jpg", "Pictures/1-5.jpg", "Pictures/1-6.png", "Pictures/1-7.jpg", "Pictures/1-8.jpg"],
+      "specs": {
+        "moduleLength": {"en": "260, 360, 460 cm", "fa": "۲۶۰، ۳۶۰، ۴۶۰ سانتی‌متر"},
+        "width": {"en": "140 cm", "fa": "۱۴۰ سانتی‌متر"},
+        "wallHeight": {"en": "120 cm", "fa": "۱۲۰ سانتی‌متر"},
+        "type": {"en": "Modular, with bench", "fa": "مدولار، با نیمکت"}
+      },
+      "similarProducts": ["product-pallet-platform-02.html", "product-pergola.html", "product-picnic-set.html"]
+    },
+    {
+      "id": "pallet-platform-02",
+      "file": "product-pallet-platform-02.html",
+      "title": {
+        "en": "Pallet Platform 02",
+        "fa": "پلتفرم پالت ۰۲"
+      },
+      "description": {
+        "en": "Versatile outdoor platform",
+        "fa": "پلتفرم چندمنظوره فضای باز"
+      },
+      "category": "platforms",
+      "images": ["Pictures/2-1.png", "Pictures/2-2.png", "Pictures/2-3.png"],
+      "specs": {
+        "moduleLength": {"en": "260, 360, 460 cm", "fa": "۲۶۰، ۳۶۰، ۴۶۰ سانتی‌متر"},
+        "width": {"en": "140 cm", "fa": "۱۴۰ سانتی‌متر"},
+        "wallHeight": {"en": "120 cm", "fa": "۱۲۰ سانتی‌متر"},
+        "type": {"en": "Modular, without bench", "fa": "مدولار، بدون نیمکت"}
+      },
+      "similarProducts": ["product-pallet-platform-01.html", "product-tree-guard.html", "product-pergola.html"]
+    },
+    {
+      "id": "tree-guard",
+      "file": "product-tree-guard.html",
+      "title": {
+        "en": "Tree Guard",
+        "fa": "محافظ درخت"
+      },
+      "description": {
+        "en": "Protective platform for urban trees",
+        "fa": "پلتفرم محافظ برای درختان شهری"
+      },
+      "category": "details",
+      "images": ["Pictures/12-1.png", "Pictures/12-2.png", "Pictures/12-3.png"],
+      "specs": {
+        "diameter": {"en": "120 cm", "fa": "۱۲۰ سانتی‌متر"},
+        "height": {"en": "45 cm", "fa": "۴۵ سانتی‌متر"},
+        "material": {"en": "Steel & Wood", "fa": "فولاد و چوب"},
+        "type": {"en": "Modular", "fa": "مدولار"}
+      },
+      "similarProducts": ["product-pallet-platform-02.html", "product-baft-canopy.html", "product-pallet-platform-01.html"]
+    }
+  ]
+}

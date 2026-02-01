@@ -147,48 +147,155 @@
         </div>
     </div>
 
-    <div style="margin-top: 90px; max-width: 1400px; margin-left: auto; margin-right: auto; padding: 4rem 2rem;">
-        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #999; margin-bottom: 2rem;">
-            <a href="index.html" style="color: #999; text-decoration: none;" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
-            <span>◆</span>
-            <a href="benches.html" style="color: #999; text-decoration: none;" data-en="Benches" data-fa="نیمکت‌ها" data-ar="المقاعد">نیمکت‌ها</a>
-            <span>◆</span>
-            <span style="color: #2D7A5F;" data-en="Tar Bench" data-fa="نیمکت تار" data-ar="مقعد تار">نیمکت تار</span>
+    <!-- Product Detail -->
+    <div class="product-detail-container">
+        <!-- Left Column: Gallery + Thumbnails -->
+        <div class="product-gallery-column">
+            <!-- Gallery Slider -->
+            <div class="product-gallery">
+                <div class="gallery-slider" id="gallerySlider">
+                <img src="Pictures/4-1.png" alt="Tar Bench with Backrest" class="gallery-main-image" data-index="0">
+                <img src="Pictures/4-2.png" alt="Tar Bench with Backrest" class="gallery-main-image" data-index="1">
+                <img src="Pictures/4-3.png" alt="Tar Bench with Backrest" class="gallery-main-image" data-index="2">
+                <img src="Pictures/4-4.png" alt="Tar Bench with Backrest" class="gallery-main-image" data-index="3">
+                <img src="Pictures/4-5.png" alt="Tar Bench with Backrest" class="gallery-main-image" data-index="4">
+                <img src="Pictures/4-6.png" alt="Tar Bench with Backrest" class="gallery-main-image" data-index="5">
+            </div>
+            <button class="gallery-nav-btn gallery-prev" id="galleryPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="gallery-nav-btn gallery-next" id="galleryNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Thumbnails -->
+            <div class="product-thumbnails">
+            <img src="Pictures/4-1.png" alt="Tar Bench with Backrest" class="thumbnail active" data-index="0">
+            <img src="Pictures/4-2.png" alt="Tar Bench with Backrest" class="thumbnail" data-index="1">
+            <img src="Pictures/4-3.png" alt="Tar Bench with Backrest" class="thumbnail" data-index="2">
+            <img src="Pictures/4-4.png" alt="Tar Bench with Backrest" class="thumbnail" data-index="3">
+            <img src="Pictures/4-5.png" alt="Tar Bench with Backrest" class="thumbnail" data-index="4">
+            <img src="Pictures/4-6.png" alt="Tar Bench with Backrest" class="thumbnail" data-index="5">
+        </div>
         </div>
         
-        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; margin-bottom: 4rem;">
-            <div>
-                <div style="aspect-ratio: 1; border-radius: 16px; overflow: hidden; background: #FAFAFA; margin-bottom: 1rem;">
-                    <img id="mainImage" src="laman-products/3-1.png" alt="Tar Bench" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
-                    <img src="laman-products/3-1.png" onclick="changeImage(this.src)" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid #2D7A5F;">
-                    <img src="laman-products/3-2.jpg" onclick="changeImage(this.src)" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;">
-                    <img src="laman-products/3-3.jpg" onclick="changeImage(this.src)" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;">
-                    <img src="laman-products/3-4.png" onclick="changeImage(this.src)" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid transparent;">
+        <!-- Right Column: Product Info -->
+        <div class="product-info-section">
+            <h1 class="product-title" data-en="Tar Bench with Backrest" data-fa="نیمکت تار با پشتی">Tar Bench with Backrest</h1>
+            <div class="product-description">
+                <p data-en="Ergonomic bench with comfortable backrest" data-fa="نیمکت ارگونومیک با پشتی راحت">
+                    Ergonomic bench with comfortable backrest
+                </p>
+                
+                <button class="read-more-btn" id="readMoreBtn" data-en="Read more" data-fa="بیشتر بخوانید">
+                    <span>Read more</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="expandable-content" id="expandableContent">
+                    <h3 style="font-size: 1.75rem; font-weight: 500; margin: 2.5rem 0 1.5rem; color: var(--primary);" data-en="Design Inspired by Music" data-fa="طراحی الهام‌گرفته از موسیقی">Design Inspired by Music</h3>
+                    
+                    <p data-en="The Tar Bench draws its inspiration from the elegant strings of traditional musical instruments, creating a harmonious blend of art and functionality in urban spaces." data-fa="نیمکت تار الهام خود را از سیم‌های ظریف سازهای موسیقی سنتی می‌گیرد و ترکیبی هماهنگ از هنر و کارکرد را در فضاهای شهری خلق می‌کند.">
+                        The Tar Bench draws its inspiration from the elegant strings of traditional musical instruments, creating a harmonious blend of art and functionality in urban spaces.
+                    </p>
+                    
+                    <h3 style="font-size: 1.5rem; font-weight: 500; margin: 2rem 0 1rem; color: var(--primary);" data-en="Durable Materials" data-fa="مواد با دوام">Durable Materials</h3>
+                    
+                    <p data-en="Constructed with high-quality wood and steel, the Tar Bench is built to withstand various weather conditions while maintaining its aesthetic appeal." data-fa="نیمکت تار با چوب و فولاد با کیفیت بالا ساخته شده و برای مقاومت در برابر شرایط مختلف آب و هوایی طراحی شده است.">
+                        Constructed with high-quality wood and steel, the Tar Bench is built to withstand various weather conditions while maintaining its aesthetic appeal.
+                    </p>
+                    
+                    <h3 style="font-size: 1.5rem; font-weight: 500; margin: 2rem 0 1rem; color: var(--primary);" data-en="Urban Integration" data-fa="یکپارچگی شهری">Urban Integration</h3>
+                    
+                    <p data-en="The minimalist design allows the Tar Bench to seamlessly integrate into various urban environments, from parks to public squares." data-fa="طراحی مینیمالیستی به نیمکت تار اجازه می‌دهد تا به‌طور یکپارچه در محیط‌های شهری مختلف، از پارک‌ها تا میدان‌های عمومی، جای بگیرد.">
+                        The minimalist design allows the Tar Bench to seamlessly integrate into various urban environments, from parks to public squares.
+                    </p>
                 </div>
             </div>
             
-            <div>
-                <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1rem; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Tar Bench" data-fa="نیمکت تار" data-ar="مقعد تار">نیمکت تار</h1>
-                <p style="font-size: 1.125rem; color: #666; line-height: 1.8; margin-bottom: 2rem; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Modern bench inspired by musical strings design" data-fa="نیمکت مدرن با طراحی الهام گرفته از تار موسیقی" data-ar="مقعد حديث مستوحى من تصميم الأوتار الموسيقية">
-                    نیمکت مدرن با طراحی الهام گرفته از تار موسیقی
-                </p>
-                
-                <div style="border-top: 1px solid #E0E0E0; padding-top: 2rem; margin-bottom: 2rem;">
-                    <div style="margin-bottom: 1.5rem;">
-                        <h3 style="font-size: 0.875rem; font-weight: 700; color: #2D7A5F; margin-bottom: 0.5rem; text-transform: uppercase; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Material" data-fa="متریال" data-ar="المواد">متریال</h3>
-                        <p style="font-size: 1rem; color: #333; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</p>
+            <div class="product-specs">
+                <h3 data-en="Technical Specifications" data-fa="مشخصات فنی">Technical Specifications</h3>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <span class="spec-label" data-en="Length" data-fa="Length">Length</span>
+                        <span class="spec-value" data-en="180 cm" data-fa="۱۸۰ سانتی‌متر">180 cm</span>
                     </div>
-                    
-                    <div style="margin-bottom: 1.5rem;">
-                        <h3 style="font-size: 0.875rem; font-weight: 700; color: #2D7A5F; margin-bottom: 0.5rem; text-transform: uppercase; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Category" data-fa="دسته‌بندی" data-ar="الفئة">دسته‌بندی</h3>
-                        <p style="font-size: 1rem; color: #333; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Benches" data-fa="نیمکت" data-ar="المقاعد">نیمکت</p>
+                    <div class="spec-item">
+                        <span class="spec-label" data-en="Width" data-fa="Width">Width</span>
+                        <span class="spec-value" data-en="60 cm" data-fa="۶۰ سانتی‌متر">60 cm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label" data-en="Height" data-fa="Height">Height</span>
+                        <span class="spec-value" data-en="85 cm" data-fa="۸۵ سانتی‌متر">85 cm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label" data-en="Material" data-fa="Material">Material</span>
+                        <span class="spec-value" data-en="Wood & Steel" data-fa="چوب و فولاد">Wood & Steel</span>
                     </div>
                 </div>
-                
-                <a href="contact.html" style="display: inline-block; padding: 1rem 2.5rem; background: #2D7A5F; color: white; text-decoration: none; border-radius: 8px; font-size: 1rem; font-weight: 600; font-family: 'Vazir', 'Tahoma', sans-serif;" data-en="Request Quote" data-fa="درخواست قیمت" data-ar="طلب عرض أسعار">درخواست قیمت</a>
             </div>
+        </div>
+    </div>
+
+    <!-- Similar Products -->
+    <section style="background: #F8F8F8; border-top: 2px solid #000; padding: 3rem 0; margin: 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h2 style="font-size: 2rem; font-weight: 300; margin-bottom: 2rem; text-align: left; font-family: 'Inter', sans-serif;" data-en="Similar products" data-fa="محصولات مشابه">Similar products</h2>
+            <div style="display: flex; gap: 2rem; margin-top: 2rem; overflow-x: auto;">
+                <a href="product-tar-bench-backrest.html" class="product-card" style="flex: 0 0 350px; text-decoration: none; color: inherit;">
+                    <div class="product-card-img" style="aspect-ratio: 1; overflow: hidden; background: white; border-radius: 8px;">
+                        <img src="4-1.png" alt="Tar Bench with Backrest" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-card-content" style="padding: 1rem 0;">
+                        <h3 style="font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;" data-en="Tar Bench with Backrest" data-fa="نیمکت تار با پشتی">Tar Bench with Backrest</h3>
+                        <p style="color: #666; font-size: 0.875rem; font-family: 'Inter', sans-serif;" data-en="Ergonomic bench with comfortable backrest" data-fa="نیمکت ارگونومیک با پشتی راحت">Ergonomic bench with comfortable backrest</p>
+                    </div>
+                </a>
+                <a href="product-chaft-bench.html" class="product-card" style="flex: 0 0 350px; text-decoration: none; color: inherit;">
+                    <div class="product-card-img" style="aspect-ratio: 1; overflow: hidden; background: white; border-radius: 8px;">
+                        <img src="5-1.png" alt="Chaft Bench" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-card-content" style="padding: 1rem 0;">
+                        <h3 style="font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;" data-en="Chaft Bench" data-fa="نیمکت چفت">Chaft Bench</h3>
+                        <p style="color: #666; font-size: 0.875rem; font-family: 'Inter', sans-serif;" data-en="Bench with unique connection system" data-fa="نیمکت با سیستم اتصال منحصربه‌فرد">Bench with unique connection system</p>
+                    </div>
+                </a>
+                <a href="product-pood-bench.html" class="product-card" style="flex: 0 0 350px; text-decoration: none; color: inherit;">
+                    <div class="product-card-img" style="aspect-ratio: 1; overflow: hidden; background: white; border-radius: 8px;">
+                        <img src="Pictures/6-1.png" alt="Pood Bench" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="product-card-content" style="padding: 1rem 0;">
+                        <h3 style="font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;" data-en="Pood Bench" data-fa="نیمکت پود">Pood Bench</h3>
+                        <p style="color: #666; font-size: 0.875rem; font-family: 'Inter', sans-serif;" data-en="Contemporary design inspired by traditional weaving" data-fa="طراحی معاصر با الهام از بافت سنتی">Contemporary design inspired by traditional weaving</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="Tar Bench" class="lightbox-image" id="lightboxImage">
+            <button class="lightbox-close" id="lightboxClose">×</button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+            <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
         </div>
     </div>
 
@@ -289,14 +396,5 @@
     </footer>
 
     <script src="script.js?v=2"></script>
-    <script>
-        function changeImage(src) {
-            document.getElementById('mainImage').src = src;
-            document.querySelectorAll('[onclick^="changeImage"]').forEach(img => {
-                img.style.border = '2px solid transparent';
-            });
-            event.target.style.border = '2px solid #2D7A5F';
-        }
-    </script>
 </body>
 </html>
