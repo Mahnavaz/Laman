@@ -3,166 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diba - Urban Furniture Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <title>Laman City - Urban Furniture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
     <!-- Header -->
     <header class="header">
         <nav class="container">
             <div class="nav-content">
-                <a href="index.html" class="logo">DIBA</a>
+                <a href="index.html" class="logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 36px; width: auto;">
+                    <span>Laman City</span>
+                </a>
                 
                 <div class="nav-links" id="navLinks">
-                    <a href="index.html" data-en="Home" data-fa="خانه">خانه</a>
-                    <a href="products.html" data-en="Products" data-fa="محصولات">محصولات</a>
-                    <a href="laman.html" data-en="Laman Collection" data-fa="کالکشن لمان">کالکشن لمان</a>
-                    <a href="projects.html" data-en="Projects" data-fa="پروژه‌ها">پروژه‌ها</a>
-                    <a href="about.html" data-en="About" data-fa="درباره ما">درباره ما</a>
-                    <a href="contact.html" data-en="Contact" data-fa="تماس با ما">تماس با ما</a>
+                    <div class="nav-dropdown">
+                        <a href="products.html" class="has-dropdown" data-en="Products" data-fa="محصولات">
+                            محصولات
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+                                <path d="M5 6L0 0h10L5 6z"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a href="benches.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="6" y="24" width="36" height="4"/>
+                                        <line x1="10" y1="28" x2="10" y2="36"/>
+                                        <line x1="38" y1="28" x2="38" y2="36"/>
+                                    </svg>
+                                    <span data-en="Benches" data-fa="نیمکت">نیمکت</span>
+                                </a>
+                                
+                                <a href="tables.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="8" y="20" width="32" height="4"/>
+                                        <line x1="12" y1="24" x2="12" y2="36"/>
+                                        <line x1="36" y1="24" x2="36" y2="36"/>
+                                    </svg>
+                                    <span data-en="Tables" data-fa="میز">میز</span>
+                                </a>
+                                
+                                <a href="canopies.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M10 18 L24 10 L38 18"/>
+                                        <line x1="14" y1="18" x2="14" y2="38"/>
+                                        <line x1="34" y1="18" x2="34" y2="38"/>
+                                    </svg>
+                                    <span data-en="Canopies" data-fa="سایه‌بان">سایه‌بان</span>
+                                </a>
+                                
+                                <a href="details.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="24" cy="24" r="14"/>
+                                        <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                                    </svg>
+                                    <span data-en="Details" data-fa="جزئیات">جزئیات</span>
+                                </a>
+                                
+                                <a href="platforms.html" class="dropdown-item">
+                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="10" y="18" width="28" height="14" rx="2"/>
+                                        <line x1="14" y1="32" x2="14" y2="38"/>
+                                        <line x1="34" y1="32" x2="34" y2="38"/>
+                                    </svg>
+                                    <span data-en="Platforms" data-fa="پلتفرم">پلتفرم</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="laman.html" data-en="News" data-fa="اخبار">اخبار</a>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما">درباره ما</a>
+                    <a href="media.html" data-en="Media" data-fa="رسانه">رسانه</a>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس">تماس</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ">کاتالوگ</a>
                 </div>
 
                 <div class="nav-actions">
-                    <a href="quote.html" class="btn-quote">
-                        <span data-en="Request Quote" data-fa="درخواست قیمت">درخواست قیمت</span>
-                        <span class="quote-badge" id="quoteBadge">0</span>
-                    </a>
-                    <button class="btn-lang" id="langBtn">EN</button>
+                    <button class="btn-search" id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="lang-switcher">
+                        <button class="lang-current" id="langCurrent">
+                            EN
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+                                <path d="M5 6L0 0h10L5 6z"/>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <div class="lang-dropdown-grid">
+                                <button class="lang-option" data-lang="en">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                    <span>EN</span>
+                                </button>
+                                <button class="lang-option" data-lang="fa">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                    </svg>
+                                    <span>FA</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <button class="btn-mobile" id="mobileBtn">☰</button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section - Masonry Grid -->
-    <section class="hero">
-        <div class="hero-grid">
-            <div class="hero-card">
-                <div class="hero-overlay"></div>
-                <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&q=80" alt="Urban Bench" class="hero-img">
-                <div class="hero-content">
-                    <h1 data-en="Modern Urban Spaces" data-fa="فضاهای شهری مدرن">فضاهای شهری مدرن</h1>
-                    <p data-en="Quality furniture for public areas" data-fa="مبلمان با کیفیت برای فضاهای عمومی">مبلمان با کیفیت برای فضاهای عمومی</p>
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="search-close" id="searchClose">×</button>
+            <input type="text" class="search-input" id="searchInput" placeholder="جستجو..." data-en-placeholder="Search..." data-fa-placeholder="جستجو...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="hero-carousel-container">
+            <div class="hero-carousel-track" id="heroTrack">
+                <div class="hero-carousel-card">
+                    <img src="laman-products/1-4.jpg" alt="Laman Bench">
+                    <div class="hero-card-overlay"></div>
+                    <div class="hero-card-content">
+                        <div class="hero-card-number">01</div>
+                        <h2 data-en="Urban Benches" data-fa="نیمکت‌های شهری">نیمکت‌های شهری</h2>
+                        <p data-en="Comfortable seating for public spaces" data-fa="نشستن راحت برای فضاهای عمومی">نشستن راحت برای فضاهای عمومی</p>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-card">
-                <div class="hero-overlay"></div>
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Park Bench" class="hero-img">
-                <div class="hero-content">
-                    <h1 data-en="Sustainable Design" data-fa="طراحی پایدار">طراحی پایدار</h1>
-                    <p data-en="Built to last for generations" data-fa="ساخته شده برای نسل‌ها">ساخته شده برای نسل‌ها</p>
+                
+                <div class="hero-carousel-card">
+                    <img src="laman-products/3-2.jpg" alt="Laman Canopy">
+                    <div class="hero-card-overlay"></div>
+                    <div class="hero-card-content">
+                        <div class="hero-card-number">02</div>
+                        <h2 data-en="Modern Canopies" data-fa="سایه‌بان‌های مدرن">سایه‌بان‌های مدرن</h2>
+                        <p data-en="Elegant shade solutions for urban areas" data-fa="راه‌حل‌های سایه زیبا برای مناطق شهری">راه‌حل‌های سایه زیبا برای مناطق شهری</p>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-card">
-                <div class="hero-overlay"></div>
-                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Public Space" class="hero-img">
-                <div class="hero-content">
-                    <h1 data-en="Architectural Excellence" data-fa="برتری معماری">برتری معماری</h1>
-                    <p data-en="Precision in every detail" data-fa="دقت در هر جزئیات">دقت در هر جزئیات</p>
+                
+                <div class="hero-carousel-card">
+                    <img src="laman-products/11-2.png" alt="Laman Platform">
+                    <div class="hero-card-overlay"></div>
+                    <div class="hero-card-content">
+                        <div class="hero-card-number">03</div>
+                        <h2 data-en="Modular Platforms" data-fa="پلتفرم‌های ماژولار">پلتفرم‌های ماژولار</h2>
+                        <p data-en="Flexible urban furniture systems" data-fa="سیستم‌های انعطاف‌پذیر مبلمان شهری">سیستم‌های انعطاف‌پذیر مبلمان شهری</p>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <button class="carousel-nav carousel-prev" id="heroPrev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="carousel-nav carousel-next" id="heroNext">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
     </section>
 
-    <!-- Categories -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title" data-en="Product Categories" data-fa="دسته‌بندی محصولات">دسته‌بندی محصولات</h2>
-            <div class="categories-grid">
-                <a href="products.html?cat=benches" class="category-card">
-                    <span data-en="Benches" data-fa="نیمکت‌ها">نیمکت‌ها</span>
-                </a>
-                <a href="products.html?cat=trash-bins" class="category-card">
-                    <span data-en="Trash Bins" data-fa="سطل‌های زباله">سطل‌های زباله</span>
-                </a>
-                <a href="products.html?cat=lighting" class="category-card">
-                    <span data-en="Lighting" data-fa="روشنایی">روشنایی</span>
-                </a>
-                <a href="products.html?cat=shelters" class="category-card">
-                    <span data-en="Shelters" data-fa="سایبان‌ها">سایبان‌ها</span>
-                </a>
-                <a href="products.html?cat=bike-racks" class="category-card">
-                    <span data-en="Bike Racks" data-fa="پارکینگ دوچرخه">پارکینگ دوچرخه</span>
-                </a>
-                <a href="products.html?cat=urban-elements" class="category-card">
-                    <span data-en="Urban Elements" data-fa="المان‌های شهری">المان‌های شهری</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Products -->
+    <!-- Categories Section -->
     <section class="section bg-gray">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-en="Products" data-fa="محصولات">محصولات</h2>
-                <a href="products.html" class="link" data-en="View Products →" data-fa="مشاهده محصولات ←">مشاهده محصولات ←</a>
+        <div class="section-header">
+            <h2 class="section-title" data-en="Our Products" data-fa="محصولات ما">محصولات ما</h2>
+            <a href="products.html" class="link" data-en="View all" data-fa="مشاهده همه">مشاهده همه →</a>
+        </div>
+        
+        <div class="categories-scroll-wrapper">
+            <div class="categories-scroll-track" id="categoriesTrack">
+                <a href="benches.html" class="category-pill">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="6" y="24" width="36" height="4"/>
+                        <line x1="10" y1="28" x2="10" y2="36"/>
+                        <line x1="38" y1="28" x2="38" y2="36"/>
+                    </svg>
+                    <span data-en="Benches" data-fa="نیمکت">نیمکت</span>
+                </a>
+                
+                <a href="tables.html" class="category-pill">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="8" y="20" width="32" height="4"/>
+                        <line x1="12" y1="24" x2="12" y2="36"/>
+                        <line x1="36" y1="24" x2="36" y2="36"/>
+                    </svg>
+                    <span data-en="Tables" data-fa="میز">میز</span>
+                </a>
+                
+                <a href="canopies.html" class="category-pill">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10 18 L24 10 L38 18"/>
+                        <line x1="14" y1="18" x2="14" y2="38"/>
+                        <line x1="34" y1="18" x2="34" y2="38"/>
+                    </svg>
+                    <span data-en="Canopies" data-fa="سایه‌بان">سایه‌بان</span>
+                </a>
+                
+                <a href="platforms.html" class="category-pill">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="10" y="18" width="28" height="14" rx="2"/>
+                        <line x1="14" y1="32" x2="14" y2="38"/>
+                        <line x1="34" y1="32" x2="34" y2="38"/>
+                    </svg>
+                    <span data-en="Platforms" data-fa="پلتفرم">پلتفرم</span>
+                </a>
+                
+                <a href="details.html" class="category-pill">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="24" cy="24" r="14"/>
+                        <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                    </svg>
+                    <span data-en="Details" data-fa="جزئیات">جزئیات</span>
+                </a>
             </div>
-            <div class="products-grid" id="featuredProducts"></div>
+            
+            <button class="category-scroll-arrow" id="categoryScrollBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
         </div>
     </section>
 
     <!-- Editorial Statement -->
     <section class="cta">
-        <div class="container">
-            <h2>
-                <span data-en="We believe in " data-fa="ما به ">ما به </span>
-                <span class="highlight" data-en="improving life" data-fa="بهبود زندگی">بهبود زندگی</span>
-                <span data-en=" in cities" data-fa=" در شهرها معتقدیم"> در شهرها معتقدیم</span>
-            </h2>
-            <p data-en="Through thoughtful design and sustainable materials, we create urban furniture that enhances public spaces and brings communities together." data-fa="از طریق طراحی دقیق و مواد پایدار، ما مبلمان شهری می‌سازیم که فضاهای عمومی را بهبود می‌بخشد و جوامع را به هم نزدیک می‌کند.">
-                از طریق طراحی دقیق و مواد پایدار، ما مبلمان شهری می‌سازیم که فضاهای عمومی را بهبود می‌بخشد و جوامع را به هم نزدیک می‌کند.
-            </p>
-            <a href="contact.html" class="btn btn-secondary" data-en="Start a Project" data-fa="شروع پروژه">شروع پروژه</a>
+        <div class="cta-wrapper">
+            <div class="cta-left">
+                <h2>
+                    <span data-en="We make cities" data-fa="ما شهرها را">ما شهرها را</span><br>
+                    <span class="cta-highlight" data-en="more beautiful" data-fa="زیباتر می‌کنیم">زیباتر می‌کنیم</span>
+                </h2>
+            </div>
+            <div class="cta-right">
+                <p data-en="Laman is a leading manufacturer of urban furniture. We design and produce high-quality benches, tables, canopies, and platforms that transform public spaces into vibrant community hubs." data-fa="لمان یک تولیدکننده پیشرو مبلمان شهری است. ما نیمکت‌ها، میزها، سایه‌بان‌ها و پلتفرم‌های با کیفیت بالا طراحی و تولید می‌کنیم که فضاهای عمومی را به مراکز پرجنب‌وجوش جامعه تبدیل می‌کنند.">
+                    لمان یک تولیدکننده پیشرو مبلمان شهری است. ما نیمکت‌ها، میزها، سایه‌بان‌ها و پلتفرم‌های با کیفیت بالا طراحی و تولید می‌کنیم که فضاهای عمومی را به مراکز پرجنب‌وجوش جامعه تبدیل می‌کنند.
+                </p>
+                <a href="about.html" class="btn-cta-dark">
+                    <span data-en="Learn more about us" data-fa="درباره ما بیشتر بدانید">درباره ما بیشتر بدانید</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer - Dark Mode -->
+    <!-- Where can you meet us -->
+    <section class="meet-us">
+        <div class="meet-us-content">
+            <h2 data-en="Where can you meet us?" data-fa="کجا می‌توانید ما را ببینید؟">کجا می‌توانید ما را ببینید؟</h2>
+            <a href="contact.html" class="btn-meet-us">
+                <span data-en="Contact us" data-fa="با ما تماس بگیرید">با ما تماس بگیرید</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-grid">
-            <div>
-                <h3>DIBA</h3>
-                <p data-en="Premium urban furniture manufacturer dedicated to creating sustainable, beautiful public spaces through innovative design and quality craftsmanship." data-fa="تولیدکننده مبلمان شهری پریمیوم متعهد به ایجاد فضاهای عمومی پایدار و زیبا از طریق طراحی نوآورانه و کیفیت ساخت.">
-                    تولیدکننده مبلمان شهری پریمیوم متعهد به ایجاد فضاهای عمومی پایدار و زیبا از طریق طراحی نوآورانه و کیفیت ساخت.
-                </p>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="laman-logo.png" alt="Laman Logo" style="height: 40px; width: auto; filter: brightness(0) invert(1);">
+                    <span>Laman City</span>
+                </div>
+                <h3 class="footer-tagline" data-en="We make cities more beautiful" data-fa="ما شهرها را زیباتر می‌کنیم">ما شهرها را زیباتر می‌کنیم</h3>
+                
                 <div class="footer-social">
-                    <a href="#" class="social-icon">in</a>
-                    <a href="#" class="social-icon">fb</a>
-                    <a href="#" class="social-icon">ig</a>
+                    <p data-en="Follow us" data-fa="ما را دنبال کنید">ما را دنبال کنید</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                
+                <a href="https://dibats.com/en/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem;">
+                    <img src="laman-products/logo.png" alt="Diba Group Logo" style="height: 24px; width: auto;">
+                    <span data-en="Diba Group" data-fa="گروه دیبا">Diba Group</span>
+                </a>
             </div>
-            <div>
-                <h4 data-en="Products" data-fa="محصولات">محصولات</h4>
-                <div class="footer-links">
-                    <a href="products.html?cat=benches" data-en="Benches" data-fa="نیمکت‌ها">نیمکت‌ها</a>
-                    <a href="products.html?cat=trash-bins" data-en="Trash Bins" data-fa="سطل‌های زباله">سطل‌های زباله</a>
-                    <a href="products.html?cat=lighting" data-en="Lighting" data-fa="روشنایی">روشنایی</a>
-                    <a href="products.html?cat=shelters" data-en="Shelters" data-fa="سایبان‌ها">سایبان‌ها</a>
+            
+            <div class="footer-newsletter">
+                <h4 data-en="Stay in contact with us" data-fa="با ما در تماس باشید">با ما در تماس باشید</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your e-mail address" data-en-placeholder="Enter your e-mail address" data-fa-placeholder="آدرس ایمیل خود را وارد کنید">
+                    <button type="submit" class="btn-newsletter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-links-col">
+                    <h4 data-en="About Laman" data-fa="درباره لمان">درباره لمان</h4>
+                    <a href="about.html" data-en="About us" data-fa="درباره ما">درباره ما</a>
+                    <a href="design.html" data-en="The design studio" data-fa="استودیو طراحی">استودیو طراحی</a>
+                    <a href="production.html" data-en="Production" data-fa="تولید">تولید</a>
+                    <a href="social.html" data-en="Laman social" data-fa="شبکه‌های اجتماعی">شبکه‌های اجتماعی</a>
                 </div>
-            </div>
-            <div>
-                <h4 data-en="Company" data-fa="شرکت">شرکت</h4>
-                <div class="footer-links">
-                    <a href="about.html" data-en="About Us" data-fa="درباره ما">درباره ما</a>
-                    <a href="projects.html" data-en="Projects" data-fa="پروژه‌ها">پروژه‌ها</a>
-                    <a href="contact.html" data-en="Contact" data-fa="تماس">تماس</a>
-                    <a href="quote.html" data-en="Request Quote" data-fa="درخواست قیمت">درخواست قیمت</a>
+                
+                <div class="footer-links-col">
+                    <h4 data-en="About our products" data-fa="درباره محصولات">درباره محصولات</h4>
+                    <a href="references.html" data-en="References" data-fa="مراجع">مراجع</a>
+                    <a href="news.html" data-en="News" data-fa="اخبار">اخبار</a>
+                    <a href="materials.html" data-en="Materials" data-fa="مواد">مواد</a>
+                    <a href="contact.html" data-en="Contacts" data-fa="تماس">تماس</a>
                 </div>
-            </div>
-            <div>
-                <h4 data-en="Contact" data-fa="تماس با ما">تماس با ما</h4>
-                <p>info@diba-furniture.com</p>
-                <p>+98 21 1234 5678</p>
-                <p data-en="Tehran, Valiasr Street, No. 123" data-fa="تهران، خیابان ولیعصر، پلاک 123">تهران، خیابان ولیعصر، پلاک 123</p>
+                
+                <div class="footer-links-col">
+                    <h4 data-en="And much more" data-fa="و بیشتر">و بیشتر</h4>
+                    <a href="media.html" data-en="Media" data-fa="رسانه">رسانه</a>
+                    <a href="catalogue.html" data-en="Catalogue" data-fa="کاتالوگ">کاتالوگ</a>
+                    <a href="support.html" data-en="Who we support" data-fa="چه کسانی را حمایت می‌کنیم">چه کسانی را حمایت می‌کنیم</a>
+                    <a href="gdpr.html" data-en="GDPR" data-fa="حریم خصوصی">حریم خصوصی</a>
+                </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>© 2026 DIBA. <span data-en="All rights reserved" data-fa="تمامی حقوق محفوظ است">تمامی حقوق محفوظ است</span></p>
+            <p>© 2026 Laman. <span data-en="All rights reserved and product information protected by Laman" data-fa="تمامی حقوق محفوظ و اطلاعات محصول توسط لمان محافظت می‌شود">تمامی حقوق محفوظ و اطلاعات محصول توسط لمان محافظت می‌شود</span></p>
         </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Laman City</title>
+    <title>Benches - Laman City</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=2">
     <style>
-        .about-container {
+        .category-page {
             margin-top: 90px;
-            max-width: 1600px;
+            max-width: 1400px;
             margin-left: auto;
             margin-right: auto;
             padding: 4rem 2rem;
@@ -25,132 +25,118 @@
             margin-bottom: 2rem;
         }
         
-        [data-theme="dark"] .breadcrumb {
-            color: #999999 !important;
-        }
-        
         .breadcrumb a {
             color: #999;
             text-decoration: none;
             transition: color 0.3s;
         }
         
-        [data-theme="dark"] .breadcrumb a {
-            color: #999999 !important;
-        }
-        
         .breadcrumb a:hover {
-            color: var(--accent);
+            color: #2D7A5F;
         }
         
         .breadcrumb span {
-            color: var(--accent);
+            color: #2D7A5F;
         }
         
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 4rem;
-            align-items: start;
-            margin-top: 3rem;
+        .category-header {
+            margin-bottom: 4rem;
         }
         
-        .about-text {
-            background: white;
-            padding: 4rem;
-            border-radius: 12px;
-        }
-        
-        [data-theme="dark"] .about-text {
-            background: var(--card-bg);
-        }
-        
-        .about-title {
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.2;
-        }
-        
-        [data-theme="dark"] .about-title {
-            color: var(--text-primary);
-        }
-        
-        .about-section {
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-section:last-child {
-            margin-bottom: 0;
-        }
-        
-        .about-section h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
+        .category-title {
+            font-size: 4rem;
+            font-weight: 200;
+            margin-bottom: 1rem;
+            color: #000;
             font-family: 'Inter', sans-serif;
         }
         
-        [data-theme="dark"] .about-section h3 {
-            color: var(--text-primary);
-        }
-        
-        .about-section p {
-            font-size: 1rem;
+        .category-description {
+            font-size: 1.125rem;
+            color: #666;
             line-height: 1.6;
-            color: #666666;
-            font-family: 'Inter', sans-serif;
-            text-align: left;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
         }
         
-        [data-theme="dark"] .about-section p {
-            color: var(--text-secondary);
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
         
-        .about-section strong {
-            color: inherit;
-            font-weight: 600;
-        }
-        
-        .about-image {
-            position: sticky;
-            top: 120px;
-            border-radius: 12px;
+        .product-card {
+            background: white;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid #F0F0F0;
+            transition: all 0.4s;
+            text-decoration: none;
+            color: inherit;
         }
         
-        .about-image img {
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            aspect-ratio: 1;
+            overflow: hidden;
+            background: #FAFAFA;
+        }
+        
+        .product-img img {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
         }
         
-        @media (max-width: 1024px) {
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .about-image {
-                position: static;
-            }
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 2rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .product-info p {
+            color: #666;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        .product-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #2D7A5F;
+            color: white;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
         }
         
         @media (max-width: 768px) {
-            .about-container {
+            .category-page {
                 padding: 3rem 1.5rem;
             }
             
-            .about-text {
-                padding: 2rem;
+            .category-title {
+                font-size: 2.5rem;
             }
             
-            .about-title {
-                font-size: 2rem;
+            .products-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -166,61 +152,7 @@
                 </a>
                 
                 <div class="nav-links" id="navLinks">
-                    <div class="nav-dropdown">
-                        <a href="products.html" class="has-dropdown" data-en="Products" data-fa="محصولات" data-ar="المنتجات">
-                            محصولات
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
-                                <path d="M5 6L0 0h10L5 6z"/>
-                            </svg>
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-grid">
-                                <a href="benches.html" class="dropdown-item">
-                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="6" y="24" width="36" height="4"/>
-                                        <line x1="10" y1="28" x2="10" y2="36"/>
-                                        <line x1="38" y1="28" x2="38" y2="36"/>
-                                    </svg>
-                                    <span data-en="Benches" data-fa="نیمکت" data-ar="المقاعد">نیمکت</span>
-                                </a>
-                                
-                                <a href="tables.html" class="dropdown-item">
-                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="8" y="20" width="32" height="4"/>
-                                        <line x1="12" y1="24" x2="12" y2="36"/>
-                                        <line x1="36" y1="24" x2="36" y2="36"/>
-                                    </svg>
-                                    <span data-en="Tables" data-fa="میز" data-ar="الطاولات">میز</span>
-                                </a>
-                                
-                                <a href="canopies.html" class="dropdown-item">
-                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <path d="M10 18 L24 10 L38 18"/>
-                                        <line x1="14" y1="18" x2="14" y2="38"/>
-                                        <line x1="34" y1="18" x2="34" y2="38"/>
-                                    </svg>
-                                    <span data-en="Canopies" data-fa="سایه‌بان">سایه‌بان</span>
-                                </a>
-                                
-                                <a href="details.html" class="dropdown-item">
-                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <circle cx="24" cy="24" r="14"/>
-                                        <circle cx="24" cy="24" r="4" fill="currentColor"/>
-                                    </svg>
-                                    <span data-en="Details" data-fa="جزئیات" data-ar="التفاصل">جزئیات</span>
-                                </a>
-                                
-                                <a href="platforms.html" class="dropdown-item">
-                                    <svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="10" y="18" width="28" height="14" rx="2"/>
-                                        <line x1="14" y1="32" x2="14" y2="38"/>
-                                        <line x1="34" y1="32" x2="34" y2="38"/>
-                                    </svg>
-                                    <span data-en="Platforms" data-fa="پلتفرم" data-ar="المنصات">پلتفرم</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
                     <span class="nav-link-disabled" data-en="News" data-fa="اخبار" data-ar="الأخبار">اخبار</span>
                     <a href="about.html" data-en="About us" data-fa="درباره ما" data-ar="معلومات عنا">درباره ما</a>
                     <span class="nav-link-disabled" data-en="Media" data-fa="رسانه" data-ar="وسائل الإعلام">رسانه</span>
@@ -229,89 +161,96 @@
                 </div>
 
                 <div class="nav-actions">
-                    <button class="btn-search" id="searchBtn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                    </button>
-                    <div class="lang-switcher">
-                        <button class="lang-current" id="langCurrent">
-                            FA
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
-                                <path d="M5 6L0 0h10L5 6z"/>
-                            </svg>
-                        </button>
-                        <div class="lang-dropdown" id="langDropdown">
-                            <div class="lang-dropdown-grid">
-                                <button class="lang-option" data-lang="en">
-                                    <span>EN</span>
-                                </button>
-                                <button class="lang-option" data-lang="fa">
-                                    <span>FA</span>
-                                </button>
-                                <button class="lang-option" data-lang="ar">
-                                    <span>AR</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-dark-mode" id="darkModeBtn" aria-label="Toggle dark mode">
-                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
+                    <button class="btn-lang" onclick="toggleLanguage()">EN</button>
                     <button class="btn-mobile" id="mobileBtn">☰</button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- About Content -->
-    <div class="about-container">
+    <!-- Category Content -->
+    <div class="category-page">
         <div class="breadcrumb">
             <a href="index.html" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
             <span>◆</span>
-            <span data-en="About us" data-fa="درباره ما" data-ar="معلومات عنا">درباره ما</span>
+            <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
+            <span>◆</span>
+            <span data-en="Benches" data-fa="نیمکت‌ها" data-ar="المقاعد">نیمکت‌ها</span>
         </div>
         
-        <div class="about-content">
-            <div class="about-text">
-                <h1 class="about-title" data-en="Why Laman?" data-fa="چرا لمان؟" data-ar="لماذا لمان؟">چرا لمان؟</h1>
-                
-                <div class="about-section">
-                    <p data-en="Our mission is to transform the city into the main stage of life and enhance the quality of staying." data-fa="ماموریت ما تبدیل شهر به صحنه اصلی زندگی و ارتقای کیفیت اقامت است." data-ar="مهمتنا هي تحويل المدينة إلى المسرح الرئيسي للحياة وتحسين جودة الإقامة.">
-                        ماموریت ما تبدیل شهر به صحنه اصلی زندگی و ارتقای کیفیت اقامت است.
-                    </p>
+        <div class="category-header">
+            <h1 class="category-title" data-en="Benches" data-fa="نیمکت‌ها" data-ar="المقاعد">نیمکت‌ها</h1>
+            <p class="category-description" data-en="Elegant and durable benches designed for urban spaces. Our collection combines comfort, aesthetics, and longevity." data-fa="نیمکت‌های زیبا و بادوام طراحی شده برای فضاهای شهری. مجموعه ما راحتی، زیبایی و دوام را ترکیب می‌کند." data-ar="مقاعد أنيقة ومتينة مصممة للمساحات الحضرية. تجمع مجموعتنا بين الراحة والجمال والمتانة.">
+                نیمکت‌های زیبا و بادوام طراحی شده برای فضاهای شهری. مجموعه ما راحتی، زیبایی و دوام را ترکیب می‌کند.
+            </p>
+        </div>
+        
+        <div class="products-grid">
+            <a href="product-tar-bench.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/3-1.png" alt="Tar Bench">
                 </div>
-                
-                <div class="about-section">
-                    <p data-en="Laman is not just a manufacturer; we are a studio of architects and designers who give a new identity to the neglected corners of the city." data-fa="لمان تنها یک تولیدکننده نیست؛ ما استودیویی از معماران و طراحان هستیم که به گوشه‌های فراموش‌شده شهر هویت تازه‌ای می‌بخشیم." data-ar="لمان ليست مجرد شركة تصنيع؛ نحن استوديو من المهندسين المعماريين والمصممين الذين يمنحون هوية جديدة للزوايا المنسية في المدينة.">
-                        لمان تنها یک تولیدکننده نیست؛ ما استودیویی از معماران و طراحان هستیم که به گوشه‌های فراموش‌شده شهر هویت تازه‌ای می‌بخشیم.
-                    </p>
+                <div class="product-info">
+                    <h3 data-en="Tar Bench" data-fa="نیمکت تار" data-ar="مقعد تار">نیمکت تار</h3>
+                    <p data-en="Modern bench inspired by musical strings design" data-fa="نیمکت مدرن با طراحی الهام گرفته از تار موسیقی" data-ar="مقعد حديث مستوحى من تصميم الأوتار الموسيقية">نیمکت مدرن با طراحی الهام گرفته از تار موسیقی</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
                 </div>
-                
-                <div class="about-section">
-                    <p data-en="Our design language is based on simplicity and readability. By using minimal materials and recycled materials (such as valuable traverse wood), we leave the smallest footprint on the environment." data-fa="زبان طراحی ما بر سادگی و خوانایی استوار است. با استفاده از مواد مینیمال و مواد بازیافتی (مانند چوب تراورس ارزشمند)، کمترین ردپا را بر محیط زیست باقی می‌گذاریم." data-ar="لغة التصميم لدينا تستند إلى البساطة والوضوح. باستخدام المواد البسيطة والمواد المعاد تدويرها (مثل خشب الترافرس القيم)، نترك أصغر بصمة على البيئة.">
-                        زبان طراحی ما بر سادگی و خوانایی استوار است. با استفاده از مواد مینیمال و مواد بازیافتی (مانند چوب تراورس ارزشمند)، کمترین ردپا را بر محیط زیست باقی می‌گذاریم.
-                    </p>
-                </div>
-            </div>
+            </a>
             
-            <div class="about-image">
-                <img src="laman-products/About Us.png" alt="About Laman">
-            </div>
+            <a href="product-tar-bench-backrest.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/4-1.png" alt="Tar Bench with Backrest">
+                </div>
+                <div class="product-info">
+                    <h3 data-en="Tar Bench with Backrest" data-fa="نیمکت تار با تکیه‌گاه" data-ar="مقعد تار مع مسند الظهر">نیمکت تار با تکیه‌گاه</h3>
+                    <p data-en="Tar bench with ergonomic backrest for enhanced comfort" data-fa="نیمکت تار با تکیه‌گاه ارگونومیک برای راحتی بیشتر" data-ar="مقعد تار مع مسند ظهر مريح للراحة المحسنة">نیمکت تار با تکیه‌گاه ارگونومیک برای راحتی بیشتر</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                </div>
+            </a>
+            
+            <a href="product-chaft-bench.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/5-1.png" alt="Chaft Bench">
+                </div>
+                <div class="product-info">
+                    <h3 data-en="Chaft Bench" data-fa="نیمکت چفت" data-ar="مقعد چفت">نیمکت چفت</h3>
+                    <p data-en="Bench with unique connection system and minimal design" data-fa="نیمکت با سیستم اتصال منحصر به فرد و طراحی مینیمال" data-ar="مقعد بنظام اتصال فريد وتصميم بسيط">نیمکت با سیستم اتصال منحصر به فرد و طراحی مینیمال</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                </div>
+            </a>
+            
+            <a href="product-pood-bench.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/6-1.png" alt="Pood Bench">
+                </div>
+                <div class="product-info">
+                    <h3 data-en="Pood Bench" data-fa="نیمکت پود" data-ar="مقعد پود">نیمکت پود</h3>
+                    <p data-en="Bench inspired by traditional weaving and contemporary architecture" data-fa="نیمکت با الهام از بافت سنتی و معماری معاصر" data-ar="مقعد مستوحى من النسيج التقليدي والعمارة المعاصرة">نیمکت با الهام از بافت سنتی و معماری معاصر</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                </div>
+            </a>
+            
+            <a href="product-kalaf-bench.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/7-1.png" alt="Kalaf Bench">
+                </div>
+                <div class="product-info">
+                    <h3 data-en="Kalaf Bench" data-fa="نیمکت کلاف" data-ar="مقعد کلاف">نیمکت کلاف</h3>
+                    <p data-en="Bench with organic form and flowing lines" data-fa="نیمکت با فرم ارگانیک و خطوط روان" data-ar="مقعد بشكل عضوي وخطوط انسيابية">نیمکت با فرم ارگانیک و خطوط روان</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                </div>
+            </a>
+            
+            <a href="product-bast-bench.html" class="product-card">
+                <div class="product-img">
+                    <img src="laman-products/8-1.png" alt="Bast Bench">
+                </div>
+                <div class="product-info">
+                    <h3 data-en="Bast Bench" data-fa="نیمکت بست" data-ar="مقعد بست">نیمکت بست</h3>
+                    <p data-en="Bench with easy installation system and high stability" data-fa="نیمکت با سیستم نصب آسان و پایداری بالا" data-ar="مقعد بنظام تركيب سهل واستقرار عالي">نیمکت با سیستم نصب آسان و پایداری بالا</p>
+                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -332,6 +271,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>

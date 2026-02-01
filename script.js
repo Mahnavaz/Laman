@@ -1,5 +1,5 @@
 // Language Management
-let currentLang = localStorage.getItem('lang') || 'fa';
+let currentLang = localStorage.getItem('lang') || 'en';
 
 const translations = {
     fa: {
@@ -16,30 +16,123 @@ const translations = {
 const products = [
     {
         id: 1,
-        nameEn: 'Modern Park Bench',
-        nameFa: 'نیمکت پارکی مدرن',
-        descEn: 'Elegant wooden bench with steel frame',
-        descFa: 'نیمکت چوبی زیبا با فریم فولادی',
-        image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
-        category: 'benches'
+        nameEn: 'Tar Bench',
+        nameFa: 'نیمکت تار',
+        descEn: 'Modern bench inspired by musical strings design',
+        descFa: 'نیمکت مدرن با طراحی الهام گرفته از تار موسیقی',
+        image: 'laman-products/3-1.png',
+        category: 'benches',
+        url: 'product-tar-bench.html'
     },
     {
         id: 2,
-        nameEn: 'Urban Waste Bin',
-        nameFa: 'سطل زباله شهری',
-        descEn: 'Durable steel waste bin with modern design',
-        descFa: 'سطل زباله فولادی با طراحی مدرن',
-        image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=800&q=80',
-        category: 'trash-bins'
+        nameEn: 'Tar Bench with Backrest',
+        nameFa: 'نیمکت تار با تکیه‌گاه',
+        descEn: 'Ergonomic bench with comfortable backrest',
+        descFa: 'نیمکت ارگونومیک با تکیه‌گاه راحت',
+        image: 'laman-products/4-1.png',
+        category: 'benches',
+        url: 'product-tar-bench-backrest.html'
     },
     {
         id: 3,
-        nameEn: 'LED Street Light',
-        nameFa: 'چراغ خیابانی LED',
-        descEn: 'Energy-efficient LED street lighting',
-        descFa: 'روشنایی خیابانی LED با مصرف انرژی کم',
-        image: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80',
-        category: 'lighting'
+        nameEn: 'Chaft Bench',
+        nameFa: 'نیمکت چفت',
+        descEn: 'Minimal design with unique connection system',
+        descFa: 'طراحی مینیمال با سیستم اتصال منحصر به فرد',
+        image: 'laman-products/5-1.png',
+        category: 'benches',
+        url: 'product-chaft-bench.html'
+    },
+    {
+        id: 4,
+        nameEn: 'Pood Bench',
+        nameFa: 'نیمکت پود',
+        descEn: 'Contemporary design inspired by traditional weaving',
+        descFa: 'طراحی معاصر با الهام از بافت سنتی',
+        image: 'laman-products/6-1.png',
+        category: 'benches',
+        url: 'product-pood-bench.html'
+    },
+    {
+        id: 5,
+        nameEn: 'Kalaf Bench',
+        nameFa: 'نیمکت کلاف',
+        descEn: 'Organic form with flowing lines',
+        descFa: 'فرم ارگانیک با خطوط روان',
+        image: 'laman-products/7-1.png',
+        category: 'benches',
+        url: 'product-kalaf-bench.html'
+    },
+    {
+        id: 6,
+        nameEn: 'Bast Bench',
+        nameFa: 'نیمکت بست',
+        descEn: 'Easy installation with high stability',
+        descFa: 'نصب آسان با پایداری بالا',
+        image: 'laman-products/8-1.png',
+        category: 'benches',
+        url: 'product-bast-bench.html'
+    },
+    {
+        id: 7,
+        nameEn: 'Pallet Platform 01',
+        nameFa: 'پلتفرم پالت ۰۱',
+        descEn: 'Modular platform with integrated seating',
+        descFa: 'پلتفرم ماژولار با نشیمن یکپارچه',
+        image: 'laman-products/1-1.png',
+        category: 'platforms',
+        url: 'product-pallet-platform-01.html'
+    },
+    {
+        id: 8,
+        nameEn: 'Pallet Platform 02',
+        nameFa: 'پلتفرم پالت ۰۲',
+        descEn: 'Flexible urban platform without bench',
+        descFa: 'پلتفرم شهری انعطاف‌پذیر بدون نیمکت',
+        image: 'laman-products/2-1.png',
+        category: 'platforms',
+        url: 'product-pallet-platform-02.html'
+    },
+    {
+        id: 9,
+        nameEn: 'Picnic Set',
+        nameFa: 'ست پیک‌نیک',
+        descEn: 'Complete picnic table and bench set',
+        descFa: 'ست کامل میز و نیمکت پیک‌نیک',
+        image: 'laman-products/9-1.png',
+        category: 'tables',
+        url: 'product-picnic-set.html'
+    },
+    {
+        id: 10,
+        nameEn: 'Pergola',
+        nameFa: 'پرگولا',
+        descEn: 'Modular urban structure with shading capability',
+        descFa: 'سازه مدولار شهری با قابلیت سایه‌اندازی',
+        image: 'laman-products/10-1.png',
+        category: 'canopies',
+        url: 'product-pergola.html'
+    },
+    {
+        id: 11,
+        nameEn: 'Baft Canopy',
+        nameFa: 'سایه‌بان بافت',
+        descEn: 'Canopy with unique woven design',
+        descFa: 'سایه‌بان با طراحی بافت منحصر به فرد',
+        image: 'laman-products/11-1.png',
+        category: 'canopies',
+        url: 'product-baft-canopy.html'
+    },
+    {
+        id: 12,
+        nameEn: 'Tree Guard',
+        nameFa: 'محافظ درخت',
+        descEn: 'Essential element for protecting tree trunks',
+        descFa: 'المان ضروری برای حفاظت از تنه درختان',
+        image: 'laman-products/12-1.png',
+        category: 'details',
+        url: 'product-tree-guard.html'
     }
 ];
 
@@ -47,11 +140,266 @@ const products = [
 function init() {
     applyLanguage();
     updateQuoteBadge();
-    renderFeaturedProducts();
+    initCarousel();
+    initCategoryScroll();
+    initSearch();
+    initLanguageSwitcher();
+    initScrollToTop();
     
     // Event Listeners
-    document.getElementById('langBtn').addEventListener('click', toggleLanguage);
-    document.getElementById('mobileBtn')?.addEventListener('click', toggleMobileMenu);
+    const mobileBtn = document.getElementById('mobileBtn');
+    if (mobileBtn) mobileBtn.addEventListener('click', toggleMobileMenu);
+}
+
+// Scroll to Top
+function initScrollToTop() {
+    const scrollBtn = document.getElementById('scrollToTop');
+    
+    if (scrollBtn) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        
+        // Scroll to top on click
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Category Scroll
+function initCategoryScroll() {
+    const scrollBtn = document.getElementById('categoryScrollBtn');
+    const scrollTrack = document.querySelector('.categories-scroll-track');
+    
+    if (scrollBtn && scrollTrack) {
+        scrollBtn.addEventListener('click', () => {
+            const scrollAmount = document.documentElement.dir === 'rtl' ? -400 : 400;
+            scrollTrack.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Language Switcher
+function initLanguageSwitcher() {
+    const langCurrent = document.querySelector('.lang-current');
+    const langDropdown = document.querySelector('.lang-dropdown');
+    const langOptions = document.querySelectorAll('.lang-option');
+    
+    if (langCurrent && langDropdown) {
+        // Toggle dropdown
+        langCurrent.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langCurrent.classList.toggle('active');
+            langDropdown.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            langCurrent.classList.remove('active');
+            langDropdown.classList.remove('active');
+        });
+        
+        // Prevent dropdown from closing when clicking inside
+        langDropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+    
+    langOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const lang = option.getAttribute('data-lang');
+            if (lang !== currentLang) {
+                currentLang = lang;
+                localStorage.setItem('lang', currentLang);
+                applyLanguage();
+                updateLanguageSwitcher();
+                
+                // Close dropdown
+                if (langCurrent && langDropdown) {
+                    langCurrent.classList.remove('active');
+                    langDropdown.classList.remove('active');
+                }
+            }
+        });
+    });
+    updateLanguageSwitcher();
+}
+
+function updateLanguageSwitcher() {
+    const langCurrent = document.querySelector('.lang-current');
+    if (langCurrent) {
+        const langText = currentLang === 'fa' ? 'FA' : 'EN';
+        const svgIcon = `<svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
+                            <path d="M5 6L0 0h10L5 6z"/>
+                        </svg>`;
+        langCurrent.innerHTML = langText + svgIcon;
+    }
+}
+
+// Category Scroll
+function initCategoryScroll() {
+    const scrollBtn = document.getElementById('categoryScrollNext');
+    const scrollContainer = document.querySelector('.categories-scroll');
+    
+    if (scrollBtn && scrollContainer) {
+        scrollBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Search Functionality
+function initSearch() {
+    const searchBtn = document.getElementById('searchBtn');
+    const searchClose = document.getElementById('searchClose');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            searchOverlay.classList.add('active');
+            searchInput.focus();
+        });
+    }
+    
+    if (searchClose) {
+        searchClose.addEventListener('click', () => {
+            searchOverlay.classList.remove('active');
+        });
+    }
+    
+    if (searchOverlay) {
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) {
+                searchOverlay.classList.remove('active');
+            }
+        });
+    }
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            performSearch(e.target.value);
+        });
+    }
+}
+
+function performSearch(query) {
+    const resultsContainer = document.getElementById('searchResults');
+    if (!resultsContainer) return;
+    
+    if (!query.trim()) {
+        resultsContainer.innerHTML = '';
+        return;
+    }
+    
+    const results = products.filter(product => {
+        const searchText = currentLang === 'fa' 
+            ? `${product.nameFa} ${product.descFa}`.toLowerCase()
+            : `${product.nameEn} ${product.descEn}`.toLowerCase();
+        return searchText.includes(query.toLowerCase());
+    });
+    
+    if (results.length === 0) {
+        resultsContainer.innerHTML = `<p style="text-align: center; color: #999;">${currentLang === 'fa' ? 'نتیجه‌ای یافت نشد' : 'No results found'}</p>`;
+        return;
+    }
+    
+    resultsContainer.innerHTML = results.map(product => `
+        <a href="${product.url}" class="search-result-item">
+            <h4>${currentLang === 'fa' ? product.nameFa : product.nameEn}</h4>
+            <p style="color: #999; font-size: 0.875rem;">${currentLang === 'fa' ? product.descFa : product.descEn}</p>
+        </a>
+    `).join('');
+}
+
+// Hero Carousel
+let carouselPosition = 0;
+const totalCards = 9;
+const cardsToShow = 3;
+const maxPosition = totalCards - cardsToShow;
+
+// City Carousel
+let cityCarouselPosition = 0;
+const totalCityCards = 6;
+const cityCardsToShow = 3;
+const maxCityPosition = totalCityCards - cityCardsToShow;
+
+function initCarousel() {
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    
+    if (prevBtn) prevBtn.addEventListener('click', prevCard);
+    if (nextBtn) nextBtn.addEventListener('click', nextCard);
+    
+    // City Carousel
+    const cityPrevBtn = document.getElementById('cityCarouselPrev');
+    const cityNextBtn = document.getElementById('cityCarouselNext');
+    
+    if (cityPrevBtn) cityPrevBtn.addEventListener('click', prevCityCard);
+    if (cityNextBtn) cityNextBtn.addEventListener('click', nextCityCard);
+}
+
+function updateCarousel() {
+    const track = document.getElementById('heroTrack');
+    if (!track) return;
+    
+    const cardWidth = track.children[0].offsetWidth;
+    const gap = 24; // 1.5rem
+    const offset = -(carouselPosition * (cardWidth + gap));
+    track.style.transform = `translateX(${offset}px)`;
+}
+
+function updateCityCarousel() {
+    const track = document.getElementById('cityTrack');
+    if (!track) return;
+    
+    const cardWidth = track.children[0].offsetWidth;
+    const gap = 24; // 1.5rem
+    const offset = -(cityCarouselPosition * (cardWidth + gap));
+    track.style.transform = `translateX(${offset}px)`;
+}
+
+function nextCard() {
+    if (carouselPosition < maxPosition) {
+        carouselPosition++;
+        updateCarousel();
+    }
+}
+
+function prevCard() {
+    if (carouselPosition > 0) {
+        carouselPosition--;
+        updateCarousel();
+    }
+}
+
+function nextCityCard() {
+    if (cityCarouselPosition < maxCityPosition) {
+        cityCarouselPosition++;
+        updateCityCarousel();
+    }
+}
+
+function prevCityCard() {
+    if (cityCarouselPosition > 0) {
+        cityCarouselPosition--;
+        updateCityCarousel();
+    }
 }
 
 // Language Functions
@@ -66,14 +414,23 @@ function applyLanguage() {
     document.documentElement.dir = config.dir;
     document.documentElement.lang = config.lang;
     
-    // Update button
-    document.getElementById('langBtn').textContent = currentLang === 'fa' ? 'EN' : 'فا';
-    
     // Update all translatable elements
     document.querySelectorAll('[data-en][data-fa]').forEach(el => {
         const key = currentLang === 'fa' ? 'data-fa' : 'data-en';
-        el.textContent = el.getAttribute(key);
+        el.innerHTML = el.getAttribute(key);
     });
+    
+    // Update placeholders
+    document.querySelectorAll('[data-en-placeholder][data-fa-placeholder]').forEach(el => {
+        const key = currentLang === 'fa' ? 'data-fa-placeholder' : 'data-en-placeholder';
+        el.placeholder = el.getAttribute(key);
+    });
+    
+    // Re-render products if on homepage
+    const featuredContainer = document.getElementById('featuredProducts');
+    if (featuredContainer) {
+        renderFeaturedProducts();
+    }
 }
 
 // Quote Cart Functions
