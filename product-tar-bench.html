@@ -149,43 +149,46 @@
 
     <!-- Product Detail -->
     <div class="product-detail-container">
-        <!-- Gallery Slider -->
-        <div class="product-gallery">
-            <div class="gallery-slider" id="gallerySlider">
-                <img src="3-1.png" alt="Tar Bench" class="gallery-main-image" data-index="0">
-                <img src="3-2.jpg" alt="Tar Bench" class="gallery-main-image" data-index="1">
-                <img src="3-3.jpg" alt="Tar Bench" class="gallery-main-image" data-index="2">
-                <img src="3-4.png" alt="Tar Bench" class="gallery-main-image" data-index="3">
-                <img src="3-5.jpg" alt="Tar Bench" class="gallery-main-image" data-index="4">
-                <img src="3-6.JPG" alt="Tar Bench" class="gallery-main-image" data-index="5">
-                <img src="3-7.png" alt="Tar Bench" class="gallery-main-image" data-index="6">
-                <img src="3-8.jpg" alt="Tar Bench" class="gallery-main-image" data-index="7">
+        <!-- Left Column: Gallery + Thumbnails -->
+        <div class="product-gallery-column">
+            <!-- Gallery Slider -->
+            <div class="product-gallery">
+                <div class="gallery-slider" id="gallerySlider">
+                    <img src="3-1.png" alt="Tar Bench" class="gallery-main-image" data-index="0">
+                    <img src="3-2.jpg" alt="Tar Bench" class="gallery-main-image" data-index="1">
+                    <img src="3-3.jpg" alt="Tar Bench" class="gallery-main-image" data-index="2">
+                    <img src="3-4.png" alt="Tar Bench" class="gallery-main-image" data-index="3">
+                    <img src="3-5.jpg" alt="Tar Bench" class="gallery-main-image" data-index="4">
+                    <img src="3-6.JPG" alt="Tar Bench" class="gallery-main-image" data-index="5">
+                    <img src="3-7.png" alt="Tar Bench" class="gallery-main-image" data-index="6">
+                    <img src="3-8.jpg" alt="Tar Bench" class="gallery-main-image" data-index="7">
+                </div>
+                <button class="gallery-nav-btn gallery-prev" id="galleryPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="gallery-nav-btn gallery-next" id="galleryNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
-            <button class="gallery-nav-btn gallery-prev" id="galleryPrev">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-            <button class="gallery-nav-btn gallery-next" id="galleryNext">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
+            
+            <!-- Thumbnails -->
+            <div class="product-thumbnails">
+                <img src="3-1.png" alt="Tar Bench" class="thumbnail active" data-index="0">
+                <img src="3-2.jpg" alt="Tar Bench" class="thumbnail" data-index="1">
+                <img src="3-3.jpg" alt="Tar Bench" class="thumbnail" data-index="2">
+                <img src="3-4.png" alt="Tar Bench" class="thumbnail" data-index="3">
+                <img src="3-5.jpg" alt="Tar Bench" class="thumbnail" data-index="4">
+                <img src="3-6.JPG" alt="Tar Bench" class="thumbnail" data-index="5">
+                <img src="3-7.png" alt="Tar Bench" class="thumbnail" data-index="6">
+                <img src="3-8.jpg" alt="Tar Bench" class="thumbnail" data-index="7">
+            </div>
         </div>
         
-        <!-- Thumbnails -->
-        <div class="product-thumbnails">
-            <img src="3-1.png" alt="Tar Bench" class="thumbnail active" data-index="0">
-            <img src="3-2.jpg" alt="Tar Bench" class="thumbnail" data-index="1">
-            <img src="3-3.jpg" alt="Tar Bench" class="thumbnail" data-index="2">
-            <img src="3-4.png" alt="Tar Bench" class="thumbnail" data-index="3">
-            <img src="3-5.jpg" alt="Tar Bench" class="thumbnail" data-index="4">
-            <img src="3-6.JPG" alt="Tar Bench" class="thumbnail" data-index="5">
-            <img src="3-7.png" alt="Tar Bench" class="thumbnail" data-index="6">
-            <img src="3-8.jpg" alt="Tar Bench" class="thumbnail" data-index="7">
-        </div>
-        
-        <!-- Product Info -->
+        <!-- Right Column: Product Info -->
         <div class="product-info-section">
             <h1 class="product-title" data-en="Tar Bench" data-fa="نیمکت تار">Tar Bench</h1>
             <div class="product-description">
