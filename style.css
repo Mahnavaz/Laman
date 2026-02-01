@@ -1736,14 +1736,14 @@ body {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Gallery Slider */
 .product-gallery {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     aspect-ratio: 21/9;
     background: #F5F5F5;
     border-radius: 16px;
