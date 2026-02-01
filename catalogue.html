@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benches - Laman City</title>
+    <title>Catalogue - Laman City</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
     <style>
-        .category-page {
+        .catalogue-container {
             margin-top: 90px;
-            max-width: 1400px;
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
             padding: 4rem 2rem;
+        }
+        
+        .catalogue-header {
+            margin-bottom: 3rem;
         }
         
         .breadcrumb {
@@ -39,104 +43,132 @@
             color: #2D7A5F;
         }
         
-        .category-header {
-            margin-bottom: 4rem;
-        }
-        
-        .category-title {
+        .catalogue-title {
             font-size: 4rem;
             font-weight: 200;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             color: #000;
             font-family: 'Inter', sans-serif;
         }
         
-        .category-description {
+        .catalogue-subtitle {
             font-size: 1.125rem;
             color: #666;
             line-height: 1.6;
             font-family: 'Vazir', 'Tahoma', sans-serif;
         }
         
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
+        .catalogue-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
         
-        .product-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid #F0F0F0;
-            transition: all 0.4s;
-            text-decoration: none;
-            color: inherit;
+        .catalogue-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+            border-bottom: 1px solid #E5E5E5;
         }
         
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        .catalogue-item:last-child {
+            border-bottom: none;
         }
         
-        .product-img {
-            aspect-ratio: 1;
-            overflow: hidden;
-            background: #FAFAFA;
+        .catalogue-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
         
-        .product-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s;
+        .catalogue-icon {
+            width: 60px;
+            height: 60px;
+            background: #2D7A5F;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
         
-        .product-card:hover .product-img img {
-            transform: scale(1.05);
+        .catalogue-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
         }
         
-        .product-info {
-            padding: 2rem;
-        }
-        
-        .product-info h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 0.75rem;
+        .catalogue-content h2 {
+            font-size: 1.75rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #000;
             font-family: 'Vazir', 'Tahoma', sans-serif;
         }
         
-        .product-info p {
+        .catalogue-content p {
+            font-size: 1rem;
             color: #666;
-            font-size: 0.875rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
             font-family: 'Vazir', 'Tahoma', sans-serif;
         }
         
-        .product-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
+        .catalogue-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
             background: #2D7A5F;
             color: white;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
             font-family: 'Vazir', 'Tahoma', sans-serif;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-download:hover {
+            background: #236b52;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 122, 95, 0.3);
+        }
+        
+        .btn-download svg {
+            width: 20px;
+            height: 20px;
         }
         
         @media (max-width: 768px) {
-            .category-page {
+            .catalogue-container {
                 padding: 3rem 1.5rem;
             }
             
-            .category-title {
+            .catalogue-title {
                 font-size: 2.5rem;
             }
             
-            .products-grid {
-                grid-template-columns: 1fr;
+            .catalogue-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+            
+            .catalogue-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .btn-download {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -168,89 +200,46 @@
         </nav>
     </header>
 
-    <!-- Category Content -->
-    <div class="category-page">
-        <div class="breadcrumb">
-            <a href="index.html" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
-            <span>◆</span>
-            <a href="products.html" data-en="Products" data-fa="محصولات" data-ar="المنتجات">محصولات</a>
-            <span>◆</span>
-            <span data-en="Benches" data-fa="نیمکت‌ها" data-ar="المقاعد">نیمکت‌ها</span>
-        </div>
-        
-        <div class="category-header">
-            <h1 class="category-title" data-en="Benches" data-fa="نیمکت‌ها" data-ar="المقاعد">نیمکت‌ها</h1>
-            <p class="category-description" data-en="Elegant and durable benches designed for urban spaces. Our collection combines comfort, aesthetics, and longevity." data-fa="نیمکت‌های زیبا و بادوام طراحی شده برای فضاهای شهری. مجموعه ما راحتی، زیبایی و دوام را ترکیب می‌کند." data-ar="مقاعد أنيقة ومتينة مصممة للمساحات الحضرية. تجمع مجموعتنا بين الراحة والجمال والمتانة.">
-                نیمکت‌های زیبا و بادوام طراحی شده برای فضاهای شهری. مجموعه ما راحتی، زیبایی و دوام را ترکیب می‌کند.
+    <!-- Catalogue Content -->
+    <div class="catalogue-container">
+        <div class="catalogue-header">
+            <div class="breadcrumb">
+                <a href="index.html" data-en="Home" data-fa="خانه" data-ar="الصفحة الرئيسية">خانه</a>
+                <span>◆</span>
+                <span data-en="Catalogue" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</span>
+            </div>
+            
+            <h1 class="catalogue-title" data-en="Catalog" data-fa="کاتالوگ" data-ar="الكتالوج">کاتالوگ</h1>
+            <p class="catalogue-subtitle" data-en="Our products in detail. Please find below our latest catalog of street furniture." data-fa="محصولات ما به تفصیل. لطفاً کاتالوگ جدید مبلمان شهری ما را در زیر پیدا کنید." data-ar="منتجاتنا بالتفصيل. يرجى العثور أدناه على أحدث كتالوج لأثاث الشوارع لدينا.">
+                محصولات ما به تفصیل. لطفاً کاتالوگ جدید مبلمان شهری ما را در زیر پیدا کنید.
             </p>
         </div>
         
-        <div class="products-grid">
-            <a href="product-tar-bench.html" class="product-card">
-                <div class="product-img">
-                    <img src="laman-products/3-1.png" alt="Tar Bench">
+        <div class="catalogue-items">
+            <div class="catalogue-item">
+                <div class="catalogue-info">
+                    <div class="catalogue-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                            <path d="M14 2v6h6"/>
+                        </svg>
+                    </div>
+                    <div class="catalogue-content">
+                        <h2 data-en="Laman Product Catalog 2024/25" data-fa="کاتالوگ محصولات لمان ۲۰۲۴/۲۵" data-ar="كتالوج منتجات لمان 2024/25">کاتالوگ محصولات لمان ۲۰۲۴/۲۵</h2>
+                        <p data-en="Complete collection of urban furniture products" data-fa="مجموعه کامل محصولات مبلمان شهری" data-ar="مجموعة كاملة من منتجات الأثاث الحضري">مجموعه کامل محصولات مبلمان شهری</p>
+                    </div>
                 </div>
-                <div class="product-info">
-                    <h3 data-en="Tar Bench" data-fa="نیمکت تار" data-ar="مقعد تار">نیمکت تار</h3>
-                    <p data-en="Modern bench inspired by musical strings design" data-fa="نیمکت مدرن با طراحی الهام گرفته از تار موسیقی" data-ar="مقعد حديث مستوحى من تصميم الأوتار الموسيقية">نیمکت مدرن با طراحی الهام گرفته از تار موسیقی</p>
-                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
+                <div class="catalogue-actions">
+                    <a href="Laman-Product Catalog.pdf" download class="btn-download" data-en="Download here" data-fa="دانلود اینجا" data-ar="تحميل هنا">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>دانلود اینجا</span>
+                    </a>
                 </div>
-            </a>
-            
-            <a href="product-tar-bench-backrest.html" class="product-card">
-                <div class="product-img">
-                    <img src="laman-products/4-1.png" alt="Tar Bench with Backrest">
-                </div>
-                <div class="product-info">
-                    <h3 data-en="Tar Bench with Backrest" data-fa="نیمکت تار با تکیه‌گاه" data-ar="مقعد تار مع مسند الظهر">نیمکت تار با تکیه‌گاه</h3>
-                    <p data-en="Tar bench with ergonomic backrest for enhanced comfort" data-fa="نیمکت تار با تکیه‌گاه ارگونومیک برای راحتی بیشتر" data-ar="مقعد تار مع مسند ظهر مريح للراحة المحسنة">نیمکت تار با تکیه‌گاه ارگونومیک برای راحتی بیشتر</p>
-                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
-                </div>
-            </a>
-            
-            <a href="product-chaft-bench.html" class="product-card">
-                <div class="product-img">
-                    <img src="laman-products/5-1.png" alt="Chaft Bench">
-                </div>
-                <div class="product-info">
-                    <h3 data-en="Chaft Bench" data-fa="نیمکت چفت" data-ar="مقعد چفت">نیمکت چفت</h3>
-                    <p data-en="Bench with unique connection system and minimal design" data-fa="نیمکت با سیستم اتصال منحصر به فرد و طراحی مینیمال" data-ar="مقعد بنظام اتصال فريد وتصميم بسيط">نیمکت با سیستم اتصال منحصر به فرد و طراحی مینیمال</p>
-                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
-                </div>
-            </a>
-            
-            <a href="product-pood-bench.html" class="product-card">
-                <div class="product-img">
-                    <img src="laman-products/6-1.png" alt="Pood Bench">
-                </div>
-                <div class="product-info">
-                    <h3 data-en="Pood Bench" data-fa="نیمکت پود" data-ar="مقعد پود">نیمکت پود</h3>
-                    <p data-en="Bench inspired by traditional weaving and contemporary architecture" data-fa="نیمکت با الهام از بافت سنتی و معماری معاصر" data-ar="مقعد مستوحى من النسيج التقليدي والعمارة المعاصرة">نیمکت با الهام از بافت سنتی و معماری معاصر</p>
-                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
-                </div>
-            </a>
-            
-            <a href="product-kalaf-bench.html" class="product-card">
-                <div class="product-img">
-                    <img src="laman-products/7-1.png" alt="Kalaf Bench">
-                </div>
-                <div class="product-info">
-                    <h3 data-en="Kalaf Bench" data-fa="نیمکت کلاف" data-ar="مقعد کلاف">نیمکت کلاف</h3>
-                    <p data-en="Bench with organic form and flowing lines" data-fa="نیمکت با فرم ارگانیک و خطوط روان" data-ar="مقعد بشكل عضوي وخطوط انسيابية">نیمکت با فرم ارگانیک و خطوط روان</p>
-                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
-                </div>
-            </a>
-            
-            <a href="product-bast-bench.html" class="product-card">
-                <div class="product-img">
-                    <img src="laman-products/8-1.png" alt="Bast Bench">
-                </div>
-                <div class="product-info">
-                    <h3 data-en="Bast Bench" data-fa="نیمکت بست" data-ar="مقعد بست">نیمکت بست</h3>
-                    <p data-en="Bench with easy installation system and high stability" data-fa="نیمکت با سیستم نصب آسان و پایداری بالا" data-ar="مقعد بنظام تركيب سهل واستقرار عالي">نیمکت با سیستم نصب آسان و پایداری بالا</p>
-                    <span class="product-badge" data-en="Wood & Steel" data-fa="چوب و فولاد" data-ar="خشب وفولاذ">چوب و فولاد</span>
-                </div>
-            </a>
+            </div>
         </div>
     </div>
 
