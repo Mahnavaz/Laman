@@ -1,66 +1,137 @@
-# Diba Urban Furniture - Standalone Website
+# Laman City - Urban Furniture Website
 
-## ✅ Ready to Use - No Installation Required!
+سایت رسمی شرکت لمان سیتی، تولیدکننده مبلمان شهری
 
-This is a complete bilingual (Persian/English) B2B website that works immediately without any npm install or build process.
+## 🌐 آدرس‌های سایت
 
-## 🚀 How to Run
+- **دامنه اصلی**: https://lamancity.com
+- **با www**: https://www.lamancity.com
+- **Vercel**: https://diba-furniture.vercel.app
 
-Simply open `index.html` in your web browser!
+## 📁 ساختار پروژه
 
-**Option 1: Double-click**
-- Double-click `index.html` file
+```
+diba-standalone/
+├── docs/                      # مستندات پروژه
+│   ├── DEPLOY.md             # راهنمای دیپلوی
+│   ├── DOMAIN-SETUP.md       # راهنمای تنظیم دامنه
+│   ├── domain-status.md      # وضعیت دامنه
+│   ├── dns-records.txt       # تنظیمات DNS
+│   └── vercel-dns-setup.md   # راهنمای DNS در Vercel
+├── Pictures/                  # تصاویر محصولات
+├── laman-products/           # فایل‌های محصولات لمان
+├── *.html                    # صفحات HTML
+├── style.css                 # استایل‌های سایت
+├── script.js                 # اسکریپت‌های JavaScript
+├── vercel.json              # تنظیمات Vercel
+└── .vercelignore            # فایل‌های نادیده شده در Vercel
 
-**Option 2: Use a local server (recommended)**
+## 🚀 دیپلوی
+
+### دیپلوی خودکار
+هر push به branch `main` در GitHub به‌صورت خودکار در Vercel دیپلوی می‌شود.
+
+### دیپلوی دستی
 ```bash
-# If you have Python installed:
-python -m http.server 8000
-
-# Or if you have Node.js:
-npx serve
+vercel --prod
 ```
 
-Then open: http://localhost:8000
+یا از اسکریپت آماده استفاده کنید:
+```bash
+.\deploy-vercel.ps1
+```
 
-## 📁 Files Included
+## 🛠️ توسعه محلی
 
-- `index.html` - Home page
-- `products.html` - Products listing
-- `quote.html` - Quote request page
-- `style.css` - All styles
-- `script.js` - JavaScript functionality
+### شروع سرور محلی
+```bash
+python -m http.server 8000
+```
 
-## ✨ Features
+یا:
+```bash
+.\start-server.bat
+```
 
-✅ **Bilingual**: Persian (default) + English with language switcher
-✅ **RTL/LTR**: Automatic direction switching
-✅ **Quote System**: Add products to cart and request quotes
-✅ **Responsive**: Works on all devices
-✅ **No Dependencies**: Pure HTML/CSS/JS
-✅ **B2B Focus**: No prices, only quote requests
+سپس به آدرس http://localhost:8000 بروید.
 
-## 🎨 Design
+## 📝 ویژگی‌ها
 
-- Clean, minimal, professional
-- Inspired by mmcite.com
-- Modern grid layouts
-- Smooth transitions
+- ✅ طراحی Responsive
+- ✅ پشتیبانی از چند زبان (فارسی، انگلیسی، عربی)
+- ✅ حالت تاریک/روشن
+- ✅ جستجوی محصولات
+- ✅ گالری تصاویر محصولات
+- ✅ فیلتر دسته‌بندی محصولات
+- ✅ SSL/HTTPS فعال
+- ✅ SEO بهینه
 
-## 🌐 Language Switching
+## 🎨 صفحات
 
-Click the "EN/فا" button in the header to switch between Persian and English.
+### صفحات اصلی
+- `index.html` - صفحه اصلی
+- `products.html` - لیست محصولات
+- `about.html` - درباره ما
+- `contact.html` - تماس با ما
+- `catalogue.html` - کاتالوگ
 
-## 📝 Customization
+### صفحات دسته‌بندی
+- `benches.html` - نیمکت‌ها
+- `tables.html` - میزها
+- `canopies.html` - سایه‌بان‌ها
+- `platforms.html` - پلتفرم‌ها
+- `details.html` - جزئیات
 
-1. **Add More Products**: Edit the `products` array in `script.js`
-2. **Change Colors**: Edit CSS variables in `style.css`
-3. **Add Pages**: Create new HTML files following the same structure
+### صفحات محصولات
+- `product-tar-bench.html` - نیمکت تار
+- `product-tar-bench-backrest.html` - نیمکت تار با پشتی
+- `product-chaft-bench.html` - نیمکت چفت
+- `product-pood-bench.html` - نیمکت پود
+- `product-kalaf-bench.html` - نیمکت کلاف
+- `product-bast-bench.html` - نیمکت بست
+- `product-picnic-set.html` - ست پیک‌نیک
+- `product-pergola.html` - پرگولا
+- `product-baft-canopy.html` - سایه‌بان بافت
+- `product-pallet-platform-01.html` - پلتفرم پالت 01
+- `product-pallet-platform-02.html` - پلتفرم پالت 02
+- `product-tree-guard.html` - محافظ درخت
 
-## 📧 Contact
+## 🔧 تنظیمات
 
-Email: info@diba-furniture.com
-Phone: +98 21 1234 5678
+### Vercel
+تنظیمات Vercel در فایل `vercel.json` قرار دارد.
+
+### Git
+فایل‌های نادیده شده در `.gitignore` مشخص شده‌اند.
+
+### DNS
+دامنه از nameserverهای Vercel استفاده می‌کند:
+- ns1.vercel-dns.com
+- ns2.vercel-dns.com
+
+## 📚 مستندات
+
+مستندات کامل در پوشه `docs/` موجود است:
+- راهنمای دیپلوی
+- راهنمای تنظیم دامنه
+- راهنمای DNS
+- وضعیت دامنه
+
+## 🔗 لینک‌های مفید
+
+- **GitHub Repository**: https://github.com/Mahnavaz/Laman
+- **Vercel Dashboard**: https://vercel.com/rahimimahnavaz-3607s-projects/diba-furniture
+- **Domain Settings**: https://vercel.com/rahimimahnavaz-3607s-projects/diba-furniture/settings/domains
+
+## 👥 تیم
+
+- **طراح**: Diba Group
+- **توسعه‌دهنده**: Mahnavaz Rahimi
+
+## 📄 مجوز
+
+© 2026 Laman City. All rights reserved.
 
 ---
 
-© 2026 DIBA. All rights reserved.
+**آخرین به‌روزرسانی**: 1 فوریه 2026
