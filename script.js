@@ -556,39 +556,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Dark Mode Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const darkModeBtn = document.getElementById('darkModeBtn');
-    const sunIcon = darkModeBtn?.querySelector('.sun-icon');
-    const moonIcon = darkModeBtn?.querySelector('.moon-icon');
-    
-    // Check saved theme preference
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    
-    if (savedTheme === 'dark') {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-    }
-    
-    darkModeBtn?.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
-        if (newTheme === 'dark') {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-        } else {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        }
-    });
-});
-
-
 // ===================================
 // Product Detail Page Gallery & Lightbox
 // ===================================
