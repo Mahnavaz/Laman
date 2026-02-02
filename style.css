@@ -3110,23 +3110,24 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background: white;
-    border: 1px solid #E0E0E0;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #2D7A5F;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 10;
     transition: all 0.3s;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(45, 122, 95, 0.2);
 }
 
 .similar-nav-btn:hover {
     background: #2D7A5F;
-    border-color: #2D7A5F;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(45, 122, 95, 0.3);
 }
 
 .similar-nav-btn:hover svg {
@@ -3134,18 +3135,19 @@ body {
 }
 
 .similar-nav-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     stroke: #2D7A5F;
+    stroke-width: 3;
     transition: stroke 0.3s;
 }
 
 .similar-nav-prev {
-    left: -25px;
+    left: -30px;
 }
 
 .similar-nav-next {
-    right: -25px;
+    right: -30px;
 }
 
 @media (max-width: 768px) {
