@@ -619,6 +619,9 @@ document.addEventListener('DOMContentLoaded', function() {
             updateLightboxCounter();
         }
         
+        // Initialize first image as active
+        showImage(0);
+        
         if (galleryPrev) {
             galleryPrev.addEventListener('click', () => {
                 const newIndex = (currentIndex - 1 + images.length) % images.length;
