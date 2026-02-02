@@ -185,8 +185,8 @@ body {
     top: 100%;
     left: 0;
     background: #000000;
-    min-width: 700px;
-    padding: 3rem;
+    min-width: 500px;
+    padding: 1.5rem;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -222,8 +222,8 @@ body {
 .dropdown-item {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 1rem;
+    padding: 1rem;
     color: white !important;
     text-decoration: none;
     transition: all 0.3s;
@@ -241,14 +241,14 @@ body {
 }
 
 .dropdown-item svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     stroke: white;
     flex-shrink: 0;
 }
 
 .dropdown-item span {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     flex: 1;
 }
