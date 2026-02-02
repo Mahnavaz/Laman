@@ -829,8 +829,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Wait for images to load before starting
         setTimeout(function() {
-            // Start auto-scroll every 1 second
-            autoScrollInterval = setInterval(autoScroll, 1000);
+            // Start auto-scroll every 3 seconds
+            autoScrollInterval = setInterval(autoScroll, 3000);
         }, 500);
         
         // Pause on hover
@@ -840,7 +840,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Resume on mouse leave
         heroTrack.addEventListener('mouseleave', function() {
-            autoScrollInterval = setInterval(autoScroll, 1000);
+            autoScrollInterval = setInterval(autoScroll, 3000);
         });
         
         // Handle manual scroll

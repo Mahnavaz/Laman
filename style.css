@@ -542,6 +542,9 @@ body {
     position: relative;
     cursor: pointer;
     scroll-snap-align: start;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .hero-carousel-card img {
