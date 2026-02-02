@@ -3006,6 +3006,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    position: relative;
 }
 
 .similar-products-title {
@@ -3016,12 +3017,23 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.similar-products-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
 .similar-products-grid {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
     overflow-x: auto;
-    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.similar-products-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .similar-product-card {
@@ -3094,6 +3106,48 @@ body {
     font-size: 1rem;
 }
 
+.similar-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.similar-nav-btn:hover {
+    background: #2D7A5F;
+    border-color: #2D7A5F;
+}
+
+.similar-nav-btn:hover svg {
+    stroke: white;
+}
+
+.similar-nav-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #2D7A5F;
+    transition: stroke 0.3s;
+}
+
+.similar-nav-prev {
+    left: -25px;
+}
+
+.similar-nav-next {
+    right: -25px;
+}
+
 @media (max-width: 768px) {
     .similar-product-card {
         flex: 0 0 250px;
@@ -3101,5 +3155,18 @@ body {
     
     .similar-products-title {
         font-size: 1.5rem;
+    }
+    
+    .similar-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .similar-nav-prev {
+        left: 0;
+    }
+    
+    .similar-nav-next {
+        right: 0;
     }
 }

@@ -742,3 +742,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// Similar Products Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const similarGrid = document.getElementById('similarGrid');
+    const similarPrev = document.getElementById('similarPrev');
+    const similarNext = document.getElementById('similarNext');
+    
+    if (similarGrid && similarPrev && similarNext) {
+        similarPrev.addEventListener('click', function() {
+            similarGrid.scrollBy({
+                left: -350,
+                behavior: 'smooth'
+            });
+        });
+        
+        similarNext.addEventListener('click', function() {
+            similarGrid.scrollBy({
+                left: 350,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
