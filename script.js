@@ -813,10 +813,23 @@ document.addEventListener('DOMContentLoaded', function() {
         function scrollToCard(index, smooth = true) {
             const cardWidth = heroTrack.offsetWidth;
             const scrollAmount = index * cardWidth;
+            
+            // Temporarily disable smooth scrolling if needed
+            if (!smooth) {
+                heroTrack.style.scrollBehavior = 'auto';
+            }
+            
             heroTrack.scrollTo({
                 left: scrollAmount,
                 behavior: smooth ? 'smooth' : 'auto'
             });
+            
+            // Re-enable smooth scrolling after a moment
+            if (!smooth) {
+                setTimeout(function() {
+                    heroTrack.style.scrollBehavior = 'smooth';
+                }, 50);
+            }
         }
         
         function autoScroll() {
@@ -835,16 +848,20 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIndex++;
             if (currentIndex >= cards.length) {
                 currentIndex = 0;
+                scrollToCard(currentIndex, false); // Jump instantly when looping
+            } else {
+                scrollToCard(currentIndex, true);
             }
-            scrollToCard(currentIndex, true);
         }
         
         function goToPrev() {
             currentIndex--;
             if (currentIndex < 0) {
                 currentIndex = cards.length - 1;
+                scrollToCard(currentIndex, false); // Jump instantly when looping back
+            } else {
+                scrollToCard(currentIndex, true);
             }
-            scrollToCard(currentIndex, true);
         }
         
         // Wait for images to load before starting
