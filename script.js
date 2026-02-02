@@ -231,12 +231,10 @@ const products = [
 
 // Initialize
 function init() {
-    applyLanguage();
     updateQuoteBadge();
     initCarousel();
     initCategoryScroll();
     initSearch();
-    initLanguageSwitcher();
     initScrollToTop();
     
     // Event Listeners
@@ -281,63 +279,6 @@ function initCategoryScroll() {
                 behavior: 'smooth'
             });
         });
-    }
-}
-
-// Language Switcher
-function initLanguageSwitcher() {
-    const langCurrent = document.querySelector('.lang-current');
-    const langDropdown = document.querySelector('.lang-dropdown');
-    const langOptions = document.querySelectorAll('.lang-option');
-    
-    if (langCurrent && langDropdown) {
-        // Toggle dropdown
-        langCurrent.addEventListener('click', (e) => {
-            e.stopPropagation();
-            langCurrent.classList.toggle('active');
-            langDropdown.classList.toggle('active');
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', () => {
-            langCurrent.classList.remove('active');
-            langDropdown.classList.remove('active');
-        });
-        
-        // Prevent dropdown from closing when clicking inside
-        langDropdown.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-    }
-    
-    langOptions.forEach(option => {
-        option.addEventListener('click', () => {
-            const lang = option.getAttribute('data-lang');
-            if (lang !== currentLang) {
-                currentLang = lang;
-                localStorage.setItem('lang', currentLang);
-                applyLanguage();
-                updateLanguageSwitcher();
-                
-                // Close dropdown
-                if (langCurrent && langDropdown) {
-                    langCurrent.classList.remove('active');
-                    langDropdown.classList.remove('active');
-                }
-            }
-        });
-    });
-    updateLanguageSwitcher();
-}
-
-function updateLanguageSwitcher() {
-    const langCurrent = document.querySelector('.lang-current');
-    if (langCurrent) {
-        const langText = currentLang === 'fa' ? 'FA' : 'EN';
-        const svgIcon = `<svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor">
-                            <path d="M5 6L0 0h10L5 6z"/>
-                        </svg>`;
-        langCurrent.innerHTML = langText + svgIcon;
     }
 }
 
