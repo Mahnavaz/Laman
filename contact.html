@@ -30,13 +30,18 @@
             font-family: 'Inter', sans-serif;
         }
         
-        [dir="rtl"] .contact-hero {
-            text-align: right;
-        }
-        
         [dir="rtl"] .contact-hero h1 {
             font-family: 'Vazir', sans-serif;
             text-align: right;
+        }
+        
+        /* Dark mode styles for hero section */
+        [data-theme="dark"] .contact-hero {
+            background: var(--bg-secondary);
+        }
+        
+        [data-theme="dark"] .contact-hero h1 {
+            color: var(--text-primary);
         }
 
         .contact-main {
