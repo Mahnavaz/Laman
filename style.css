@@ -2479,10 +2479,6 @@ body {
         height: 24px !important;
     }
     
-    .logo span {
-        display: none;
-    }
-    
     /* Navigation Actions */
     .nav-actions {
         gap: 0.5rem;
