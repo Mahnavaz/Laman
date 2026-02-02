@@ -3348,6 +3348,32 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+[data-theme="dark"] .logo {
+    color: #FFFFFF;
+}
+
+[data-theme="dark"] .nav-links a,
+[data-theme="dark"] .nav-links .has-dropdown {
+    color: #FFFFFF;
+}
+
+[data-theme="dark"] .nav-links svg {
+    stroke: #FFFFFF;
+    fill: #FFFFFF;
+}
+
+[data-theme="dark"] .btn-dark-mode,
+[data-theme="dark"] .btn-search,
+[data-theme="dark"] .lang-current {
+    color: #FFFFFF;
+}
+
+[data-theme="dark"] .btn-dark-mode svg,
+[data-theme="dark"] .btn-search svg,
+[data-theme="dark"] .lang-current svg {
+    stroke: #FFFFFF;
+}
+
 [data-theme="dark"] .btn-dark-mode:hover {
     background: #333333;
 }
