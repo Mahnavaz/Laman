@@ -810,32 +810,38 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentIndex = 0;
         let autoScrollInterval;
         
-        function getCardWidth() {
-            return cards[0]?.offsetWidth || 0;
+        function getScrollAmount() {
+            const cardWidth = cards[0]?.offsetWidth || 0;
+            const gap = 32; // 2rem gap
+            return cardWidth + gap;
         }
         
-        function scrollToCard(index) {
-            const cardWidth = getCardWidth();
-            const gap = 32; // gap between cards
-            const scrollAmount = index * (cardWidth + gap);
-            heroTrack.scrollTo({
+        function scrollToNext() {
+            const scrollAmount = getScrollAmount();
+            heroTrack.scrollBy({
                 left: scrollAmount,
                 behavior: 'smooth'
             });
-        }
-        
-        function autoScroll() {
-            currentIndex++;
-            if (currentIndex >= cards.length) {
-                currentIndex = 0;
-            }
-            scrollToCard(currentIndex);
+            
+            // Check if we've reached the end
+            setTimeout(() => {
+                if (heroTrack.scrollLeft + heroTrack.clientWidth >= heroTrack.scrollWidth - 10) {
+                    // Reset to beginning
+                    heroTrack.scrollTo({
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                    currentIndex = 0;
+                } else {
+                    currentIndex++;
+                }
+            }, 100);
         }
         
         // Wait for images to load before starting
         setTimeout(function() {
             // Start auto-scroll
-            autoScrollInterval = setInterval(autoScroll, 4000);
+            autoScrollInterval = setInterval(scrollToNext, 4000);
         }, 500);
         
         // Pause on hover
@@ -845,24 +851,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Resume on mouse leave
         heroTrack.addEventListener('mouseleave', function() {
-            autoScrollInterval = setInterval(autoScroll, 4000);
-        });
-        
-        // Handle manual scroll
-        let isScrolling;
-        heroTrack.addEventListener('scroll', function() {
-            clearTimeout(isScrolling);
-            isScrolling = setTimeout(function() {
-                const cardWidth = getCardWidth();
-                const gap = 32;
-                const scrollLeft = heroTrack.scrollLeft;
-                currentIndex = Math.round(scrollLeft / (cardWidth + gap));
-            }, 100);
+            autoScrollInterval = setInterval(scrollToNext, 4000);
         });
         
         // Recalculate on window resize
         window.addEventListener('resize', function() {
-            scrollToCard(currentIndex);
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = setInterval(scrollToNext, 4000);
         });
     }
 });
