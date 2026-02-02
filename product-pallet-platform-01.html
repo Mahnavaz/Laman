@@ -267,37 +267,75 @@
     </div>
 
     <!-- Similar Products -->
-    <section style="background: #F8F8F8; border-top: 2px solid #000; padding: 3rem 0; margin: 0;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-            <h2 style="font-size: 2rem; font-weight: 300; margin-bottom: 2rem; text-align: left; font-family: 'Inter', sans-serif;" data-en="Similar products" data-fa="محصولات مشابه">Similar products</h2>
-            <div style="display: flex; gap: 2rem; margin-top: 2rem; overflow-x: auto;">
-                <a href="product-tar-bench-backrest.html" class="product-card" style="flex: 0 0 350px; text-decoration: none; color: inherit;">
-                    <div class="product-card-img" style="aspect-ratio: 1; overflow: hidden; background: white; border-radius: 8px;">
-                        <img src="4-1.png" alt="Tar Bench with Backrest" style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="product-card-content" style="padding: 1rem 0;">
-                        <h3 style="font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;" data-en="Tar Bench with Backrest" data-fa="نیمکت تار با پشتی">Tar Bench with Backrest</h3>
-                        <p style="color: #666; font-size: 0.875rem; font-family: 'Inter', sans-serif;" data-en="Ergonomic bench with comfortable backrest" data-fa="نیمکت ارگونومیک با پشتی راحت">Ergonomic bench with comfortable backrest</p>
-                    </div>
-                </a>
-                <a href="product-chaft-bench.html" class="product-card" style="flex: 0 0 350px; text-decoration: none; color: inherit;">
-                    <div class="product-card-img" style="aspect-ratio: 1; overflow: hidden; background: white; border-radius: 8px;">
-                        <img src="5-1.png" alt="Chaft Bench" style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="product-card-content" style="padding: 1rem 0;">
-                        <h3 style="font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;" data-en="Chaft Bench" data-fa="نیمکت چفت">Chaft Bench</h3>
-                        <p style="color: #666; font-size: 0.875rem; font-family: 'Inter', sans-serif;" data-en="Bench with unique connection system" data-fa="نیمکت با سیستم اتصال منحصربه‌فرد">Bench with unique connection system</p>
-                    </div>
-                </a>
-                <a href="product-pood-bench.html" class="product-card" style="flex: 0 0 350px; text-decoration: none; color: inherit;">
-                    <div class="product-card-img" style="aspect-ratio: 1; overflow: hidden; background: white; border-radius: 8px;">
-                        <img src="Pictures/6-1.png" alt="Pood Bench" style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                    <div class="product-card-content" style="padding: 1rem 0;">
-                        <h3 style="font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;" data-en="Pood Bench" data-fa="نیمکت پود">Pood Bench</h3>
-                        <p style="color: #666; font-size: 0.875rem; font-family: 'Inter', sans-serif;" data-en="Contemporary design inspired by traditional weaving" data-fa="طراحی معاصر با الهام از بافت سنتی">Contemporary design inspired by traditional weaving</p>
-                    </div>
-                </a>
+    <section class="similar-products-section">
+        <div class="container">
+            <h2 class="similar-products-title" data-en="Similar products" data-fa="محصولات مشابه">Similar products</h2>
+            
+            <div class="similar-products-wrapper">
+                <button class="similar-nav-btn similar-nav-prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="similar-products-container">
+                    <a href="product-pallet-platform-02.html" class="similar-product-card">
+                        <div class="similar-product-image">
+                            <img src="Pictures/2-1.png" alt="Pallet Platform 02">
+                        </div>
+                        <div class="similar-product-info">
+                            <h3 class="similar-product-name" data-en="Pallet Platform 02" data-fa="پلتفرم پالت ۰۲">Pallet Platform 02</h3>
+                            <p class="similar-product-desc" data-en="Modular urban platform without bench" data-fa="پلتفرم شهری ماژولار بدون نیمکت">Modular urban platform without bench</p>
+                            <span class="similar-product-link" data-en="VIEW DETAILS" data-fa="مشاهده جزئیات">
+                                VIEW DETAILS
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <a href="product-tar-bench.html" class="similar-product-card">
+                        <div class="similar-product-image">
+                            <img src="Pictures/3-1.png" alt="Tar Bench">
+                        </div>
+                        <div class="similar-product-info">
+                            <h3 class="similar-product-name" data-en="Tar Bench" data-fa="نیمکت تار">Tar Bench</h3>
+                            <p class="similar-product-desc" data-en="Minimalist bench with recycled wood" data-fa="نیمکت مینیمال با چوب بازیافتی">Minimalist bench with recycled wood</p>
+                            <span class="similar-product-link" data-en="VIEW DETAILS" data-fa="مشاهده جزئیات">
+                                VIEW DETAILS
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                    
+                    <a href="product-tar-bench-backrest.html" class="similar-product-card">
+                        <div class="similar-product-image">
+                            <img src="Pictures/4-1.png" alt="Tar Bench with Backrest">
+                        </div>
+                        <div class="similar-product-info">
+                            <h3 class="similar-product-name" data-en="Tar Bench with Backrest" data-fa="نیمکت تار با پشتی">Tar Bench with Backrest</h3>
+                            <p class="similar-product-desc" data-en="Ergonomic bench with comfortable backrest" data-fa="نیمکت ارگونومیک با پشتی راحت">Ergonomic bench with comfortable backrest</p>
+                            <span class="similar-product-link" data-en="VIEW DETAILS" data-fa="مشاهده جزئیات">
+                                VIEW DETAILS
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                
+                <button class="similar-nav-btn similar-nav-next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
