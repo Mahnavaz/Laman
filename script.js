@@ -658,10 +658,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Click on main image to open lightbox
-        images.forEach((img, index) => {
+        // Click on main image to open lightbox - use currentIndex
+        images.forEach((img) => {
             img.addEventListener('click', () => {
-                openLightbox(index);
+                openLightbox(currentIndex);
             });
         });
     }
