@@ -3348,6 +3348,14 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+[data-theme="dark"] .btn-dark-mode:hover {
+    background: #333333;
+}
+
+[data-theme="dark"] .btn-search:hover {
+    background: #333333;
+}
+
 [data-theme="dark"] .nav-link-disabled {
     color: #666;
 }
