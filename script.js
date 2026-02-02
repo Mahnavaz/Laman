@@ -807,12 +807,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (heroTrack) {
         const cards = heroTrack.querySelectorAll('.hero-carousel-card');
-        const cardWidth = cards[0]?.offsetWidth || 0;
-        const gap = 32; // gap between cards
         let currentIndex = 0;
         let autoScrollInterval;
         
+        function getCardWidth() {
+            return cards[0]?.offsetWidth || 0;
+        }
+        
         function scrollToCard(index) {
+            const cardWidth = getCardWidth();
+            const gap = 32; // gap between cards
             const scrollAmount = index * (cardWidth + gap);
             heroTrack.scrollTo({
                 left: scrollAmount,
@@ -828,8 +832,11 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollToCard(currentIndex);
         }
         
-        // Start auto-scroll
-        autoScrollInterval = setInterval(autoScroll, 4000);
+        // Wait for images to load before starting
+        setTimeout(function() {
+            // Start auto-scroll
+            autoScrollInterval = setInterval(autoScroll, 4000);
+        }, 500);
         
         // Pause on hover
         heroTrack.addEventListener('mouseenter', function() {
@@ -846,9 +853,16 @@ document.addEventListener('DOMContentLoaded', function() {
         heroTrack.addEventListener('scroll', function() {
             clearTimeout(isScrolling);
             isScrolling = setTimeout(function() {
+                const cardWidth = getCardWidth();
+                const gap = 32;
                 const scrollLeft = heroTrack.scrollLeft;
                 currentIndex = Math.round(scrollLeft / (cardWidth + gap));
             }, 100);
+        });
+        
+        // Recalculate on window resize
+        window.addEventListener('resize', function() {
+            scrollToCard(currentIndex);
         });
     }
 });
