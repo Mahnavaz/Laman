@@ -1,0 +1,86 @@
+# 🚀 Deploy Diba Website - 3 Easy Methods
+
+Your website is **100% ready to deploy**. Choose any method below:
+
+---
+
+## ⚡ Method 1: Netlify Drop (FASTEST - 30 seconds)
+
+1. Open: **https://app.netlify.com/drop**
+2. Drag the entire `diba-standalone` folder into the browser
+3. **Done!** Get instant link like: `https://random-name.netlify.app`
+
+**No signup needed!** You can claim it later to customize the URL.
+
+---
+
+## 🔷 Method 2: Vercel (via Browser)
+
+1. Go to: **https://vercel.com/new**
+2. Sign in with GitHub/GitLab/Email
+3. Click "Add New" → "Project"
+4. Drag the `diba-standalone` folder
+5. Click "Deploy"
+6. Get link: `https://diba-furniture.vercel.app`
+
+---
+
+## 📦 Method 3: GitHub Pages (Free Forever)
+
+### Step 1: Create GitHub Repo
+```bash
+cd diba-standalone
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+### Step 2: Push to GitHub
+```bash
+# Create a new repo on github.com first, then:
+git remote add origin https://github.com/YOUR-USERNAME/diba-furniture.git
+git branch -M main
+git push -u origin main
+```
+
+### Step 3: Enable GitHub Pages
+1. Go to repo Settings → Pages
+2. Source: Deploy from branch `main`
+3. Folder: `/ (root)`
+4. Save
+5. Get link: `https://YOUR-USERNAME.github.io/diba-furniture/`
+
+---
+
+## 🌐 Method 4: Surge.sh (CLI)
+
+```bash
+cd diba-standalone
+surge . diba-furniture.surge.sh
+```
+
+Enter email and password when prompted. Get: `https://diba-furniture.surge.sh`
+
+---
+
+## ✅ What's Included
+
+- ✅ Swiss Minimalist Design
+- ✅ Bilingual (Persian/English)
+- ✅ Laman Collection (12 products)
+- ✅ Responsive Design
+- ✅ Quote System
+- ✅ Category Filters
+- ✅ Production Ready
+
+---
+
+## 🎯 Recommended: Netlify Drop
+
+**Why?** No CLI, no git, no signup needed. Just drag and drop!
+
+**Link:** https://app.netlify.com/drop
+
+---
+
+Need help? The website is in: `C:\Users\m.rahimi\Desktop\diba-standalone`
