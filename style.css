@@ -3317,3 +3317,83 @@ body {
 .similar-nav-next {
     right: -30px;
 }
+
+
+/* Dark Mode Styles */
+:root {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F8F8;
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --border-color: #E0E0E0;
+    --card-bg: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #2A2A2A;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --border-color: #404040;
+    --card-bg: #2A2A2A;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .header {
+    background: rgba(26, 26, 26, 0.95);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .nav-link-disabled {
+    color: #666;
+}
+
+[data-theme="dark"] .section.bg-gray {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .category-pill {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-carousel-card {
+    background: var(--card-bg);
+}
+
+[data-theme="dark"] .product-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .footer {
+    background: var(--bg-secondary);
+    border-top-color: var(--border-color);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+}
