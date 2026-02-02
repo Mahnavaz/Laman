@@ -56,6 +56,9 @@ function changeLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
     applyLanguage(lang);
+    
+    // Dispatch custom event for language change
+    window.dispatchEvent(new Event('languageChanged'));
 }
 
 function applyLanguage(lang) {

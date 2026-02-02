@@ -479,22 +479,44 @@
         // Contact information data
         const contactData = {
             iran: {
-                address: "No. 3, Rokhsana Dead End, Shariati St, North of Motahari Intersection, Tehran, Iran",
-                tel: '<a href="tel:+982145288000">+98 (0)21 45288000</a><br><a href="tel:+982187700295">+98 (0)21 87700295</a>',
-                mobile: '<a href="tel:+989912701922">+98 991 270 1922</a>',
-                fax: '<a href="tel:+982186196270">+98 (0)21 86196270</a>',
-                zip: "15676-15411",
-                email: '<a href="mailto:info@dibats.com">info@dibats.com</a>',
-                website: '<a href="https://dibats.com/en/" target="_blank">dibats.com/en</a>'
+                en: {
+                    address: "No. 3, Rokhsana Dead End, Shariati St, North of Motahari Intersection, Tehran, Iran",
+                    tel: '<a href="tel:+982145288000">+98 (0)21 45288000</a><br><a href="tel:+982187700295">+98 (0)21 87700295</a>',
+                    mobile: '<a href="tel:+989912701922">+98 991 270 1922</a>',
+                    fax: '<a href="tel:+982186196270">+98 (0)21 86196270</a>',
+                    zip: "15676-15411",
+                    email: '<a href="mailto:info@dibats.com">info@dibats.com</a>',
+                    website: '<a href="https://dibats.com/en/" target="_blank">dibats.com/en</a>'
+                },
+                fa: {
+                    address: "تهران، خیابان شریعتی، بالاتر از تقاطع مطهری، بن بست رخسانا، پلاک ۳، زنگ ۲",
+                    tel: '<a href="tel:+982145288000">۰۲۱ ۴۵۲۸۸۰۰۰</a><br><a href="tel:+982187700295">۰۲۱ ۸۷۷۰۰۲۹۵</a>',
+                    mobile: '<a href="tel:+989912701922">۰۹۹۱ ۲۷۰ ۱۹۲۲</a>',
+                    fax: '<a href="tel:+982186196270">۰۲۱ ۸۶۱۹۶۲۷۰</a>',
+                    zip: "۱۵۶۷۶-۱۵۴۱۱",
+                    email: '<a href="mailto:info@dibats.com">info@dibats.com</a>',
+                    website: '<a href="https://dibats.com/fa/" target="_blank">dibats.com/fa</a>'
+                }
             },
             kenya: {
-                address: "iHiT, Dennis Pritt Road, Next to Maalim Juma Road, Kilimani, Nairobi, Kenya",
-                tel: '<a href="tel:+254112929020">+254 112929020</a>',
-                mobile: '-',
-                fax: '-',
-                zip: "38101-00100",
-                email: '<a href="mailto:ihit@dibats.com">ihit@dibats.com</a>',
-                website: '<a href="https://www.dibaarchiventure.com/" target="_blank">dibaarchiventure.com</a>'
+                en: {
+                    address: "iHiT, Dennis Pritt Road, Next to Maalim Juma Road, Kilimani, Nairobi, Kenya",
+                    tel: '<a href="tel:+254112929020">+254 112929020</a>',
+                    mobile: '-',
+                    fax: '-',
+                    zip: "38101-00100",
+                    email: '<a href="mailto:ihit@dibats.com">ihit@dibats.com</a>',
+                    website: '<a href="https://www.dibaarchiventure.com/" target="_blank">dibaarchiventure.com</a>'
+                },
+                fa: {
+                    address: "iHiT، جاده دنیس پریت، کنار جاده معلم جوما، کیلیمانی، نایروبی، کنیا",
+                    tel: '<a href="tel:+254112929020">+۲۵۴ ۱۱۲۹۲۹۰۲۰</a>',
+                    mobile: '-',
+                    fax: '-',
+                    zip: "۳۸۱۰۱-۰۰۱۰۰",
+                    email: '<a href="mailto:ihit@dibats.com">ihit@dibats.com</a>',
+                    website: '<a href="https://www.dibaarchiventure.com/" target="_blank">dibaarchiventure.com</a>'
+                }
             }
         };
 
@@ -534,8 +556,27 @@
         // Update contact info when country is selected
         countrySelect.addEventListener('change', function() {
             const country = this.value;
+            const currentLang = localStorage.getItem('lang') || 'en';
+            
             if (country && contactData[country]) {
-                const data = contactData[country];
+                const data = contactData[country][currentLang] || contactData[country]['en'];
+                document.getElementById('addressText').innerHTML = data.address;
+                document.getElementById('telText').innerHTML = data.tel;
+                document.getElementById('mobileText').innerHTML = data.mobile;
+                document.getElementById('faxText').innerHTML = data.fax;
+                document.getElementById('zipText').innerHTML = data.zip;
+                document.getElementById('emailText').innerHTML = data.email;
+                document.getElementById('websiteText').innerHTML = data.website;
+            }
+        });
+        
+        // Update contact info when language changes
+        window.addEventListener('languageChanged', function() {
+            const country = countrySelect.value;
+            const currentLang = localStorage.getItem('lang') || 'en';
+            
+            if (country && contactData[country]) {
+                const data = contactData[country][currentLang] || contactData[country]['en'];
                 document.getElementById('addressText').innerHTML = data.address;
                 document.getElementById('telText').innerHTML = data.tel;
                 document.getElementById('mobileText').innerHTML = data.mobile;
