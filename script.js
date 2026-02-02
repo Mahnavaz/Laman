@@ -831,6 +831,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
+        function goToNext() {
+            currentIndex++;
+            if (currentIndex >= cards.length) {
+                currentIndex = 0;
+            }
+            scrollToCard(currentIndex, true);
+        }
+        
+        function goToPrev() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = cards.length - 1;
+            }
+            scrollToCard(currentIndex, true);
+        }
+        
         // Wait for images to load before starting
         setTimeout(function() {
             // Start auto-scroll every 4 seconds
@@ -856,6 +872,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 const scrollLeft = heroTrack.scrollLeft;
                 currentIndex = Math.round(scrollLeft / cardWidth);
             }, 100);
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                goToNext();
+                // Reset auto-scroll timer
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(autoScroll, 4000);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                goToPrev();
+                // Reset auto-scroll timer
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(autoScroll, 4000);
+            }
         });
         
         // Recalculate on window resize
