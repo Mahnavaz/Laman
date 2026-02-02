@@ -799,3 +799,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Hero Carousel Auto-Scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const heroTrack = document.getElementById('heroTrack');
+    
+    if (heroTrack) {
+        const cards = heroTrack.querySelectorAll('.hero-carousel-card');
+        const cardWidth = cards[0]?.offsetWidth || 0;
+        const gap = 32; // gap between cards
+        let currentIndex = 0;
+        let autoScrollInterval;
+        
+        function scrollToCard(index) {
+            const scrollAmount = index * (cardWidth + gap);
+            heroTrack.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+        
+        function autoScroll() {
+            currentIndex++;
+            if (currentIndex >= cards.length) {
+                currentIndex = 0;
+            }
+            scrollToCard(currentIndex);
+        }
+        
+        // Start auto-scroll
+        autoScrollInterval = setInterval(autoScroll, 4000);
+        
+        // Pause on hover
+        heroTrack.addEventListener('mouseenter', function() {
+            clearInterval(autoScrollInterval);
+        });
+        
+        // Resume on mouse leave
+        heroTrack.addEventListener('mouseleave', function() {
+            autoScrollInterval = setInterval(autoScroll, 4000);
+        });
+        
+        // Handle manual scroll
+        let isScrolling;
+        heroTrack.addEventListener('scroll', function() {
+            clearTimeout(isScrolling);
+            isScrolling = setTimeout(function() {
+                const scrollLeft = heroTrack.scrollLeft;
+                currentIndex = Math.round(scrollLeft / (cardWidth + gap));
+            }, 100);
+        });
+    }
+});
