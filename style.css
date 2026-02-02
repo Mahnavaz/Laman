@@ -2389,21 +2389,54 @@ body {
     /* Product Detail */
     .product-detail-container {
         margin-top: 60px;
-        padding: 1.5rem 1rem;
+        padding: 0;
         grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .product-gallery-column {
+        max-width: 100%;
+        gap: 1rem;
+        padding: 0;
+    }
+    
+    .product-gallery {
+        aspect-ratio: 4/3;
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    .product-thumbnails {
+        gap: 0.5rem;
+        padding: 0 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .thumbnail {
+        flex: 0 0 60px;
+        height: 60px;
+        border-radius: 8px;
+    }
+    
+    .product-info-section {
+        padding: 1.5rem 1rem;
     }
     
     .product-title {
         font-size: 1.5rem;
     }
     
-    .product-thumbnails {
-        gap: 0.5rem;
+    .gallery-nav-btn {
+        width: 40px;
+        height: 40px;
     }
     
-    .thumbnail {
-        flex: 0 0 60px;
-        height: 60px;
+    .gallery-prev {
+        left: 0.5rem;
+    }
+    
+    .gallery-next {
+        right: 0.5rem;
     }
     
     /* Scroll to Top */
@@ -2717,14 +2750,18 @@ body {
     /* Product Detail Page */
     .product-detail-container {
         margin-top: 55px;
-        padding: 1.5rem 1rem;
+        padding: 0;
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 0;
+    }
+    
+    .product-gallery-column {
+        gap: 0.75rem;
     }
     
     .product-gallery {
         aspect-ratio: 1;
-        border-radius: 8px;
+        border-radius: 0;
     }
     
     .gallery-nav-btn {
@@ -2737,15 +2774,27 @@ body {
         height: 18px;
     }
     
+    .gallery-prev {
+        left: 0.5rem;
+    }
+    
+    .gallery-next {
+        right: 0.5rem;
+    }
+    
     .product-thumbnails {
         gap: 0.5rem;
-        padding: 0.5rem 0;
+        padding: 0 1rem;
     }
     
     .thumbnail {
         flex: 0 0 55px;
         height: 55px;
         border-radius: 6px;
+    }
+    
+    .product-info-section {
+        padding: 1.5rem 1rem;
     }
     
     .product-title {
