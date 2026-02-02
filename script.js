@@ -810,27 +810,31 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentIndex = 0;
         let autoScrollInterval;
         
-        function scrollToCard(index) {
+        function scrollToCard(index, smooth = true) {
             const cardWidth = heroTrack.offsetWidth;
             const scrollAmount = index * cardWidth;
             heroTrack.scrollTo({
                 left: scrollAmount,
-                behavior: 'smooth'
+                behavior: smooth ? 'smooth' : 'auto'
             });
         }
         
         function autoScroll() {
             currentIndex++;
+            
+            // If we've reached the end, jump to start without animation
             if (currentIndex >= cards.length) {
                 currentIndex = 0;
+                scrollToCard(currentIndex, false); // Jump instantly to first
+            } else {
+                scrollToCard(currentIndex, true); // Smooth scroll to next
             }
-            scrollToCard(currentIndex);
         }
         
         // Wait for images to load before starting
         setTimeout(function() {
-            // Start auto-scroll every 3 seconds
-            autoScrollInterval = setInterval(autoScroll, 3000);
+            // Start auto-scroll every 4 seconds
+            autoScrollInterval = setInterval(autoScroll, 4000);
         }, 500);
         
         // Pause on hover
@@ -840,7 +844,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Resume on mouse leave
         heroTrack.addEventListener('mouseleave', function() {
-            autoScrollInterval = setInterval(autoScroll, 3000);
+            autoScrollInterval = setInterval(autoScroll, 4000);
         });
         
         // Handle manual scroll
@@ -856,7 +860,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Recalculate on window resize
         window.addEventListener('resize', function() {
-            scrollToCard(currentIndex);
+            scrollToCard(currentIndex, false);
         });
     }
 });
