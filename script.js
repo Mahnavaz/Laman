@@ -602,6 +602,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const readMoreBtn = document.getElementById('readMoreBtn');
     const expandableContent = document.getElementById('expandableContent');
     
+    // Lightbox variables (declare early)
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    
+    let lightboxIndex = 0;
+    let lightboxImages = [];
+    
+    function updateLightboxCounter() {
+        if (lightboxCounter && lightboxImages.length > 0) {
+            lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
+        }
+    }
+    
     if (gallerySlider) {
         const images = gallerySlider.querySelectorAll('.gallery-main-image');
         let currentIndex = 0;
@@ -616,7 +633,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             currentIndex = index;
-            updateLightboxCounter();
         }
         
         // Initialize first image as active
@@ -665,17 +681,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightboxImage');
-    const lightboxClose = document.getElementById('lightboxClose');
-    const lightboxPrev = document.getElementById('lightboxPrev');
-    const lightboxNext = document.getElementById('lightboxNext');
-    const lightboxCounter = document.getElementById('lightboxCounter');
-    
-    let lightboxIndex = 0;
-    let lightboxImages = [];
-    
+    // Lightbox functions
     function openLightbox(index) {
         if (!lightbox || !gallerySlider) return;
         
@@ -693,12 +699,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!lightbox) return;
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
-    }
-    
-    function updateLightboxCounter() {
-        if (lightboxCounter && lightboxImages.length > 0) {
-            lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
-        }
     }
     
     if (lightboxClose) {
