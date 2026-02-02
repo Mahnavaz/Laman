@@ -2267,6 +2267,13 @@ body {
         height: 28px !important;
     }
     
+    /* Hide extra nav items on mobile */
+    .btn-search,
+    .btn-dark-mode,
+    .lang-switcher {
+        display: none !important;
+    }
+    
     /* Mobile Menu */
     .nav-links {
         position: fixed;
@@ -2482,9 +2489,15 @@ body {
     }
     
     .btn-search,
-    .btn-dark-mode {
-        width: 36px;
-        height: 36px;
+    .btn-dark-mode,
+    .lang-switcher {
+        display: none !important;
+    }
+    
+    .btn-mobile {
+        display: block;
+        font-size: 1.5rem;
+        padding: 0.5rem;
     }
     
     .btn-search svg,
