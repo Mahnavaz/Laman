@@ -9,8 +9,101 @@ const translations = {
     en: {
         dir: 'ltr',
         lang: 'en'
+    },
+    ar: {
+        dir: 'rtl',
+        lang: 'ar'
     }
 };
+
+// Apply language on page load
+document.addEventListener('DOMContentLoaded', function() {
+    applyLanguage(currentLang);
+    
+    // Language switcher
+    const langCurrent = document.getElementById('langCurrent');
+    const langDropdown = document.getElementById('langDropdown');
+    const langOptions = document.querySelectorAll('.lang-option');
+    
+    if (langCurrent && langDropdown) {
+        // Toggle dropdown
+        langCurrent.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle('active');
+            langCurrent.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+            langDropdown.classList.remove('active');
+            langCurrent.classList.remove('active');
+        });
+        
+        // Language selection
+        langOptions.forEach(function(option) {
+            option.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const selectedLang = this.getAttribute('data-lang');
+                changeLanguage(selectedLang);
+                langDropdown.classList.remove('active');
+                langCurrent.classList.remove('active');
+            });
+        });
+    }
+});
+
+function changeLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    applyLanguage(lang);
+}
+
+function applyLanguage(lang) {
+    const html = document.documentElement;
+    const config = translations[lang];
+    
+    if (!config) return;
+    
+    // Set HTML attributes
+    html.setAttribute('lang', config.lang);
+    html.setAttribute('dir', config.dir);
+    
+    // Update current language button
+    const langCurrent = document.getElementById('langCurrent');
+    if (langCurrent) {
+        const langText = langCurrent.querySelector('span') || langCurrent.childNodes[0];
+        if (langText) {
+            langText.textContent = lang.toUpperCase();
+        } else {
+            langCurrent.innerHTML = lang.toUpperCase() + langCurrent.innerHTML.substring(2);
+        }
+    }
+    
+    // Update all elements with data-en, data-fa, data-ar attributes
+    const elements = document.querySelectorAll('[data-en], [data-fa], [data-ar]');
+    elements.forEach(function(element) {
+        const text = element.getAttribute('data-' + lang);
+        if (text) {
+            // Check if it's a placeholder
+            if (element.hasAttribute('data-' + lang + '-placeholder')) {
+                element.placeholder = element.getAttribute('data-' + lang + '-placeholder');
+            } else if (element.tagName === 'INPUT' && element.type === 'text') {
+                element.placeholder = text;
+            } else {
+                element.textContent = text;
+            }
+        }
+    });
+    
+    // Update placeholders
+    const placeholders = document.querySelectorAll('[data-en-placeholder], [data-fa-placeholder], [data-ar-placeholder]');
+    placeholders.forEach(function(element) {
+        const placeholder = element.getAttribute('data-' + lang + '-placeholder');
+        if (placeholder) {
+            element.placeholder = placeholder;
+        }
+    });
+}
 
 // Products Data
 const products = [
