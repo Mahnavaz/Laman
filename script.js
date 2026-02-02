@@ -71,12 +71,10 @@ function applyLanguage(lang) {
     // Update current language button
     const langCurrent = document.getElementById('langCurrent');
     if (langCurrent) {
-        const langText = langCurrent.querySelector('span') || langCurrent.childNodes[0];
-        if (langText) {
-            langText.textContent = lang.toUpperCase();
-        } else {
-            langCurrent.innerHTML = lang.toUpperCase() + langCurrent.innerHTML.substring(2);
-        }
+        // Get the SVG element
+        const svg = langCurrent.querySelector('svg');
+        // Update the text content while preserving the SVG
+        langCurrent.childNodes[0].textContent = lang.toUpperCase() + ' ';
     }
     
     // Update all elements with data-en, data-fa, data-ar attributes

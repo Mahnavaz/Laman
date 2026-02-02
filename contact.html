@@ -11,8 +11,15 @@
         .contact-hero {
             margin-top: 70px;
             padding: 4rem 2rem;
-            text-align: left;
             background: #F8F8F8;
+        }
+        
+        [dir="ltr"] .contact-hero {
+            text-align: left;
+        }
+        
+        [dir="rtl"] .contact-hero {
+            text-align: right;
         }
 
         .contact-hero h1 {
@@ -21,6 +28,15 @@
             margin-bottom: 1rem;
             color: #000;
             font-family: 'Inter', sans-serif;
+        }
+        
+        [dir="rtl"] .contact-hero {
+            text-align: right;
+        }
+        
+        [dir="rtl"] .contact-hero h1 {
+            font-family: 'Vazir', sans-serif;
+            text-align: right;
         }
 
         .contact-main {
@@ -57,6 +73,10 @@
             margin-bottom: 1rem;
             color: #000;
         }
+        
+        [dir="rtl"] .contact-section h3 {
+            font-family: 'Vazir', sans-serif;
+        }
 
         .contact-dropdown {
             width: 100%;
@@ -67,6 +87,10 @@
             font-family: 'Inter', sans-serif;
             background: white;
             cursor: pointer;
+        }
+        
+        [dir="rtl"] .contact-dropdown {
+            font-family: 'Vazir', sans-serif;
         }
 
         .contact-dropdown option[disabled] {
@@ -115,6 +139,16 @@
 
         .contact-info-card a:hover {
             color: #2D7A5F;
+        }
+        
+        /* RTL Styles for Persian */
+        [dir="rtl"] .contact-info-card h4,
+        [dir="rtl"] .contact-info-card p {
+            font-family: 'Vazir', sans-serif;
+        }
+        
+        [dir="rtl"] .contact-section {
+            text-align: right;
         }
 
         @media (max-width: 1024px) {
