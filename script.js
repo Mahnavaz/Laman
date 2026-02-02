@@ -766,3 +766,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Categories Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const categoriesTrack = document.getElementById('categoriesTrack');
+    const categoriesPrev = document.getElementById('categoriesPrev');
+    const categoriesNext = document.getElementById('categoriesNext');
+
+    if (categoriesTrack && categoriesPrev && categoriesNext) {
+        categoriesPrev.addEventListener('click', function() {
+            categoriesTrack.scrollBy({
+                left: -400,
+                behavior: 'smooth'
+            });
+        });
+
+        categoriesNext.addEventListener('click', function() {
+            categoriesTrack.scrollBy({
+                left: 400,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
