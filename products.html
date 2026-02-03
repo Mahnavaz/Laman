@@ -25,6 +25,10 @@
             margin-bottom: 2rem;
         }
         
+        [dir="rtl"] .breadcrumb {
+            font-family: 'Vazir', sans-serif;
+        }
+        
         .breadcrumb a {
             color: #999;
             text-decoration: none;
@@ -59,6 +63,10 @@
             font-family: 'Inter', sans-serif;
         }
         
+        [dir="rtl"] .products-title {
+            font-family: 'Vazir', sans-serif;
+        }
+        
         .category-dropdown {
             position: relative;
             display: inline-block;
@@ -76,6 +84,10 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
+        }
+        
+        [dir="rtl"] .category-select {
+            font-family: 'Vazir', sans-serif;
         }
         
         .category-select:focus {
@@ -136,6 +148,10 @@
             text-align: left;
         }
         
+        [dir="rtl"] .product-info {
+            text-align: right;
+        }
+        
         .product-info h3 {
             font-size: 1.25rem;
             font-weight: 400;
@@ -144,11 +160,19 @@
             color: #000;
         }
         
+        [dir="rtl"] .product-info h3 {
+            font-family: 'Vazir', sans-serif;
+        }
+        
         .product-info p {
             color: #666;
             font-size: 0.875rem;
             font-family: 'Inter', sans-serif;
             margin-bottom: 1rem;
+        }
+        
+        [dir="rtl"] .product-info p {
+            font-family: 'Vazir', sans-serif;
         }
         
         .view-details {
@@ -160,6 +184,10 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+        
+        [dir="rtl"] .view-details {
+            font-family: 'Vazir', sans-serif;
         }
         
         .view-details::after {
@@ -329,22 +357,22 @@
     <!-- Products Content -->
     <div class="products-page">
         <div class="breadcrumb">
-            <a href="index.html">Home</a>
+            <a href="index.html" data-en="Home" data-fa="خانه">Home</a>
             <span>◆</span>
-            <span>Products</span>
+            <span data-en="Products" data-fa="محصولات">Products</span>
         </div>
         
         <div class="products-header">
             <div class="products-title-wrapper">
-                <h1 class="products-title">Product:</h1>
+                <h1 class="products-title" data-en="Product:" data-fa="محصول:">Product:</h1>
                 <div class="category-dropdown">
                     <select class="category-select" id="categorySelect">
-                        <option value="all">All Products</option>
-                        <option value="benches">Benches</option>
-                        <option value="tables">Tables</option>
-                        <option value="canopies">Canopies</option>
-                        <option value="details">Details</option>
-                        <option value="platforms">Platforms</option>
+                        <option value="all" data-en="All Products" data-fa="همه محصولات">All Products</option>
+                        <option value="benches" data-en="Benches" data-fa="نیمکت">Benches</option>
+                        <option value="tables" data-en="Tables" data-fa="میز">Tables</option>
+                        <option value="canopies" data-en="Canopies" data-fa="سایه‌بان">Canopies</option>
+                        <option value="details" data-en="Details" data-fa="جزئیات">Details</option>
+                        <option value="platforms" data-en="Platforms" data-fa="پلتفرم">Platforms</option>
                     </select>
                 </div>
             </div>
@@ -357,9 +385,9 @@
                     <img src="3-1.png" alt="Tar Bench">
                 </div>
                 <div class="product-info">
-                    <h3>Tar Bench</h3>
-                    <p>Modern bench inspired by musical strings design</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Tar Bench" data-fa="نیمکت تار">Tar Bench</h3>
+                    <p data-en="Modern bench inspired by musical strings design" data-fa="نیمکت مدرن با طراحی الهام گرفته از تار موسیقی">Modern bench inspired by musical strings design</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -368,9 +396,9 @@
                     <img src="4-1.png" alt="Tar Bench with Backrest">
                 </div>
                 <div class="product-info">
-                    <h3>Tar Bench with Backrest</h3>
-                    <p>Ergonomic bench with comfortable backrest</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Tar Bench with Backrest" data-fa="نیمکت تار با پشتی">Tar Bench with Backrest</h3>
+                    <p data-en="Ergonomic bench with comfortable backrest" data-fa="نیمکت ارگونومیک با پشتی راحت">Ergonomic bench with comfortable backrest</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -379,9 +407,9 @@
                     <img src="5-1.png" alt="Chaft Bench">
                 </div>
                 <div class="product-info">
-                    <h3>Chaft Bench</h3>
-                    <p>Bench with unique connection system</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Chaft Bench" data-fa="نیمکت چفت">Chaft Bench</h3>
+                    <p data-en="Bench with unique connection system" data-fa="نیمکت با سیستم اتصال منحصربه‌فرد">Bench with unique connection system</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -390,9 +418,9 @@
                     <img src="Pictures/6-1.png" alt="Pood Bench">
                 </div>
                 <div class="product-info">
-                    <h3>Pood Bench</h3>
-                    <p>Contemporary design inspired by traditional weaving</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Pood Bench" data-fa="نیمکت پود">Pood Bench</h3>
+                    <p data-en="Contemporary design inspired by traditional weaving" data-fa="طراحی معاصر با الهام از بافت سنتی">Contemporary design inspired by traditional weaving</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -401,9 +429,9 @@
                     <img src="Pictures/7-1.png" alt="Kalaf Bench">
                 </div>
                 <div class="product-info">
-                    <h3>Kalaf Bench</h3>
-                    <p>Bench with organic form and flowing lines</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Kalaf Bench" data-fa="نیمکت کلاف">Kalaf Bench</h3>
+                    <p data-en="Bench with organic form and flowing lines" data-fa="نیمکت با فرم ارگانیک و خطوط روان">Bench with organic form and flowing lines</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -412,9 +440,9 @@
                     <img src="Pictures/8-1.png" alt="Bast Bench">
                 </div>
                 <div class="product-info">
-                    <h3>Bast Bench</h3>
-                    <p>Easy installation with high stability</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Bast Bench" data-fa="نیمکت بست">Bast Bench</h3>
+                    <p data-en="Easy installation with high stability" data-fa="نصب آسان با پایداری بالا">Easy installation with high stability</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -424,9 +452,9 @@
                     <img src="Pictures/9-1.png" alt="Picnic Set">
                 </div>
                 <div class="product-info">
-                    <h3>Picnic Set</h3>
-                    <p>Complete outdoor dining solution</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Picnic Set" data-fa="ست پیک‌نیک">Picnic Set</h3>
+                    <p data-en="Complete outdoor dining solution" data-fa="راه‌حل کامل غذاخوری فضای باز">Complete outdoor dining solution</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -436,9 +464,9 @@
                     <img src="Pictures/10-1.png" alt="Pergola">
                 </div>
                 <div class="product-info">
-                    <h3>Pergola</h3>
-                    <p>Modern pergola with shading capability</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Pergola" data-fa="پرگولا">Pergola</h3>
+                    <p data-en="Modern pergola with shading capability" data-fa="پرگولای مدرن با قابلیت سایه‌اندازی">Modern pergola with shading capability</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -447,9 +475,9 @@
                     <img src="Pictures/11-1.png" alt="Woven Canopy">
                 </div>
                 <div class="product-info">
-                    <h3>Woven Canopy</h3>
-                    <p>Canopy with unique woven design pattern</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Woven Canopy" data-fa="سایه‌بان بافت">Woven Canopy</h3>
+                    <p data-en="Canopy with unique woven design pattern" data-fa="سایه‌بان با الگوی بافت منحصربه‌فرد">Canopy with unique woven design pattern</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -459,9 +487,9 @@
                     <img src="1-1.png" alt="Pallet Platform 01">
                 </div>
                 <div class="product-info">
-                    <h3>Pallet Platform 01</h3>
-                    <p>Modular platform system</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Pallet Platform 01" data-fa="پلتفرم پالت ۰۱">Pallet Platform 01</h3>
+                    <p data-en="Modular platform system" data-fa="سیستم پلتفرم ماژولار">Modular platform system</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -470,9 +498,9 @@
                     <img src="2-1.png" alt="Pallet Platform 02">
                 </div>
                 <div class="product-info">
-                    <h3>Pallet Platform 02</h3>
-                    <p>Versatile outdoor platform</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Pallet Platform 02" data-fa="پلتفرم پالت ۰۲">Pallet Platform 02</h3>
+                    <p data-en="Versatile outdoor platform" data-fa="پلتفرم چندمنظوره فضای باز">Versatile outdoor platform</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
             
@@ -481,9 +509,9 @@
                     <img src="Pictures/12-1.png" alt="Tree Guard">
                 </div>
                 <div class="product-info">
-                    <h3>Tree Guard</h3>
-                    <p>Protective platform for urban trees</p>
-                    <span class="view-details">View Details</span>
+                    <h3 data-en="Tree Guard" data-fa="محافظ درخت">Tree Guard</h3>
+                    <p data-en="Protective platform for urban trees" data-fa="پلتفرم محافظ برای درختان شهری">Protective platform for urban trees</p>
+                    <span class="view-details" data-en="View Details" data-fa="مشاهده جزئیات">View Details</span>
                 </div>
             </a>
         </div>
